@@ -1,0 +1,37 @@
+
+/* // footer style // */
+.FooterHr {
+    background-color:  #073DAA;
+    height: 3px; 
+    margin-top: 0;
+}
+
+.List1, .List2 {
+    font-size: 16px;
+    color: #073DAA;
+    list-style-type:none;
+}
+
+.FooterFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; 
+}
+
+.FooterLogos{
+    padding-top: 20px;
+    color: #073DAA;
+    font-size: 15px;
+    font-weight: 800;
+    width: 30%;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    height: 70px;
+}
+
+.Footer {
+    padding: 3%;
+    padding-top: 1%;
+    background-color: #CDEAF0;
+    height: auto;
+}

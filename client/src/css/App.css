@@ -1,0 +1,84 @@
+.App {
+  text-align: center;
+  background-image: url(https://media.istockphoto.com/id/1276581591/vector/cute-simple-seamless-pattern-with-paw-prints.jpg?s=612x612&w=0&k=20&c=qRxqN8NX0Q0VkLOOj0NCysIZZ37328M4W2Kze2Xofro=);
+  background-position: center;
+  background-size: contain;
+  background-size:auto;  
+}
+
+.Background {
+  background-image: url(https://media.istockphoto.com/id/1276581591/vector/cute-simple-seamless-pattern-with-paw-prints.jpg?s=612x612&w=0&k=20&c=qRxqN8NX0Q0VkLOOj0NCysIZZ37328M4W2Kze2Xofro=);
+  background-position: center;
+  background-size: contain;
+  background-size: auto;  
+  padding: 1%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color:#073DAA;
+}
+
+p {
+  text-align:center;
+  color: #073DAA;
+  font-size: 20px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #073DAA;
+}
+
+a {
+  color:#073DAA;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  color: #fd6ee0;
+  font-weight: bold;
+  text-shadow:0px 0px 30px #fd6ee0;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+table {
+  width: 55%;
+  margin: 0 auto;
+  /* padding: 8px, -2px, 8px, 8px; */
+  border: 10px double #073DAA;
+  background-image: url(https://media.istockphoto.com/id/1199391451/vector/paw-print-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZFa-1inw6WkXKpy43nVHGe2rBCroqiw9K0TvBcNNQmI=);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+
+}
+
+thead {
+  background-color: #073DAA;
+  color: white;
+}
+
+
+th {
+  font-size: 24px;
+  padding: 10px;
+}
+
+tbody {
+  width: 50%;
+}
