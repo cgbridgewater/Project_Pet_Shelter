@@ -1,14 +1,16 @@
 /* // Containers //  */
 
 .Main {
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .CardContainer{
-    padding: 0;
+    padding:0;
+    padding-bottom:10px;
     width: 20%;
     min-width: 250px;
     margin:.5%  ;
+    margin-bottom: 15px;
     list-style: none;
     border: 2px solid #073DAA;
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.70);

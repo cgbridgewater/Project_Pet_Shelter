@@ -1,9 +1,9 @@
-
 /* // footer style // */
+
 .FooterHr {
     background-color:  #073DAA;
     height: 3px; 
-    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .List1, .List2 {
@@ -16,17 +16,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly; 
+    align-items: center;
 }
 
 .FooterLogos{
-    padding-top: 20px;
+    /* padding-top: 20px; */
     color: #073DAA;
     font-size: 15px;
     font-weight: 800;
-    width: 30%;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    height: 70px;
+    width: 40%;
 }
 
 .Footer {
@@ -34,4 +32,12 @@
     padding-top: 1%;
     background-color: #CDEAF0;
     height: auto;
+}
+
+.social:hover {
+    box-shadow:0 8px 12px 0 #fd6ee0;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
