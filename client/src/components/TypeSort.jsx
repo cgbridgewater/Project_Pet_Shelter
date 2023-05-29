@@ -31,8 +31,9 @@ const TypeSort = (props) => {
 
     return (
         <div style={{padding:"10px"}}>
+            <Link  to="/petshelter" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800", marginLeft:"50%"}}>Return To Shelter</Link>
             {/* top bar */}
-            <div style={{display:"flex", justifyContent:"space-evenly"}} >
+            <div style={{marginTop:"10px",display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}} >
                 <div>
                     {/* spacer */}
                 </div>
@@ -44,7 +45,6 @@ const TypeSort = (props) => {
                         <option value="ZTOA">Z to A</option>
                     </select>
                 </div>
-                <Link  to="/petshelter" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800"}}>Return To Shelter</Link>
             </div>
             <br />
             <div className='Main' style={{ display:'flex',justifyContent:"center"}}>
