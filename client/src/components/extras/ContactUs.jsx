@@ -58,13 +58,15 @@ const ContactUs = () => {
 
             <div className='hoursFlex2'>
                 <div className='infobox'>
+                    <br />
                     <p className='textLeft'>Coding Dojo Pet Shelter (Seattle)</p>
-                    <hr />
+                    <br /><hr /><br />
                     <p className='textLeft'>3600 136th Pl SE Suite 300</p> 
-                    <hr />
+                    <br />
                     <p className='textLeft'>Bellevue, WA 98006</p>
-                    <hr />
+                    <br /><hr /><br />
                     <p className='textLeft'>Phone: 1-877-ADOPT-ME</p>
+                    <br />
                 </div>
                 {/* <!-- google MAP --> */}
                 <iframe

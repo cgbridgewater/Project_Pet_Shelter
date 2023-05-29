@@ -4,8 +4,8 @@ const DontBuy = () => {
 
     return (
         <div style={{minHeight:"65vh"}}>
-            <div className="Main" style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly" }}>
-                <div className="LeftContainer" style={{minWidth:"350px",width:"55%", marginTop:"10px"}}>
+            <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly" }}>
+                <div className="LeftContainer" style={{minWidth:"325px",width:"55%", marginTop:"4%"}}>
                     <h1>Adopt, Don't Buy!</h1>
                     <p style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
                     <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
@@ -20,7 +20,7 @@ const DontBuy = () => {
                         f you would still rather buy than adopt, make sure you buy from a responsible, reputable breeder. If you’re buying an animal over the Internet, you’re almost certainly buying from an animal mill. Responsible breeders are individuals who have focused their efforts on one or a select few breeds, and they screen potential owners to ensure a long-term fit. Always visit the breeder’s facility and observe the animals’ behavior and socialization. Don’t be fooled by breeder certification or purebred registration papers; a puppy mill can be USDA licensed. 
                     </p>
                 </div>
-                <div className="RightContainer" style={{Minwidth:"350px", marginTop:"8%", marginRight:"20px", height:"550px"}} >
+                <div className="RightContainer" style={{Minwidth:"350px", marginTop:"4%", height:"550px"}} >
                     <h1 style={{textAlign:"center",backgroundColor:"#073DAA", color:"white", margin:"auto",padding:"5px"}}>Find Your Companion</h1>
                     <br />
                     <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Adopt A Pet</Link>
