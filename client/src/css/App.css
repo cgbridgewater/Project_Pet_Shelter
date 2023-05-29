@@ -79,7 +79,6 @@ thead {
   color: white;
 }
 
-
 th {
   font-size: 24px;
   padding: 10px;
@@ -87,4 +86,10 @@ th {
 
 tbody {
   width: 50%;
+}
+
+.video {
+  width: 65%;
+  min-width: 360px;
+  aspect-ratio: 16/9;
 }

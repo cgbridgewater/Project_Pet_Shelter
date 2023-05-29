@@ -25,13 +25,13 @@
 
 @keyframes wobble {
     25% {
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     }
     50% {
-    transform: rotate(-15deg);
+    transform: rotate(-8deg);
     }
     75% {
-    transform: rotate(5deg);
+    transform: rotate(3deg);
     }
     100% {
     transform: rotate(0deg);
@@ -39,8 +39,10 @@
 }
 
 .EnteranceCard {
-    display: block;
-    margin: 0 auto;
+    width: 45%;
+    min-width: 360px;
+    border-radius: 20px;
+    margin: 10px auto;
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
 }
 
@@ -106,8 +108,8 @@
     background-image: url(https://www.pngkey.com/png/full/236-2360034_calvary-wolfeboro-stream-buttonpng-live-stream-button-png.png);
     background-position: center;
     background-size: cover;
-    width: 150px;
-    height:100p;
+    width: 180px;
+    height:40px;
     border: 2px solid black;
     background-color: #073DAA;
     padding: 20px 34px;
