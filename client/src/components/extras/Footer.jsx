@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     
-    // alert pop ups //
-    const socialMedia = (e) => {
-        e.preventDefault();
-        alert(`Social Media Sites Coming Soon`)
-    }
-    const donate = (e) => {
-        e.preventDefault();
-        alert(`Unfortunately, donation capabilities are currently down. 😥 \n 💕However Voluneteers are ALWAYS welcome!!💕`)
-    }
+    // // alert pop ups //
+    // const socialMedia = (e) => {
+    //     e.preventDefault();
+    //     alert(`Social Media Sites Coming Soon`)
+    // }
+    // const donate = (e) => {
+    //     e.preventDefault();
+    //     alert(`Unfortunately, donation capabilities are currently down. 😥 \n 💕However Voluneteers are ALWAYS welcome!!💕`)
+    // }
 
     
     return (
@@ -50,7 +50,7 @@ const Footer = () => {
                     {/* right side links */}
                     <ul className="List2">
                         <li><a href="https://oregonhumane.tfaforms.net/23">Donate</a></li>
-                        <li><a href="/petshelter/construction">Success Stories</a></li>
+                        <li><a href="/petshelter/stories">Success Stories</a></li>
                         <li><a href="/petshelter/careers">Careers</a></li>
                         <li><a href="/petshelter/construction">Privacy Notice</a></li>
                         <li><a href="/petshelter/construction">Site Info</a></li>
