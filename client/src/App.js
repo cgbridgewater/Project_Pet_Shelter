@@ -6,6 +6,7 @@ import './css/Footer.css';
 import './css/contactUs.css';
 import './css/ourStory.css';
 import './css/dontbuy.css';
+import './css/wishList.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/extras/BadLink';
 import Indexpage from './components/Index';
@@ -22,6 +23,7 @@ import PetShow from './components/PetShow';
 import PetForm from './components/PetForm';
 import ContactUs from './components/extras/ContactUs';
 import OurStory from './components/extras/ourStory'
+import WishList from './components/extras/WishList';
 
 function App() {
 
@@ -41,6 +43,7 @@ function App() {
             <Route element={<ContactUs/>} path="/petshelter/contactus"/>
             <Route element={<Construction/>} path="/petshelter/construction"/>
             <Route element={<DontBuy/>} path="/petshelter/adopt"/>
+            <Route element={<WishList/>} path="/petshelter/wishlist"/>
             <Route element={<Careers/>} path="/petshelter/careers"/>
             <Route element={<BadLink/>} path="/petshelter/:bad" />
             <Route element={<BadLink/>} path="/petshelter/edit/:bad" />
