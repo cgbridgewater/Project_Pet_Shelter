@@ -24,6 +24,7 @@ import PetForm from './components/PetForm';
 import ContactUs from './components/extras/ContactUs';
 import OurStory from './components/extras/ourStory'
 import WishList from './components/extras/WishList';
+import Stories from './components/extras/Stories';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
             <Route element={<Construction/>} path="/petshelter/construction"/>
             <Route element={<DontBuy/>} path="/petshelter/adopt"/>
             <Route element={<WishList/>} path="/petshelter/wishlist"/>
+            <Route element={<Stories/>} path="/petshelter/stories"/>
             <Route element={<Careers/>} path="/petshelter/careers"/>
             <Route element={<BadLink/>} path="/petshelter/:bad" />
             <Route element={<BadLink/>} path="/petshelter/edit/:bad" />
