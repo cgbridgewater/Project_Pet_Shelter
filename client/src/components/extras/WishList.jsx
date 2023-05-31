@@ -187,7 +187,7 @@ const WishList = () => {
             {/* end wish list */}
             {/* donate button */}
             <a href="https://oregonhumane.tfaforms.net/23">
-                <img style={{height:"75px", width:"250px", borderRadius:"8px", marginTop:"2%",marginLeft: "5%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
+                <img className='donate' style={{height:"75px", width:"250px", borderRadius:"8px", marginTop:"2%",marginLeft: "5%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
             </a>
             {/* donate button */}
         </div>
