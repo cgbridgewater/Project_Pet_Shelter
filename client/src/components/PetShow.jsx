@@ -68,7 +68,7 @@ const PetShow = () => {
                 </div>
                 <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap" }}>
                     <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA", minWidth:"240px", marginTop:"15px", textAlign:"start"}}>Select Drop Down To Sort:</label>
-                    <select value={sort} onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                    <select className='dropdown' value={sort} onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                         <option value="NONE">Newest Added</option>
                         <option value="ATOZ">Name A to Z</option>
                         <option value="ZTOA">Name Z to A</option>
