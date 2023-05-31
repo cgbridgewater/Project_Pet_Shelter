@@ -1,15 +1,14 @@
 /* wish list css */
 
-
-/* .wishList{
-    margin: 2% auto;
-    padding: 1%;
-    width: 50%;
-    min-width: 350px;
-    text-align: start;
-} */
-
 .wishList {
     width: 47vw;
     min-width: 300px;
+}
+
+.donate:hover {
+    box-shadow:0 8px 12px 0 #fd6ee0;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
