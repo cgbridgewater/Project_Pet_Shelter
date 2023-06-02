@@ -21,7 +21,7 @@ const PetShow = () => {
 
     const [ pet, setPet ] = useState([])
     const [ sort, setSort ] = useState("TYPEA2Z") 
-    const [getErrors, setGetErrors] = useState({});
+    // const [getErrors, setGetErrors] = useState({});
 
     const removeFromDom = petId => {
         setPet(pet.filter(pet => pet._id !== petId));
@@ -35,7 +35,7 @@ const PetShow = () => {
             })
             .catch((err) => {
                 console.log(err.response.data)
-                setGetErrors(err.response.data); 
+                // setGetErrors(err.response.data); 
             })
     }
 
@@ -46,11 +46,11 @@ const PetShow = () => {
         .then((res) => {
             console.log(res.data);
             setPet(res.data);
-            setGetErrors("")
+            // setGetErrors("")
         })
         .catch((err) => {
             console.log(err.response.data.path)
-            setGetErrors(err.response.data.path); //Set Errors
+            // setGetErrors(err.response.data.path); //Set Errors
         })
     }, [sort])
 
