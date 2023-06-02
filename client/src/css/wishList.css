@@ -5,7 +5,7 @@
     min-width: 300px;
 }
 
-.donate:hover {
+.donate:hover{
     box-shadow:0 8px 12px 0 #fd6ee0;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
