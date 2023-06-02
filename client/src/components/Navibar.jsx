@@ -9,12 +9,14 @@ const Navibar = () => {
         {/* left side of navbar */}
         <div style={{minWidth:"355px",width:"30%", textAlign:"start"}}>
           <Link to="/petshelter">
-            <h1 style={{fontSize:"26px", fontWeight: 800, lineHeight:"90%", color:"#073DAA"}}>
+            
+            <p className="NavTitle">
               Coding Dojo Pet Shelters
-            </h1>
-            <h4 style={{color:"#073DAA", textAlign:"end"}}>
-              Save one until there are none.
-            </h4>
+              <br />
+              <span style={{fontSize:"14px", float:" right"}}>
+                Save one until there are none.
+              </span>
+            </p>  
           </Link>
         </div>
           <Link className="LiveFeed" to={`/petshelter/livefeed`}></Link>
