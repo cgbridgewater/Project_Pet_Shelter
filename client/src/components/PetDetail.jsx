@@ -57,7 +57,8 @@ const Detail = () => {
             {/* page load ternary */}
             { name.length == 0  ? 
             <div className="Background">
-                <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"30px", marginTop:"20"}}>It appears your lost.. Don't worry, we'll get you to your owners.</h3>
+                <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"30px", marginTop:"20"}}>It appears your lost...</h3>
+                <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>Click below and we'll get you back to to your owners.</h3>
 
                 <br/>
                 <a  href="/petshelter">

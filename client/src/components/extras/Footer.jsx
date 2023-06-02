@@ -1,18 +1,5 @@
-import { Link } from "react-router-dom";
-
 const Footer = () => {
-    
-    // // alert pop ups //
-    // const socialMedia = (e) => {
-    //     e.preventDefault();
-    //     alert(`Social Media Sites Coming Soon`)
-    // }
-    // const donate = (e) => {
-    //     e.preventDefault();
-    //     alert(`Unfortunately, donation capabilities are currently down. 😥 \n 💕However Voluneteers are ALWAYS welcome!!💕`)
-    // }
 
-    
     return (
         <div className="Footer">
             <main>
