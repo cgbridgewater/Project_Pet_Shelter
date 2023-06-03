@@ -59,7 +59,6 @@ const Detail = () => {
             <div className="Background">
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"30px", marginTop:"20"}}>It appears your lost...</h3>
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>Click below and we'll get you back to to your owners.</h3>
-
                 <br/>
                 <a  href="/petshelter">
                     <img className='Lost'src="https://img.freepik.com/premium-vector/animal-shelter-house-cartoon-illustration-containing-animals-adoption-flat-hand-drawn-style_2175-6053.jpg?w=2000" alt="" />        
@@ -87,7 +86,6 @@ const Detail = () => {
                             </div>
                         </div>
                     </div>
-
                     {/* results container */}
                     <div style={{margin:"auto", marginTop:"30px",padding:"0 10%", minHeight:"35%", width:"40%",backgroundImage:"url(https://media.istockphoto.com/id/1064117208/vector/animal-paw-prints-on-blue-winter-background.jpg?s=612x612&w=0&k=20&c=SxtfxxqqSEHv8ms2EhMAvAuYZGFdQtqbcUOY4D3JIaU=)",backgroundSize:"cover", border:"2px solid white", borderRadius:"15px"}}>
                         <div style={{display:"flex", justifyContent:"space-between",marginTop:"0px"}}>
@@ -112,8 +110,7 @@ const Detail = () => {
                                 <p style={{margin:"3px"}}>{skillTwo}</p>
                                 <p style={{margin:"3px"}}>{skillThree}</p>
                             </div>
-                        </div>    
-                        
+                        </div>
                         <div style={{display:"flex",alignItems:"center", justifyContent:"space-evenly" }}>
                         <LikeButton name={name}/>
                         </div>
