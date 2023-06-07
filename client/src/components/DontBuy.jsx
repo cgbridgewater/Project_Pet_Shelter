@@ -22,12 +22,11 @@ const DontBuy = () => {
                         f you would still rather buy than adopt, make sure you buy from a responsible, reputable breeder. If you’re buying an animal over the Internet, you’re almost certainly buying from an animal mill. Responsible breeders are individuals who have focused their efforts on one or a select few breeds, and they screen potential owners to ensure a long-term fit. Always visit the breeder’s facility and observe the animals’ behavior and socialization. Don’t be fooled by breeder certification or purebred registration papers; a puppy mill can be USDA licensed. 
                     </p>
                 </div>
-                <div className="RightContainer" style={{Minwidth:"350px", marginTop:"4%", marginBottom:"2%"}} >
+                <div className="RightContainer" style={{Minwidth:"350px", marginTop:"4%", marginBottom:"2%",paddingBottom:"1%", border:"2px solid #073DAA"}} >
+                    <img style={{margin: 0 }} className="support" src="https://millardwestcatalyst.com/wp-content/uploads/2021/11/come.sit_.stay-1-900x900.png" alt="support" />
                     <h1 style={{textAlign:"center",backgroundColor:"#073DAA", color:"white", margin:"auto",padding:"5px"}}>Find Your Companion</h1>
                     <br />
                     <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Adopt A Pet!</Link>
-                    <br />
-                    <img className="support" src="https://millardwestcatalyst.com/wp-content/uploads/2021/11/come.sit_.stay-1-900x900.png" alt="support" />
                 </div>
             </div>
             <Link className='Return'  style={{textDecoration:"none"}} to={`/petshelter`}><button className='EnterButton' > Return To Pet Shelter</button></Link>
