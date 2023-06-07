@@ -8,23 +8,23 @@ import './css/ourStory.css';
 import './css/dontbuy.css';
 import './css/wishList.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import BadLink from './components/extras/BadLink';
+import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
 import Update from './components/Update';
 import Navibar from './components/Navibar';
-import LiveFeed from './components/extras/LiveFeed';
+import LiveFeed from './components/LiveFeed';
 import PetDetail from './components/PetDetail';
-import Footer from './components/extras/Footer';
-import Construction from './components/extras/Construction';
-import DontBuy from './components/extras/DontBuy';
-import Careers from './components/extras/Careers';
+import Footer from './components/Footer';
+import Construction from './components/Construction';
+import DontBuy from './components/DontBuy';
+import Careers from './components/Careers';
 import TypeSort from './components/TypeSort';
 import PetShow from './components/PetShow';
 import PetForm from './components/PetForm';
-import ContactUs from './components/extras/ContactUs';
-import OurStory from './components/extras/ourStory'
-import WishList from './components/extras/WishList';
-import Stories from './components/extras/Stories';
+import ContactUs from './components/ContactUs';
+import OurStory from './components/ourStory'
+import WishList from './components/WishList';
+import Stories from './components/Stories';
 
 function App() {
 
