@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-const GOOGLE_API = process.env.MY_GOOGLE_KEY
+import React from 'react';
 
+// const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API
 
 const ContactUs = () => {
-
+    
     return(
         <div className='Background' style={{minHeight:"60vh"}}>
             
@@ -21,7 +22,7 @@ const ContactUs = () => {
                     <h1 className='title'> Adoption Information</h1>
                     <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
                         <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
-                        f you are interested in adopting a cat or dog, please come out to Creswell between 11 am – 4 pm. We are operating on a first come, limited capacity basis.
+                        f you are interested in adopting a cat or dog, please come out between 11 am – 4 pm. We are operating on a first come, limited capacity basis.
 
                         If you are interested in adopting a specialized species, please call us to schedule an adoption appointment. We are following all safety guidelines to prevent the spread of COVID. 
                     </p>
@@ -39,7 +40,7 @@ const ContactUs = () => {
                         className='lostLink'
                         href="https://lost.petcolove.org/shelters/greenhill-humane-society/44525748387a50417251" 
                         target="_blank" 
-                        rel="noopener">
+                        rel="noreferrer">
                         <img 
                             className='lostnfound'  
                             src="https://www.green-hill.org/wp-content/uploads/2022/08/LostWebsiteBanners_SidebarImage_270x90.png" alt="lost_n_found" 
@@ -83,12 +84,10 @@ const ContactUs = () => {
                     title='googleMap'
                     style={{height:"280px", width:"280px"}}
                     loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=MY_GOOGLE_KEY
-                    &q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006 ">
-                    {/* src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
-                    &q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006 "> */}
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
+                    &q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006">
                 </iframe>
                 {/* <!-- end google MAP --> */}
             </div>
@@ -118,9 +117,9 @@ const ContactUs = () => {
                     title='googleMap'
                     style={{height:"280px", width:"280px"}}
                     loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=MY_GOOGLE_KEY
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
                     &q=coding dojo, 440 N Wolfe Rd suite E019, Sunnyvale, CA 94085">
                 </iframe>
                 {/* <!-- end google MAP --> */}
@@ -151,9 +150,9 @@ const ContactUs = () => {
                     title='googleMap'
                     style={{height:"280px", width:"280px"}}
                     loading="lazy"
-                    allowfullscreen
-                    referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=MY_GOOGLE_KEY
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
                     &q=coding dojo, 213 W Institute Pl # 610, Chicago, IL 60610">
                 </iframe>
                 {/* <!-- end google MAP --> */}
