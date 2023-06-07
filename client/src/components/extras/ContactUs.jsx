@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+const GOOGLE_API = process.env.MY_GOOGLE_KEY
+
 
 const ContactUs = () => {
 
@@ -83,8 +85,10 @@ const ContactUs = () => {
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
+                    src="https://www.google.com/maps/embed/v1/place?key=MY_GOOGLE_KEY
                     &q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006 ">
+                    {/* src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
+                    &q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006 "> */}
                 </iframe>
                 {/* <!-- end google MAP --> */}
             </div>
@@ -116,7 +120,7 @@ const ContactUs = () => {
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
+                    src="https://www.google.com/maps/embed/v1/place?key=MY_GOOGLE_KEY
                     &q=coding dojo, 440 N Wolfe Rd suite E019, Sunnyvale, CA 94085">
                 </iframe>
                 {/* <!-- end google MAP --> */}
@@ -149,7 +153,7 @@ const ContactUs = () => {
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
+                    src="https://www.google.com/maps/embed/v1/place?key=MY_GOOGLE_KEY
                     &q=coding dojo, 213 W Institute Pl # 610, Chicago, IL 60610">
                 </iframe>
                 {/* <!-- end google MAP --> */}
