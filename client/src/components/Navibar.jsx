@@ -12,11 +12,10 @@ const Navibar = () => {
             
             <p className="NavTitle">
               Coding Dojo Pet Shelters
-              <br />
-              <span style={{fontSize:"14px", float:" right"}}>
+            </p>  
+              <span style={{fontSize:"14px", marginLeft:"45%"}}>
                 Save one until there are none.
               </span>
-            </p>  
           </Link>
         </div>
           <Link className="LiveFeed" to={`/petshelter/livefeed`}></Link>

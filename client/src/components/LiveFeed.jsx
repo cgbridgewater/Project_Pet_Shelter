@@ -11,11 +11,9 @@ const LiveFeed = () => {
                 className="video" 
                 src="https://www.youtube.com/embed/bI0hW378XsA" 
                 title="Lower Animal Wellness Adoption Center | Highlights" 
-                frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
+                allowFullScreen>
             </iframe>
-            {/* <h2 style={{color:"white", background:"#073DAA", border:"3px solid black",padding:"5px", margin:"-5px auto",width:"25%"}}>Live Feed of our pups </h2>     */}
         </div>
     )
 }

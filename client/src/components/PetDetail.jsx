@@ -75,13 +75,13 @@ const Detail = () => {
                         <div style={{marginTop:"10px"}}>
                         <Link to="/petshelter" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
                             <div className="Deets" style={{marginTop:"20px"}} >
-                                <button className='DeleteButton' style={{color:"#073DAA", fontWeight:800}} onClick={(e) =>{adoptPet(id)}}>
+                                <button className='DeleteButton' style={{color:"#073DAA", fontWeight:800, padding:"2px"}} onClick={(e) =>{adoptPet(id)}}>
                                     <img  
-                                        style={{width:"90px",height:"50px",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)" }} 
+                                        style={{width:"55px",height:"50px",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)" }} 
                                         src="https://thumbs.dreamstime.com/b/vector-flat-cartoon-illustration-icon-design-adopt-me-dont-buy-dog-cat-pet-adoption-puppy-pooch-kitty-cat-looking-up-to-red-heart-99463424.jpg" 
                                         alt="Adopt Pet" 
                                     />
-                                    <br />ADOPT {name}
+                                    <br />ADOPT ME! 
                                 </button>
                             </div>
                         </div>
@@ -112,7 +112,6 @@ const Detail = () => {
                             </div>
                         </div>
                         <div style={{display:"flex",alignItems:"center", justifyContent:"space-evenly" }}>
-                        <LikeButton name={name}/>
                         </div>
                     </div>
                 </div>

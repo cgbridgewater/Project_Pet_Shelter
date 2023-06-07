@@ -103,7 +103,9 @@ tbody {
 }
 
 .NavTitle {
-  font-size:26px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size:1.625rem;
   font-weight: 800;
   line-height: 90%; 
   color:#073DAA;
