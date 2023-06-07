@@ -21,9 +21,9 @@ const Stories = () => {
             <p>Coming</p>
             <p>Soon!!!</p>
 
-
-
-
+            <br />
+                        <img style={{margin:"2% auto",width:"50%", minWidth:"350px"}} src="https://png.pngitem.com/pimgs/s/46-464912_site-under-construction-hd-png-download.png" alt="Under Construction" />
+            <br />
 
 
 
