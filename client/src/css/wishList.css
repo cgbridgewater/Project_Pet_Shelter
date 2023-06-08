@@ -1,6 +1,6 @@
 /* wish list css */
 
-.wishList {
+.wishList, .Results {
     width: 47vw;
     min-width: 300px;
     border: 2px solid #073DAA;
