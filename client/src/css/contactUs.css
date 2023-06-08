@@ -6,8 +6,8 @@
 }
 
 .hoursFlex, .hoursFlex2, .hoursFlex3{
-    width: 45%;
-    margin: 1% auto;
+    width: 55%;
+    margin: 2% auto;
     padding: 1%;
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +22,7 @@
 }
 
 .infoWrapper {
-    width: 47%;
+    width: 55%;
     min-width: 375px;
     margin: 0 auto;
     padding: 1%;

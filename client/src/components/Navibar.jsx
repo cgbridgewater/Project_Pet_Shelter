@@ -21,7 +21,7 @@ const Navibar = () => {
           <Link className="LiveFeed" to={`/petshelter/livefeed`}></Link>
         {/* right side of navbar */}
         <div style={{minWidth:"30%"}} className='RightNav'>
-          <img style={{height:"80px", borderRadius:"50%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLVoF89deZHiOVAJIV4NKeqnZryBNrFzUWh3vZncWmcU2qGeqGXs6LhJlwPOHkbMFEitQ&usqp=CAU" alt="" />
+          <img style={{height:"80px",width:"80px", borderRadius:"50%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLVoF89deZHiOVAJIV4NKeqnZryBNrFzUWh3vZncWmcU2qGeqGXs6LhJlwPOHkbMFEitQ&usqp=CAU" alt="" />
         </div>
       </nav>
     </div>

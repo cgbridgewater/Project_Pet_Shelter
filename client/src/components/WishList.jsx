@@ -4,7 +4,7 @@ const WishList = () => {
 
     return(
         <div className='Background' style={{minHeight:"60vh"}}>
-            <img className='wishList' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQugxvlCbpI6Sd7tICZ8RT3f5IR6U5x3L1bLQ&usqp=CAU" alt="Wish List" />
+            <img className='wishList' src="https://www.parpets.org/uploads/5/7/4/1/5741185/editor/wishlist.jpg?1510458017" alt="Wish List" />
             <h1 style={{textAlign:"center", color:"#073DAA", textShadow:"1px 1px 2em #172023", position:""}}>Donate Goods From Our Wish List</h1>
 
 
@@ -187,7 +187,7 @@ const WishList = () => {
             {/* end wish list */}
             {/* donate button */}
             <a href="https://oregonhumane.tfaforms.net/23">
-                <img className='donate' style={{height:"75px", width:"250px", borderRadius:"8px", marginTop:"2%",marginLeft: "5%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
+                <img className='donate' style={{height:"75px", width:"172px", borderRadius:"5px", border: "1px solid #073DAA", marginTop:"2%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
             </a>
             {/* donate button */}
         </div>

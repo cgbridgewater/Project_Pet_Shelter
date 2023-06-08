@@ -3,6 +3,8 @@
 .wishList {
     width: 47vw;
     min-width: 300px;
+    border: 2px solid #073DAA;
+    border-radius:5px;
 }
 
 .donate:hover{
