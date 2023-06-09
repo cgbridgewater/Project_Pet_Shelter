@@ -14,7 +14,7 @@ const Stories = () => {
 
 
 
-
+            {/* REMOVE AND REPLACE WITH CONTENT!! */}
             <p>Heart Warming</p>
             <p>Content</p>
             <p>and Images</p>
@@ -24,7 +24,7 @@ const Stories = () => {
             <br />
                 <img style={{margin:"2% auto", width:"30%", height:"15%", minWidth:"325px", minHeight:"163px"}} src="https://png.pngitem.com/pimgs/s/46-464912_site-under-construction-hd-png-download.png" alt="Under Construction" />
             <br />
-
+            {/* END REMOVE AND REPLACE WITH CONTENT!! */}
 
 
             {/* donate button */}
