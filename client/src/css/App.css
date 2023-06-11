@@ -30,7 +30,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 62vh;
+  /* min-height: 62vh; */
 }
 
 h1, h2 {
@@ -61,7 +61,7 @@ a {
 }
 
 a:hover, .CDPS:hover {
-  color: #fd6ee0;
+  color: purple;
   filter: drop-shadow(6px 6px 3px #fd6ee0);
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
@@ -120,7 +120,7 @@ tbody {
 }
 
 .NavTitle:hover , .AllPets:hover {
-  color: #fd6ee0;
+  color: purple;
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
@@ -135,7 +135,7 @@ tbody {
 /***** Slide Right *****/
 .slide-right {
   animation: 3s slide-right;
-  margin-bottom: 2%;
+  margin-bottom: 2%;  
 }
 @keyframes slide-right {
   from {
@@ -174,19 +174,14 @@ tbody {
   background-image: url(https://media.istockphoto.com/id/1276581591/vector/cute-simple-seamless-pattern-with-paw-prints.jpg?s=612x612&w=0&k=20&c=qRxqN8NX0Q0VkLOOj0NCysIZZ37328M4W2Kze2Xofro=);
 }
 
-.line {
-  border-bottom: 1px solid  #073DAA;
-  width: 75%;
-  margin: 2px auto;
-}
 /***** FadeIn Underline *****/
-.line2 {
+.line {
   border-bottom: 3px solid  #073DAA;
   width: 200px;
   margin: 10px auto;
 }
 .fade-in {
-  animation: fadeIn ease 5s;
+  animation: fadeIn ease 10s;
 }
 @keyframes fadeIn{
   0% {
@@ -196,3 +191,10 @@ tbody {
     opacity:1;
   }
 }
+
+/* display for phone only */
+  @media only screen and (min-width:500px) {
+    .mobile-only {
+      display:none !important;
+    }
+  }
