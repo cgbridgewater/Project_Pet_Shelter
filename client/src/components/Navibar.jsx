@@ -8,8 +8,7 @@ const Navibar = () => {
       <nav style={{flexWrap:"wrap",height:"auto", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"1%", paddingLeft:"5%", borderBottom:"10px double #073DAA"}}>
         {/* left side of navbar */}
         <div style={{minWidth:"355px",width:"30%", textAlign:"start"}}>
-          <Link to="/petshelter">
-            
+          <Link to="/">
             <p className="NavTitle">
               Coding Dojo Pet Shelters
             </p>  
