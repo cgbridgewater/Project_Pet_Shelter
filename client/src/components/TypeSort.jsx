@@ -40,7 +40,7 @@ const TypeSort = (props) => {
                 {/* <Link to="/petshelter" className='ViewButton' style={{  textDecoration: "none"}}>Back To Shelter</Link> */}
                 {/* <br/> */}
                 <br/>
-                <a  href="/petshelter">
+                <a  href="/">
                     <img className='Lost'src="https://img.freepik.com/premium-vector/animal-shelter-house-cartoon-illustration-containing-animals-adoption-flat-hand-drawn-style_2175-6053.jpg?w=2000" alt="" />        
                 </a>
             </div>

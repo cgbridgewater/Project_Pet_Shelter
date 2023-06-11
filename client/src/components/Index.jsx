@@ -12,7 +12,7 @@ const Indexpage = () => {
             <div class='TitleContainer'>
                 <div class="slide-right">
                     <h2>Welcome to the</h2>
-                    <h1><em>Coding Dojo Pet Shelter</em></h1>
+                    <h1 className='Title'><em>Coding Dojo Pet Shelter</em></h1>
                 </div>
                 {/* <div class="line2 fade-in"></div> */}
                 <Counter/>

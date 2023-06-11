@@ -5,7 +5,7 @@ const Careers = () => {
     return (
         <div style={{minHeight:"65vh"}}>
             <div style={{width:"70%", margin:"10px auto" }}>
-                <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Back To Shelter</Link>
+                <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Back To Shelter Home</Link>
                 <h2 style={{fontWeight:"800", fontSize:"40px"}}>There is nothing like going home at the end of the day knowing you made lives better.</h2>
                 <p style={{fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
                     <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>

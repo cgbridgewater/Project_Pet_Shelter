@@ -60,9 +60,9 @@ const Detail = () => {
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"30px", marginTop:"20"}}>It appears your lost...</h3>
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>Click below and we'll get you back to to your owners.</h3>
                 <br/>
-                <a  href="/petshelter">
+                <Link  to="/">
                     <img className='Lost'src="https://img.freepik.com/premium-vector/animal-shelter-house-cartoon-illustration-containing-animals-adoption-flat-hand-drawn-style_2175-6053.jpg?w=2000" alt="" />        
-                </a>
+                </Link>
             </div>
                 : //ternary for bad data flow //
             // start content //
@@ -73,7 +73,7 @@ const Detail = () => {
                     <div style={{display:"flex",justifyContent:"space-evenly", alignItems:"center", height:"15%"}}>
                         <h1 style={{color:"#073DAA"}}>Details about : {name}</h1>
                         <div style={{marginTop:"10px"}}>
-                        <Link to="/petshelter" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
+                        <Link to="/" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
                             <div className="Deets" style={{marginTop:"20px"}} >
                                 <button className='DeleteButton' style={{color:"#073DAA", fontWeight:800, padding:"2px"}} onClick={(e) =>{adoptPet(id)}}>
                                     <img  

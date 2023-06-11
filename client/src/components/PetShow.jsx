@@ -58,9 +58,12 @@ const PetShow = () => {
         <div style={{padding:"10px"}}>
             {/* top bar */}
             <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap", alignItems:"center"}}>
-                {/* <h1> These pets are looking for a good home🐶🐱</h1> */}
                 <img style={{height:"150px", borderRadius:"8px", marginLeft: "5%"}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
-                <Link to="/petshelter/new" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Add a pet to the shelter</Link>
+                <div className='Links' style={{display:"flex", flexDirection:"column"}}>
+                    <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
+                    <br />
+                    <Link to="/petshelter/new" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Add a pet to the shelter</Link>
+                </div>
             </div>
             <div style={{marginLeft:"40%"}} >
                 <div>

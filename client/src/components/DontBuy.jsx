@@ -26,10 +26,10 @@ const DontBuy = () => {
                     <img style={{margin: 0 }} className="support" src="https://millardwestcatalyst.com/wp-content/uploads/2021/11/come.sit_.stay-1-900x900.png" alt="support" />
                     <h1 style={{textAlign:"center",backgroundColor:"#073DAA", color:"white", margin:"auto",padding:"5px"}}>Find Your Companion</h1>
                     <br />
-                    <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Adopt A Pet!</Link>
+                    <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>See Our Pets!</Link>
                 </div>
             </div>
-            <Link className='Return'  style={{textDecoration:"none"}} to={`/petshelter`}><button className='EnterButton' > Return To Pet Shelter</button></Link>
+            <Link className='Return'  style={{textDecoration:"none"}} to={"/"}><button className='EnterButton' > Return To Pet Shelter</button></Link>
         </div>
     )
 }

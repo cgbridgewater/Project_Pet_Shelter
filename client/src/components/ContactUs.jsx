@@ -162,7 +162,7 @@ const ContactUs = () => {
             <Link 
                 className='Return'  
                 style={{textDecoration:"none"}} 
-                to={`/petshelter`}><button className='EnterButton' > Return To Pet Shelter</button>
+                to={"/"}><button className='EnterButton' > Return To Pet Shelter</button>
             </Link>
 
         </div>

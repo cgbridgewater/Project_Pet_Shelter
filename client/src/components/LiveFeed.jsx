@@ -4,7 +4,7 @@ const LiveFeed = () => {
 
     return(
         <div className='Background' style={{minHeight:"65vh"}}>
-            <Link className='Return'  style={{textDecoration:"none"}} to={`/petshelter`}><button className='EnterButton' > Return To Pet Shelter</button></Link>
+            <Link className='Return'  style={{textDecoration:"none"}} to={"/"}><button className='EnterButton' > Return To Pet Shelter</button></Link>
             <br />
             <br />
             <iframe 

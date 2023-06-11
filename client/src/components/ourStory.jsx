@@ -21,7 +21,7 @@ const OurStory = () => {
             </p>
             <img style={{marginBottom:"10px"}} className='storyImg' src="https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/news_impact/photo/23192288-standard.jpg" alt="kitten" />
             <br />
-            <Link className='Return'  style={{textDecoration:"none"}} to={`/petshelter`}><button className='EnterButton' > Return To Pet Shelter</button></Link>
+            <Link className='Return'  style={{textDecoration:"none"}} to={"/"}><button className='EnterButton' > Return To Pet Shelter</button></Link>
         </div>
     )
 }
