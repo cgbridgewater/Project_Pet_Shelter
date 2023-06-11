@@ -1,20 +1,29 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Counter from './Counter';
 
 
 const Indexpage = () => {
+    
+    // scroll to top fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
 
     return(
-        <div className='Background' style={{minHeight:"69vh"}}>
+        <div className='Background' style={{}}>
 
 
             {/* sliding Title */}
             <div class='TitleContainer'>
                 <div class="slide-right">
                     <h2>Welcome to the</h2>
+                    <span>
+                        <div class="line fade-in"></div>
+                        </span>
+                    
                     <h1 className='Title'><em>Coding Dojo Pet Shelter</em></h1>
                 </div>
-                {/* <div class="line2 fade-in"></div> */}
                 <Counter/>
 
                 <div class="slide-left">

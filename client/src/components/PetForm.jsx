@@ -1,8 +1,13 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
 const PetForm = (props) => {
+
+    // scroll to top fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
 
     const[ name, setName ] = useState("");
     const[ type, setType ] = useState("");

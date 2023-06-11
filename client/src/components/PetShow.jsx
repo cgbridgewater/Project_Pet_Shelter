@@ -20,7 +20,7 @@ const PetShow = () => {
     },[])
 
     const [ pet, setPet ] = useState([])
-    const [ sort, setSort ] = useState("TYPEA2Z") 
+    const [ sort, setSort ] = useState("ATOZ") 
     // const [getErrors, setGetErrors] = useState({});
 
     // const removeFromDom = petId => {
@@ -58,27 +58,31 @@ const PetShow = () => {
         <div style={{padding:"10px"}}>
             {/* top bar */}
             <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap", alignItems:"center"}}>
-                <img style={{height:"150px", borderRadius:"8px", marginLeft: "5%"}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
                 <div className='Links' style={{display:"flex", flexDirection:"column"}}>
                     <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
-                    <br />
-                    <Link to="/petshelter/new" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Add a pet to the shelter</Link>
                 </div>
+                <div className='DropdownContainer' style={{marginLeft: "5%", border:"2px solid #073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                    <img style={{height:"150px", width:"280px", margin:0}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
+                    <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap" }}>
+                        <div className='DropdownFlex' style={{display:"flex", flexDirection:"column"}}>
+                            <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA", minWidth:"240px",marginTop:"-7px", backgroundColor:"#EFEDEF",textAlign:"center"}}>Select Drop Down To Sort:</label>
+                            <select className='dropdown' value={sort} onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA", width:"280px",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)", textAlign:"center"}}>
+                                <option value="NONE">Newest Added</option>
+                                <option value="ATOZ">Name A to Z</option>
+                                <option value="ZTOA">Name Z to A</option>
+                                <option value="TYPEA2Z">Type A to Z</option>
+                                <option value="TYPEZ2A">Type Z to A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div style={{marginLeft:"40%"}} >
                 <div>
                     {/* spacer */}
                 </div>
-                <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap" }}>
-                    <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA", minWidth:"240px", marginTop:"15px", textAlign:"start"}}>Select Drop Down To Sort:</label>
-                    <select className='dropdown' value={sort} onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
-                        <option value="NONE">Newest Added</option>
-                        <option value="ATOZ">Name A to Z</option>
-                        <option value="ZTOA">Name Z to A</option>
-                        <option value="TYPEA2Z">Type A to Z</option>
-                        <option value="TYPEZ2A">Type Z to A</option>
-                    </select>
-                </div>
+
             </div>
             <br />
             <div className='Main' style={{ display:'flex',justifyContent:"center"}}>

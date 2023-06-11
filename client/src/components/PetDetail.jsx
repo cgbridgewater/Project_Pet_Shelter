@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import LikeButton from "./LikeButton";
+// import LikeButton from "./LikeButton";
 
 const Detail = () => {
 
@@ -55,7 +55,7 @@ const Detail = () => {
     return (
         <div>
             {/* page load ternary */}
-            { name.length == 0  ? 
+            { name.length === 0  ? 
             <div className="Background">
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"30px", marginTop:"20"}}>It appears your lost...</h3>
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>Click below and we'll get you back to to your owners.</h3>

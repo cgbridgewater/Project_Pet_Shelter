@@ -17,6 +17,11 @@ const TypeSort = (props) => {
     const [ sort, setSort ] = useState("NONE") 
     const [getErrors, setGetErrors] = useState({});
 
+    // scroll to top fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
+
     useEffect(() => {
         axios.get("http://localhost:8000/api/pets/sort/" + type)
         .then((res) => {

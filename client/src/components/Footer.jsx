@@ -8,13 +8,13 @@ const Footer = () => {
                     {/* left side links */}
                     <ul className="List1">
                         <li><a href="/petshelter/adopt">Adopt Don't Buy</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/ourstory">Our Story</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/contactus">Visit or Contact Us</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/wishlist">Wish List</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/construction">Recomended Foods</a></li>
                     </ul>
                     {/* social media links */}
@@ -41,13 +41,13 @@ const Footer = () => {
                     {/* right side links */}
                     <ul className="List2">
                         <li><a href="https://oregonhumane.tfaforms.net/23">Donate</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/stories">Success Stories</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/careers">Careers</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/construction">Privacy Notice</a></li>
-                        <hr className="line" />
+                        <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/construction">Site Info</a></li>
                     </ul>
                 </div>

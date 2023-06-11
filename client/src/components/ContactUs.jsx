@@ -1,10 +1,15 @@
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 // const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API
 
 const ContactUs = () => {
     
+    // scroll to top fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
+
     return(
         <div className='Background' style={{minHeight:"60vh"}}>
             
@@ -17,13 +22,11 @@ const ContactUs = () => {
             </div>  
             
             <div className='infoWrapper'>
-
                 <div className='hoursFlex3'>
                     <h1 className='title'> Adoption Information</h1>
                     <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
                         <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
                         f you are interested in adopting a cat or dog, please come out between 11 am – 4 pm. We are operating on a first come, limited capacity basis.
-
                         If you are interested in adopting a specialized species, please call us to schedule an adoption appointment. We are following all safety guidelines to prevent the spread of COVID. 
                     </p>
                 </div>

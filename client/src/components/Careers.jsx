@@ -1,6 +1,12 @@
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const Careers = () => {
+
+    // scroll to top fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
 
     return (
         <div style={{minHeight:"65vh"}}>
