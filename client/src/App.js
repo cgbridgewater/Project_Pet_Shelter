@@ -7,6 +7,7 @@ import './css/contactUs.css';
 import './css/ourStory.css';
 import './css/dontbuy.css';
 import './css/wishList.css';
+import './css/Counter.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
