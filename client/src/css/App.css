@@ -95,6 +95,11 @@ tbody {
   width: 50%;
 }
 
+.Title {
+  font-size: 40px;
+  font-weight: 800;
+}
+
 .video {
   width: 65%;
   min-width: 360px;
@@ -130,6 +135,7 @@ tbody {
 /***** Slide Right *****/
 .slide-right {
   animation: 3s slide-right;
+  margin-bottom: 2%;
 }
 @keyframes slide-right {
   from {
