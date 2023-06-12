@@ -34,9 +34,9 @@ const Stories = () => {
 
 
             {/* donate button */}
-            <a href="https://oregonhumane.tfaforms.net/23">
+            {/* <a href="https://oregonhumane.tfaforms.net/23">
                 <img className='donate' style={{height:"75px", width:"172px", borderRadius:"5px", border: "1px solid #073DAA", marginTop:"2%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
-            </a>
+            </a> */}
             {/* donate button */}
             
             <br />
