@@ -48,7 +48,7 @@ const Footer = () => {
                         <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/careers">Careers</a></li>
                         <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                        <li><a href="/petshelter/construction">Site Info</a></li>
+                        <li><a href="/petshelter/aboutme">Site Info</a></li>
                     </ul>
                 </div>
             </main>        
