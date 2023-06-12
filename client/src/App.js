@@ -10,6 +10,7 @@ import './css/wishList.css';
 import './css/Counter.css';
 import './css/AdoptForm.css';
 import './css/Adopting.css';
+import './css/Donate.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
