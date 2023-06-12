@@ -5,7 +5,6 @@ import axios from "axios";
 const AdoptForm = (props) => {
 
     const { petName, petId } = props;
-
     const[ userName, setUserName ] = useState("");
     const[ email, setEmail ] = useState("");
     const[ phone, setPhone ] = useState("");
@@ -31,26 +30,20 @@ const AdoptForm = (props) => {
             navigate("/petshelter/adopting");
         })
         .catch((err) => {
-            console.log("you fuct it") 
             console.log(err.response.data.error.errors) 
             setErrors(err.response.data.error.errors); //Set Errors
         })
     }
 
-
-
     return(
         <div className="Background">
-
-                <a class="AdoptButton" href="#popup1">Adopt ME!</a>
-
-
+            <a class="AdoptButton" href="#popup1">Adopt ME!</a>
+            {/* pop up */}
             <div id="popup1" class="overlay">
                 <div class="popup">
                     <h2>Pet Adoption Form</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
-
                         {/* form start */}
                         <form 
                                 className="FormAdopt"    
@@ -124,7 +117,7 @@ const AdoptForm = (props) => {
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
     )
 }
 
