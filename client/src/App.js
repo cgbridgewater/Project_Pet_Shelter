@@ -30,6 +30,7 @@ import OurStory from './components/ourStory'
 import WishList from './components/WishList';
 import Stories from './components/Stories';
 import Adopting from './components/Adopting';
+import AboutMe from './components/AboutMe';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <Navibar/>
           <Routes>
             <Route element={<Indexpage/>} path="/" default/>
+            <Route element={<AboutMe/>} path="/petshelter/aboutme"/>
             <Route element={<PetShow/>} path="/petshelter" />
             <Route element={<PetForm/>} path="/petshelter/new" />
             <Route element={<Adopting/>} path="/petshelter/adopting" />
