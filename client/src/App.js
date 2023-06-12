@@ -8,6 +8,8 @@ import './css/ourStory.css';
 import './css/dontbuy.css';
 import './css/wishList.css';
 import './css/Counter.css';
+import './css/AdoptForm.css';
+import './css/Adopting.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
@@ -26,6 +28,7 @@ import ContactUs from './components/ContactUs';
 import OurStory from './components/ourStory'
 import WishList from './components/WishList';
 import Stories from './components/Stories';
+import Adopting from './components/Adopting';
 
 function App() {
 
@@ -37,6 +40,7 @@ function App() {
             <Route element={<Indexpage/>} path="/" default/>
             <Route element={<PetShow/>} path="/petshelter" />
             <Route element={<PetForm/>} path="/petshelter/new" />
+            <Route element={<Adopting/>} path="/petshelter/adopting" />
             <Route element={<PetDetail/>} path="/petshelter/:id" />
             <Route element={<Update/>} path="/petshelter/edit/:id"/>
             <Route element={<TypeSort/>} path="/petshelter/sort/:type" />
