@@ -33,6 +33,13 @@
   /* min-height: 62vh; */
 }
 
+.Flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 h1, h2, h3, h4 {
   color:#073DAA;
 }
@@ -195,6 +202,12 @@ tbody {
 /* display for phone only */
   @media only screen and (min-width:500px) {
     .mobile-only {
+      display:none !important;
+    }
+  }
+
+  @media only screen and (max-width:1026px) {
+    .desktop-only {
       display:none !important;
     }
   }
