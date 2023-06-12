@@ -51,9 +51,7 @@ const AdoptForm = (props) => {
                                 style={{width:"50%", minWidth:"330px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} 
                         >
                         {/* inner form container */}
-                            {/* <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center"}}> */}
                             <div>
-                            
                                 {/* name */}
                                 <div className="FormInput">
                                     <label style={{minWidth:"200px", textAlign:"start"}}>
