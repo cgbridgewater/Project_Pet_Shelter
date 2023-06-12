@@ -39,6 +39,10 @@ const PetsSchema = new mongoose.Schema({
         type:Boolean,
         default:false,
     },
+    fixed:{
+        type:Boolean,
+        default:false,
+    },
     notes: { 
         type: String,
     },
