@@ -4,6 +4,7 @@ const Adopting = () => {
 
     return(
         <div className="Background">
+            {/* thank you animation */}
             <div className="ThanksFlex">
                 <div class="animate five">
                     <span>T</span><span>h</span><span>a</span><span>n</span><span>k</span><span>s</span>&nbsp;
@@ -13,7 +14,7 @@ const Adopting = () => {
                 <img style={{height:"200px", borderRadius:"5%", margin:'20px'}} src="https://adopthope.org/wp-content/uploads/2018/12/Thank-You-Dog-and-Cat.jpg" alt="Thanks" />
             </div>
             <br />
-            
+            {/* test container */}
             <div className="TextBox">
                 <hr className="Divide"/>
                 <br />
@@ -31,13 +32,12 @@ const Adopting = () => {
                     NOTE - If you are interested in adopting a specialized species, you MUST call us to schedule an appointment, as some species require special needs and handling care.
                 </h4>
             </div>
-
+            {/* home link */}
             <Link  to="/" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}>
                 Back To Shelter Home
             </Link>
             <br />
-
-    </div>
+        </div>
     )
 }
 
