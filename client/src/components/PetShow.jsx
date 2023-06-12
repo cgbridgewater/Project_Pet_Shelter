@@ -21,23 +21,7 @@ const PetShow = () => {
 
     const [ pet, setPet ] = useState([])
     const [ sort, setSort ] = useState("ATOZ") 
-    // const [getErrors, setGetErrors] = useState({});
 
-    // const removeFromDom = petId => {
-    //     setPet(pet.filter(pet => pet._id !== petId));
-    // }
-
-    // const adoptPet = (id,name) => {
-    //     axios.delete('http://localhost:8000/api/pets/' + id)
-    //         .then(res => {
-    //             alert(`Congratulations!! ${name} has lots of love to give and will make a great pet in your home.`)
-    //             removeFromDom(id)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err.response.data)
-    //             // setGetErrors(err.response.data); 
-    //         })
-    // }
 
 
 
