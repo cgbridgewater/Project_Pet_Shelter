@@ -12,24 +12,37 @@ const PetForm = (props) => {
     const[ name, setName ] = useState("");
     const[ type, setType ] = useState("");
     const[ description, setDescription ] = useState("");
-    const[ skillOne, setSkillOne ] = useState("");
-    const[ skillTwo, setSkillTwo ] = useState("");
-    const[ skillThree, setSkillThree ] = useState("");
     const[ age, setAge ] = useState("");
+    const[ petImage, setPetImage ] = useState(null);
+    const[ notes, setNotes ] = useState("");
+    const[ checked1, setChecked1 ] = useState(false);
+    const[ checked2, setChecked2 ] = useState(false);
+    const[ checked3, setChecked3 ] = useState(false);
     const [errors, setErrors] = useState("");
     const navigate = useNavigate();
+
+    // const handleChange1 = () => {
+    //     setChecked1(!checked1)
+    // }
+    // const handleChange2 = () => {
+    //     setChecked2(!checked2)
+    // }
+    // const handleChange3 = () => {
+    //     setChecked3(!checked3)
+    // }
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
         axios.post("http://localhost:8000/api/pets", {
             name: name.toUpperCase(),
-        type:type.toLowerCase(),
-        description,
-        skillOne,
-        skillTwo,
-        skillThree,
-        age,
-        // likes // like tracking to be added later
+            type:type.toLowerCase(),
+            description,
+            age,
+            petImage,
+            notes,
+            fixed: checked1,
+            childFriendly: checked2,
+            animalFriendly: checked3,
     })
         .then( res => {
             console.log(res);
@@ -37,10 +50,9 @@ const PetForm = (props) => {
             setName("")
             setType("")
             setDescription("")
-            setSkillOne("")
-            setSkillTwo("")
-            setSkillThree("")
             setAge("")
+            setPetImage("")
+            setNotes("")
             setErrors({})
             navigate("/petshelter");
         })
@@ -51,115 +63,164 @@ const PetForm = (props) => {
     }
 
     return(
-        <div style={{height:"63vh"}}>
+        <div style={{minHeight:"63vh"}}>
             {/* top ribbon */}
-            <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center"}}>
-                <h1 style={{color:"#073DAA"}}>Know a pet needing a home?</h1>
+            <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap-reverse"}}>
+                <h1 style={{color:"#073DAA"}}>New Pet Intake Form</h1>
+                <h1 style={{color:"RED"}}>ADMIN PAGE </h1>
+                <br />
                 <Link to="/petshelter" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
             </div>
             {/* form start */}
-            <form className="Form" style={{ fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
+            <form className="Form" style={{minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
             {/* inner form container */}
-                <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center"}}>
-                    {/* left column container */}
-                    <div style={{width:"40%"}}>
+
                         {/* name */}
-                        <div>
+                        <div className="FormInput">
                             <label>
                                 { errors.name ? 
                                     <h3 style={{color:"red", margin:0}}>{errors.name.message}</h3>
-                                    : <h3 style={{color:"#073DAA", margin:0}}>Pet Name *</h3>
+                                    : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>Pet Name *</h3>
                                 }
                             </label>
                             <input 
-                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%"  }} 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
                                 type="text" 
                                 onChange={(e) => setName(e.target.value)}
                                 value= {name}
+                                placeholder="Required"
                             />
                         </div>
+                        
                         {/* type */}
-                        <div>
+                        <div className="FormInput">
                             <label>
                                 { errors.type ? 
                                     <h3 style={{color:"red", margin:0}}>{errors.type.message}</h3>
-                                    : <h3 style={{color:"#073DAA", margin:0}}>Pet Type *</h3>
+                                    : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>Pet Type *</h3>
                                 }
                             </label>
                             <input 
-                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%"  }} 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
                                 type="text" 
                                 onChange={(e) => setType(e.target.value)}
                                 value= {type}
+                                placeholder="Required"
                             />
                         </div>
+
                         {/* description */}
-                        <div>
+                        <div className="FormInput">
                             <label>
                                 { errors.description ? 
                                     <h3 style={{color:"red", margin:0}}>{errors.description.message}</h3>
-                                    : <h3 style={{color:"#073DAA", margin:0}}>Description *</h3>
+                                    : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>Description *</h3>
                                 }
                             </label>
                             <input 
-                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%"  }} 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
                                 type="text" 
                                 onChange={(e) => setDescription(e.target.value)}
                                 value= {description}
+                                placeholder="Required"
                             />
                         </div>
-                            <h6 style={{margin:"3px"}}> * is required</h6>
-                        {/* form button */}
+
+                        {/* age */}
+                        <div className="FormInput">
+                            <label>
+                                { errors.age ? 
+                                    <h3 style={{color:"red", margin:0}}>{errors.age.message}</h3>
+                                    : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>Pet Age *</h3>
+                                }
+                            </label>
+                            <input 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
+                                type="Number" 
+                                step="1" 
+                                min="1"
+                                onChange={(e) => setAge(e.target.value)}
+                                value={age}
+                                placeholder="Required"
+                            />
+                        </div>
+
+                        {/* Image */}
+                        <div className="FormInput">
+                            <label>
+                                { errors.petImage ? 
+                                    <h3 style={{color:"red", margin:0}}>{errors.petImage.message}</h3>
+                                    : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>Image Link *</h3>
+                                }
+                            </label>
+                            <input 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
+                                type="text" 
+                                onChange={(e) => setPetImage(e.target.value)}
+                                value= {petImage}
+                                placeholder="Required"
+                            />
+                        </div>
+
+                        {/* Image */}
+                        <div className="FormInput">
+                            <label>
+                                <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>Notes </h3>
+                            </label>                    
+                            <input 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
+                                type="text" 
+                                onChange={(e) => setNotes(e.target.value)}
+                                value= {notes}
+                                placeholder="optional"
+                            />
+                        </div>
+                        {/* fixed */}
+                        <div className="FormInput">
+                            <div>
+                                <label>
+                                    <h3 style={{color:"#073DAA", margin:0}}>Fixed? </h3>
+                                </label>                    
+                                <input 
+                                    style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
+                                    type="checkbox" 
+                                    value={checked1}
+                                    onChange={(e) => setChecked1(!checked1)}
+                                    />
+                            </div>
+                        
+                            {/* child friendly */}
+                            <div>
+                                <label>
+                                    <h3 style={{color:"#073DAA", margin:0}}>Child Friendly? </h3>
+                                </label>                    
+                                <input 
+                                    style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
+                                    type="checkbox" 
+                                    value={checked2}
+                                    onChange={(e) => setChecked2(!checked2)}
+                                    />
+                            </div>
+
+                            {/* pet friendly */}
+                            <div>
+                                <label>
+                                    <h3 style={{color:"#073DAA", margin:0}}>Pet Friendly? </h3>
+                                </label>                    
+                                <input 
+                                    style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
+                                    type="checkbox" 
+                                    value={checked3}
+                                    onChange={(e) => setChecked3(!checked3)}
+                                    />
+                            </div>
+                        </div>
+                    {/* form button */}
+                    <div>
+                        <h6 style={{margin:"3px"}}> * is required</h6>
                         <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
                     </div>
 
-                    {/* right column */}
-                    <div className="RightColumn" style={{width:"40%"}}>
-                        {/* age */}
-                        <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>Pet Age</h3>
-                        </label>
-                        <input 
-                            style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%"  }} 
-                            type="Number" 
-                            step="1" 
-                            min="1"
-                            onChange={(e) => 
-                            setAge(e.target.value)}
-                            value={age}
-                            placeholder="optional"
-                        />
-                        {/* skills */}
-                        <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>Skill 1 </h3>
-                        </label>
-                        <input 
-                            style={{marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%" }} 
-                            type="text" 
-                            onChange={(e) => setSkillOne(e.target.value)}
-                            value= {skillOne}
-                            placeholder="optional"
-                        />
-                        <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>Skill 2 </h3>
-                        </label>                    <input 
-                            style={{marginTop:"1px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%"  }} 
-                            type="text" 
-                            onChange={(e) => setSkillTwo(e.target.value)}
-                            value= {skillTwo}
-                            placeholder="optional"
-                        />
-                        <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>Skill 3 </h3>
-                        </label>                    <input 
-                            style={{margin:"1px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"70%"  }} 
-                            type="text" 
-                            onChange={(e) => setSkillThree(e.target.value)}
-                            value= {skillThree}
-                            placeholder="optional"
-                        />
-                    </div>
-                </div>
             </form>
         </div>
     )
