@@ -52,7 +52,9 @@ const TypeSort = (props) => {
                 : //ternary for bad data flow //
             // start content //
             <div style={{padding:"10px"}}>
-                <Link  to="/petshelter" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800", marginLeft:"50%"}}>Return To Shelter</Link>
+                <Link  to="/" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800", marginLeft:"45%"}}>Return To Shelter Home</Link>
+                <br />
+                <Link  to="/petshelter" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800", marginLeft:"45%"}}>See All Of Our Pets!</Link>
                 {/* top bar */}
                 <div style={{marginTop:"10px",display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}} >
                     <div>
