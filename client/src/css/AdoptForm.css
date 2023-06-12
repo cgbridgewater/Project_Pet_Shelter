@@ -1,0 +1,97 @@
+/* .box {
+    width: 30%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #073DAA;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+} */
+
+.AdoptButton {
+    font-size: 1em;
+    padding: 10px;
+    color: #073DAA;
+    border: 2px solid #073DAA;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.AdoptButton:hover {
+    background: #073DAA;
+    color:white ;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 15% auto;
+    padding: 10px 5px;
+    background-image: url(https://media.istockphoto.com/id/1199391451/vector/paw-print-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZFa-1inw6WkXKpy43nVHGe2rBCroqiw9K0TvBcNNQmI=);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin: 1%;
+    color: #073DAA;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: red;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+@media screen and (max-width: 1000px){
+    .box{
+        width: 90%;
+    }
+    .popup{
+        width: 90%;
+    }
+}
+
+.FormInput {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
