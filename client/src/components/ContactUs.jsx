@@ -29,6 +29,13 @@ const ContactUs = () => {
                         f you are interested in adopting a cat or dog, please come out between 11 am – 4 pm. We are operating on a first come, limited capacity basis.
                         If you are interested in adopting a specialized species, please call us to schedule an adoption appointment. We are following all safety guidelines to prevent the spread of COVID. 
                     </p>
+                    <Link to="/petshelter">
+                        <img 
+                            src="https://www.9and10news.com/resizer/CgrkYgY0gbsjH1UCcKVkOlplv3Y=/600x338/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/910mediagroup/CFZXYZVUBJIHPBWS5ZHDIOKSKM.jpg" 
+                            alt="adopt"
+                            style={{width:"325px",height:"170px",border:"2px solid #073DAA"}}
+                        />
+                    </Link>
                 </div>
 
                 <div className='hoursFlex3'>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from "react";
 import axios from "axios";
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import AdoptForm from "./AdoptForm";
 // import LikeButton from "./LikeButton";
 
 const Detail = () => {
@@ -115,6 +116,7 @@ const Detail = () => {
                         </div>
                     </div>
                 </div>
+                <AdoptForm petName= {name} petId={id} />
             </div>    
             }
         </div>    
