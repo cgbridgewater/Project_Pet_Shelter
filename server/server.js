@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 require('./config/mongoose.config.js');
 require('./routes/pets.routes')(app);
+require('./routes/adopt.routes')(app);
 
 app.listen(PORT,() => {
     console.log(`WOOF!!! Listening on Port: ${PORT}`)

@@ -1,5 +1,6 @@
 const Pets = require('../models/pets.model')
 
+
 module.exports.index = (req, res) => {
     res.json({
         message: "Dojo Pet Shelter!"
@@ -10,8 +11,7 @@ module.exports.create = (req, res) => {
     Pets.create(req.body)
     .then(result => res.json(result))
     .catch(err => {
-        res.status(400).json({message: "Something went wrong with Creat in Axios",error: err})
-    });
+        res.status(400).json({message: "Something went wrong with Creat in Axios",error: err})});
 }
 
 module.exports.getAll = (req,res) => {
