@@ -1,3 +1,5 @@
+import Donate from "./Donate";
+
 const Footer = () => {
 
     return (
@@ -40,7 +42,8 @@ const Footer = () => {
                     </div>
                     {/* right side links */}
                     <ul className="List2">
-                        <li><a href="https://oregonhumane.tfaforms.net/23">Donate</a></li>
+                        <li><Donate/></li>
+                        {/* <li><a href="https://oregonhumane.tfaforms.net/23">Donate</a></li> */}
                         <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                         <li><a href="/petshelter/stories">Success Stories</a></li>
                         <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>

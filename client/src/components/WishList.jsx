@@ -82,11 +82,11 @@ const WishList = () => {
                     Shopping/grocery bags-Paper or reusable
                 </li>
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS">Link to Fosters wishlist</a> 
+                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS">Link to Fosters wishlist</a> 
                 
                 </li>
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD">Link to Adoptions wishlist</a>
+                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD">Link to Adoptions wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
@@ -109,7 +109,7 @@ const WishList = () => {
                     Ziploc Freezer Gallon and/or Quart bags (Ziploc FREEZER brand only please)
                 </li>
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX">Link to Meals wishlist</a>
+                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX">Link to Meals wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
@@ -129,7 +129,7 @@ const WishList = () => {
                     Flash Memory Cards
                 </li>
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9">Link to Tech wishlist</a>
+                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9">Link to Tech wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
@@ -187,14 +187,14 @@ const WishList = () => {
                     Hand crank emergency radio for evacuation kit
                 </li>
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75">Link to Amazon wishlist</a>
+                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75">Link to Amazon wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
-            {/* donate button */}
+            {/* donate button
             <a href="https://oregonhumane.tfaforms.net/23">
                 <img className='donate' style={{height:"75px", width:"172px", borderRadius:"5px", border: "1px solid #073DAA", marginTop:"2%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
-            </a>
+            </a> */}
             {/* donate button */}
             <br />
             <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
