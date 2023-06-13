@@ -32,6 +32,7 @@ import WishList from './components/WishList';
 import Stories from './components/Stories';
 import Adopting from './components/Adopting';
 import AboutMe from './components/AboutMe';
+import AdminViewAll from './components/AdminViewAll';
 
 function App() {
 
@@ -41,12 +42,16 @@ function App() {
         <Navibar/>
           <Routes>
             <Route element={<Indexpage/>} path="/" default/>
+            {/* admin pages */}
+            <Route element={<AdminViewAll/>} path="/admin/viewall"/>
+            <Route element={<PetForm/>} path="/admin/new" />
+            <Route element={<Update/>} path="/admin/edit/:id"/>
+            <Route element={<BadLink/>} path="/admin/:bad" />
+            {/* user pages */}
             <Route element={<AboutMe/>} path="/petshelter/aboutme"/>
             <Route element={<PetShow/>} path="/petshelter" />
-            <Route element={<PetForm/>} path="/petshelter/new" />
             <Route element={<Adopting/>} path="/petshelter/adopting" />
             <Route element={<PetDetail/>} path="/petshelter/:id" />
-            <Route element={<Update/>} path="/petshelter/edit/:id"/>
             <Route element={<TypeSort/>} path="/petshelter/sort/:type" />
             <Route element={<LiveFeed/>} path="/petshelter/liveFeed" />
             <Route element={<OurStory/>} path="/petshelter/ourstory"/>
