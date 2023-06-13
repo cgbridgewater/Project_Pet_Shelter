@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import TypingText from './TypingText';
+
 
 const Counter = () => {
 
     useEffect(() => {
-
+        
         const counters = document.querySelectorAll('.counter');
         const speed = 100; // The lower the slower the increment change is
         
@@ -26,34 +28,50 @@ const Counter = () => {
                 }
             };
             updateCount();
+
         });
 
     },[])
 
 
+
+
+
+
+
     return(
 
         <section class="counters">
-                    <div class="CounterContainer">
+            <div>
 
-                        <div>
-                            <i class="fab fa-youtube fa-4x"></i>
-                            <div class="counter" data-target="812">0</div>
-                            <h3 style={{color:"lightblue"}}>Animals Adopted</h3>
-                        </div>
-                        <div>
-                            <i class="fab fa-twitter fa-4x"></i>
-                            <div class="counter" data-target="1291">0</div>
-                            <h3 style={{color:"lightblue"}}>Surgeries Performed</h3>
-                        </div>
-                        <div>
-                            <i class="fab fa-facebook fa-4x"></i>
-                            <div class="counter" data-target="322">0</div>
-                            <h3 style={{color:"lightblue"}}>Pets Returned To Owners</h3>
-                        </div>
+                <TypingText/>
 
-                    </div>
-                </section>
+            </div>
+
+            <div class="CounterContainer">
+
+                <div className='CounterBox'>
+                    <i class="fab fa-youtube fa-4x"></i>
+                    <div class="counter" data-target="812">0</div>
+                    <h3 style={{color:"lightblue"}}>Animals Adopted</h3>
+                </div>
+                
+                <div className='CounterBox'>
+                    <i class="fab fa-twitter fa-4x"></i>
+                    <div class="counter" data-target="1291">0</div>
+                    <h3 style={{color:"lightblue"}}>Surgeries Performed</h3>
+                </div>
+
+                <div className='CounterBox'>
+                    <i class="fab fa-facebook fa-4x"></i>
+                    <div class="counter" data-target="322">0</div>
+                    <h3 style={{color:"lightblue"}}>Pets Returned To Owners</h3>
+                </div>
+
+            </div>
+            
+            
+        </section>
 
 
     )
