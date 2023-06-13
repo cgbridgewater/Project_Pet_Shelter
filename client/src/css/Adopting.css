@@ -120,8 +120,14 @@
     min-width: 350px;
 }
 
+.Divide2 {
+    margin: 0 auto;
+    width: 50%;
+    min-width: 350px;
+}
+
 .TextBox {
-    margin: 5% auto;
+    margin: 0 auto;
     width: 50%;
     min-width: 350px;
 }
