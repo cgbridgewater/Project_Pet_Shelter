@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <div className="Footer">
             <hr className="FooterHr" />
+            {/* footer content container */}
             <div className="FooterFlex" >
-
                 {/* left side links */}
                 <ul className="List1">
                     <li><a href="/petshelter/ourstory">Our Story</a></li>
@@ -17,8 +17,7 @@ const Footer = () => {
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/wishlist">Wish List</a></li>
                 </ul>
-
-                {/* social media links */}
+                {/* social media links (center) */}
                 <div className="FooterLogos">
                     <a href="https://www.facebook.com/greenhillhumane/?ref=ts">
                         <img className="social" style={{height:"40px",width:"40px", marginLeft: "5%"}} src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/83-facebook-64.png" alt="#"/>
@@ -39,7 +38,6 @@ const Footer = () => {
                         <img className="social"  style={{height:"40px",width:"40px", marginLeft: "5%"}} src="https://cdn2.iconfinder.com/data/icons/social-media-2452/512/TikTok-01-64.png" alt="#"/>
                     </a>
                 </div>
-
                 {/* right side links */}
                 <ul className="List2">
                     <li><Donate/></li>
@@ -50,11 +48,9 @@ const Footer = () => {
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/aboutme">Site Info</a></li>
                 </ul>
-
             </div>
         </div>
     );
 };
-
 
 export default Footer

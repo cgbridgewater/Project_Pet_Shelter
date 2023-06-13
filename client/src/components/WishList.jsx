@@ -10,10 +10,11 @@ const WishList = () => {
 
     return(
         <div className='Background' style={{minHeight:"60vh"}}>
+            {/* title and image */}
             <img className='wishList' src="https://www.parpets.org/uploads/5/7/4/1/5741185/editor/wishlist.jpg?1510458017" alt="Wish List" />
             <h1 style={{textAlign:"center", color:"#073DAA", textShadow:"1px 1px 2em #172023", position:""}}>Donate Goods From Our Wish List</h1>
 
-
+            {/* Donation text */}
             <p style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}} className='ourStory'>
             <span style={{fontSize:"200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>T</span>
             he Coding Dojo Pet Shelter is a nonprofit corporation who relies not only on monetary donations, but also in-kind donations to perform everyday functions.  In-kind donations are tax deductible, however we only are only able to accept certain items.  See the list of acceptable donation items below.  Please contact us at 1-877-ADOPT-ME for information on how to donate any of these items, questions about additional types of in-kind donations or assistance with a donation drive.  Donations can be dropped off at the Adoptions front desk during normal operating hours.
@@ -93,7 +94,7 @@ const WishList = () => {
             <br />
             <hr style={{width:"70%", margin:"0 auto"}} />
             <br/>
-            {/* start wish list */}
+            {/* start wish list 2 */}
             <h2 style={{textAlign:"center"}}> AniMeals </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
@@ -112,11 +113,11 @@ const WishList = () => {
                     <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX">Link to Meals wishlist</a>
                 </li>
             </ul>
-            {/* end wish list */}
+            {/* end wish list 2 */}
             <br />
             <hr style={{width:"70%", margin:"0 auto"}} />
             <br/>
-            {/* start wish list */}
+            {/* start wish list 3 */}
             <h2 style={{textAlign:"center"}}> Technology and Web Needs </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
@@ -132,11 +133,11 @@ const WishList = () => {
                     <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9">Link to Tech wishlist</a>
                 </li>
             </ul>
-            {/* end wish list */}
+            {/* end wish list 3 */}
             <br />
             <hr style={{width:"70%", margin:"0 auto"}} />
             <br/>
-            {/* start wish list */}
+            {/* start wish list 4 */}
             <h2 style={{textAlign:"center"}}> Special Events </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
@@ -158,11 +159,11 @@ const WishList = () => {
                     Collapsible folding all-terrain wagons
                 </li>
             </ul>
-            {/* end wish list */}
+            {/* end wish list 4 */}
             <br />
             <hr style={{width:"70%", margin:"0 auto"}} />
             <br/>
-            {/* start wish list */}
+            {/* start wish list 5 */}
             <h2 style={{textAlign:"center"}}> Pet Encounter Therapy </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
                 <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
@@ -190,15 +191,10 @@ const WishList = () => {
                     <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75">Link to Amazon wishlist</a>
                 </li>
             </ul>
-            {/* end wish list */}
-            {/* donate button
-            <a href="https://oregonhumane.tfaforms.net/23">
-                <img className='donate' style={{height:"75px", width:"172px", borderRadius:"5px", border: "1px solid #073DAA", marginTop:"2%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVMMYCnUQ3zRjA9N-fsTSZ1NcTzglTZUzUxyKBtTc3zU-BCcTTukP2F9VrkVOoHubw4p4&usqp=CAU" alt="donate button"/>
-            </a> */}
-            {/* donate button */}
+            {/* end wish list 5 */}
             <br />
+            {/* link to home page */}
             <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
-
         </div>
     )
 }

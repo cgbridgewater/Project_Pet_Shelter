@@ -1,42 +1,10 @@
-import React, {useState,useEffect} from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import React from "react";
 
 const Donate = () => {
 
-    // const { petName, petId } = props;
-    // const[ userName, setUserName ] = useState("");
-    // const[ email, setEmail ] = useState("");
-    // const[ phone, setPhone ] = useState("");
-    // const [errors, setErrors] = useState("");
-    // const navigate = useNavigate();
-
-    // const onSubmitHandler = (e) => {
-    //     e.preventDefault();
-    //     axios.post("http://localhost:8000/api/pets/adopt", {
-    //     petName,
-    //     petId,
-    //     userName,
-    //     email,
-    //     phone
-    // })
-    //     .then( res => {
-    //         console.log(res);
-    //         console.log(res.data) 
-    //         setUserName("")
-    //         setEmail("")
-    //         setPhone("")
-    //         setErrors({})
-    //         navigate("/petshelter/adopting");
-    //     })
-    //     .catch((err) => {
-    //         console.log(err.response.data.error.errors) 
-    //         setErrors(err.response.data.error.errors); //Set Errors
-    //     })
-    // }
-
     return(
         <div className="Background">
+            {/* donate link */}
             <a class="DonateButton" href="#popup2">Donate</a>
             {/* pop up */}
             <div id="popup2" class="overlay2">
@@ -48,6 +16,7 @@ const Donate = () => {
                         Are you sure?
                     </h2>    
                     <br />
+                    {/* This link leaves the APP!! */}
                     <a href="https://oregonhumane.tfaforms.net/23">Yes, I want to donate!!</a>
                     <a class="close" href="#">&times;</a>
                 </div>

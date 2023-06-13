@@ -10,7 +10,7 @@ const DontBuy = () => {
 
     return (
         <div style={{minHeight:"65vh"}}>
-            <div style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly" }}>
+            <div className="ContentContainer" style={{display:"flex", flexWrap:"wrap", justifyContent:"space-evenly" }}>
                 <div className="LeftContainer" style={{minWidth:"325px",width:"55%", marginTop:"4%"}}>
                     <h1>Adopt, Don't Buy!</h1>
                     <p style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-// const GOOGLE_KEY = process.env.REACT_APP_GOOGLE_API
-
 const ContactUs = () => {
     
     // scroll to top fix
@@ -12,7 +10,7 @@ const ContactUs = () => {
 
     return(
         <div className='Background' style={{minHeight:"60vh"}}>
-            
+            {/* title box */}
             <div className='hoursFlex'>
                 <h1 className='title'>The shelter is open for certain programs and services, see below for details.</h1>
                 <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
@@ -20,8 +18,9 @@ const ContactUs = () => {
                     he Coding Dojo Pet Shelter is closed on the following holidays each year: Thanksgiving, Christmas, and New Year’s Day. Staff & Volunteers are always onsite caring for the animals. We will close at 3 pm on 12/24 & 12/31.
                 </p>
             </div>  
-            
+            {/* column container */}
             <div className='infoWrapper'>
+                {/* adoption info box */}
                 <div className='hoursFlex3'>
                     <h1 className='title'> Adoption Information</h1>
                     <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
@@ -37,7 +36,7 @@ const ContactUs = () => {
                         />
                     </Link>
                 </div>
-
+                {/* lost and found box */}
                 <div className='hoursFlex3'>
                     <h1 className='title'>Lost & Found Pets</h1>
                     <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
@@ -60,7 +59,7 @@ const ContactUs = () => {
                     </a>
                 </div>
             </div>
-
+            {/* Tours Box */}
             <div className='hoursFlex'>
                 <h1 className='title'>We offer Guided Shelter Tours!</h1>
                 <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
@@ -168,13 +167,12 @@ const ContactUs = () => {
                 {/* <!-- end google MAP --> */}
             </div>
             <br />
-            <br />
+            {/* home link */}
             <Link 
                 className='Return'  
                 style={{textDecoration:"none"}} 
                 to={"/"}><button className='EnterButton' > Return To Pet Shelter</button>
             </Link>
-
         </div>
     )
 }

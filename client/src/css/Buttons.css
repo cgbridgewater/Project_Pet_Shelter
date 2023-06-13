@@ -88,11 +88,11 @@
     transition: all 0.2s ease-in;
 }
 
-.SubmitButton,.ViewButton:hover {
+.SubmitButton,.ViewButton:hover,.ViewButton2:hover {
     color: #073DAA;
 }
 
-.SubmitButton,.ViewButton {
+.SubmitButton,.ViewButton,.ViewButton2 {
     width: 134px;
     margin:0 10px;
     padding: 5px;

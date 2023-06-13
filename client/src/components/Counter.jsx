@@ -5,18 +5,14 @@ import TypingText from './TypingText';
 const Counter = () => {
 
     useEffect(() => {
-        
         const counters = document.querySelectorAll('.counter');
         const speed = 100; // The lower the slower the increment change is
-        
         counters.forEach(counter => {
             const updateCount = () => {
                 const target = +counter.getAttribute('data-target');
                 const count = +counter.innerText;
-        
                 // Lower inc to slow and higher to slow
                 const inc = Math.round(target / speed);
-
                 // Check if target is reached
                 if (count < target) {
                     // Add inc to count and output in counter
@@ -28,52 +24,35 @@ const Counter = () => {
                 }
             };
             updateCount();
-
         });
-
     },[])
 
-
-
-
-
-
-
     return(
-
         <section class="counters">
-            <div>
-
-                <TypingText/>
-
-            </div>
-
+            {/* typing text insert */}
+            <TypingText/>
+            {/* counting container */}
             <div class="CounterContainer">
-
+                {/* Counter box 1 */}
                 <div className='CounterBox'>
                     <i class="fab fa-youtube fa-4x"></i>
                     <div class="counter" data-target="812">0</div>
                     <h3 style={{color:"lightblue"}}>Animals Adopted</h3>
                 </div>
-                
+                {/* Counter box 2 */}
                 <div className='CounterBox'>
                     <i class="fab fa-twitter fa-4x"></i>
                     <div class="counter" data-target="1291">0</div>
                     <h3 style={{color:"lightblue"}}>Surgeries Performed</h3>
                 </div>
-
+                {/* Counter box 3 */}
                 <div className='CounterBox'>
                     <i class="fab fa-facebook fa-4x"></i>
                     <div class="counter" data-target="322">0</div>
                     <h3 style={{color:"lightblue"}}>Pets Returned To Owners</h3>
                 </div>
-
             </div>
-            
-            
         </section>
-
-
     )
 }
 

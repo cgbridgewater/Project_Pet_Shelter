@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import defaultPetImage from '../assets/images/dogCatDefault.png'
 
-// sorting
-const sortType = { 
-    NONE: (a,b) => a.createdAt > b.createdAt ? -1 : 1,
-    TYPEA2Z: (a,b) => a.type > b.type ? 1 : -1,
-    TYPEZ2A: (a,b) => a.type > b.type ? -1 : 1,
-    ATOZ: (a,b) => a.name.localeCompare(b.name),                   
-    ZTOA: (a,b) => b.name.localeCompare(a.name)
-}
+    // sorting
+    const sortType = { 
+        NONE: (a,b) => a.createdAt > b.createdAt ? -1 : 1,
+        TYPEA2Z: (a,b) => a.type > b.type ? 1 : -1,
+        TYPEZ2A: (a,b) => a.type > b.type ? -1 : 1,
+        ATOZ: (a,b) => a.name.localeCompare(b.name),                   
+        ZTOA: (a,b) => b.name.localeCompare(a.name)
+    }
 
 const PetShow = () => {
+
+    
+    const [ pet, setPet ] = useState([])
+    const [ sort, setSort ] = useState("ATOZ") 
 
     // scroll to top fix
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
-
-    const [ pet, setPet ] = useState([])
-    const [ sort, setSort ] = useState("ATOZ") 
-
-
-
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/pets")
@@ -39,12 +37,15 @@ const PetShow = () => {
     }, [sort])
 
     return (
-        <div style={{padding:"10px"}}>
+        // Show All Container
+        <div style={{padding:"20px 10px"}}>
             {/* top bar */}
             <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap", alignItems:"center"}}>
+                {/* Link to home page */}
                 <div className='Links' style={{display:"flex", flexDirection:"column"}}>
                     <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
                 </div>
+                {/* Sort Drowpdown with image */}
                 <div className='DropdownContainer' style={{marginLeft: "5%", border:"2px solid #073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                     <img style={{height:"150px", width:"280px", margin:0}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
                     <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap" }}>
@@ -60,29 +61,27 @@ const PetShow = () => {
                         </div>
                     </div>
                 </div>
-                
-            </div>
-            <div style={{marginLeft:"40%"}} >
-                <div>
-                    {/* spacer */}
-                </div>
-
             </div>
             <br />
-            <div className='Main' style={{ display:'flex',justifyContent:"center"}}>
-                <div className='Boxes' 
-                    style={{display:"flex", flexWrap:"wrap"}}>
-                    {/* mapping */}
-                    {pet.length > 0 &&[...pet]
-                        .sort(sortType[sort])
-                        .map((pet, index) => {
-                        return(
-                            <div key={pet._id}  className='CardContainer'>
-                                <div className="Card">
-                                    <h1 style={{color:"#073DAA"}}>{pet.name}</h1>
-                                    <h2>
-                                        <a style={{textDecoration:"underline"}} href={`/petshelter/sort/${pet.type}`}>({pet.type})</a>
-                                    </h2>
+            {/* Main Content Cards */}
+            <div className='Boxes' style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
+                {/* mapping */}
+                {pet.length > 0 &&[...pet]
+                    .sort(sortType[sort])
+                    .map((pet, index) => {
+                    return(
+                        // Each Card //
+                        <div key={pet._id}  className='PetCardContainer'>
+                            <div className="PetCard">
+                                {/* Pet Name */}
+                                <h1 style={{color:"#073DAA"}}>{pet.name}</h1>
+                                {/* Link To Pet Type */}
+                                <h2>
+                                    <Link style={{textDecoration:"underline"}} to={`/petshelter/sort/${pet.type}`}>({pet.type})</Link>
+                                </h2>
+                                {/* Image Link to view pet */}
+                                <Link to={`/petshelter/${pet._id}`}>
+                                    {/* Check For Pet Image */}
                                     { pet.petImage == null  ?
                                     <img 
                                         style={{height:"100px",borderRadius: "50%"}} 
@@ -95,19 +94,20 @@ const PetShow = () => {
                                         src={pet.petImage} 
                                         alt="Pet Image" />
                                     }
-                                    <p>
-                                        <Link style={{textDecoration:"none", color:"white"}} to={`/petshelter/${pet._id}`}>
-                                            <button className='ViewButton'>
-                                                <h3>View</h3>
-                                                <h3>{pet.name}</h3>
-                                            </button>
-                                        </Link>
-                                    </p>
-                                </div>
+                                </Link>
+                                {/* Link to view pet */}
+                                <p>
+                                    <Link style={{textDecoration:"none", color:"white"}} to={`/petshelter/${pet._id}`}>
+                                        <button className='ViewButton'>
+                                            <h3>View</h3>
+                                            <h3>{pet.name}</h3>
+                                        </button>
+                                    </Link>
+                                </p>
                             </div>
-                        )})
-                }</div>
-            </div>
+                        </div>
+                    )})
+            }</div>
         </div>
     );
 }

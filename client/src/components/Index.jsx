@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Counter from './Counter';
 
-
 const Indexpage = () => {
     
     // scroll to top fix
@@ -11,21 +10,20 @@ const Indexpage = () => {
     },[])
 
     return(
-        <div className='Background' style={{}}>
-
-
+        <div className='Background'>
             {/* sliding Title */}
             <div class='TitleContainer'>
+                {/* slide from Left to Right */}
                 <div class="slide-right">
                     <h2>Welcome to the</h2>
                     <span>
                         <div class="line fade-in"></div>
-                        </span>
-                    
+                    </span>
                     <h1 className='Title'><em>Coding Dojo Pet Shelter</em></h1>
                 </div>
+                {/* Counter Insert */}
                 <Counter/>
-
+                {/* slide from Right to Left */}
                 <div class="slide-left">
                     <div className="AnimalLinks" style={{display:"flex",width:"90%",margin:"0% auto", flexWrap:"wrap", justifyContent:"space-evenly", marginTop:"3%"}}>
                         {/* all pets link */}
@@ -58,11 +56,9 @@ const Indexpage = () => {
                                     </h5>
                             </div>
                         </Link>
-
                     </div>
                 </div>
             </div>
-
         </div>
     )
 }
