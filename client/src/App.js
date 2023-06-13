@@ -15,7 +15,6 @@ import './css/CardFlip.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
-import Update from './components/Update';
 import Navibar from './components/Navibar';
 import LiveFeed from './components/LiveFeed';
 import PetDetail from './components/PetDetail';
@@ -25,14 +24,15 @@ import DontBuy from './components/DontBuy';
 import Careers from './components/Careers';
 import TypeSort from './components/TypeSort';
 import PetShow from './components/PetShow';
-import PetForm from './components/PetForm';
 import ContactUs from './components/ContactUs';
 import OurStory from './components/ourStory'
 import WishList from './components/WishList';
 import Stories from './components/Stories';
 import Adopting from './components/Adopting';
 import AboutMe from './components/AboutMe';
+import AdminPetForm from './components/AdminPetForm';
 import AdminViewAll from './components/AdminViewAll';
+import AdminUpdatePet from './components/AdminUpdatePet';
 
 function App() {
 
@@ -41,13 +41,14 @@ function App() {
       <BrowserRouter>
         <Navibar/>
           <Routes>
+            {/* Landing */}
             <Route path="/" default element={<Indexpage/>}/>
-            {/* admin pages */}
+            {/* admin routes */}
             <Route path="/admin/viewall" element={<AdminViewAll/>}/>
-            <Route path="/admin/new" element={<PetForm/>}/>
-            <Route path="/admin/edit/:id" element={<Update/>}/>
+            <Route path="/admin/new" element={<AdminPetForm/>}/>
+            <Route path="/admin/edit/:id" element={<AdminUpdatePet/>}/>
             <Route path="/admin/:bad" element={<BadLink/>}/>
-            {/* user pages */}
+            {/* user routes */}
             <Route path="/petshelter" element={<PetShow/>}/>
             <Route path="/petshelter/aboutme" element={<AboutMe/>}/>
             <Route path="/petshelter/adopting"element={<Adopting/>}/>
