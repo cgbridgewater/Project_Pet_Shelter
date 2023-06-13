@@ -41,7 +41,7 @@ const AdoptForm = (props) => {
             {/* pop up */}
             <div id="popup1" class="overlay">
                 <div class="popup">
-                    <h2>Pet Adoption Form</h2>
+                    <h2>Sign-up to be contacted about <span style={{fontSize:"24px",color:"#fd6ee0"}}><em>{petName}</em></span></h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                         {/* form start */}
@@ -101,9 +101,9 @@ const AdoptForm = (props) => {
                                 {/* Pet Name */}
                                 <div className="FormInput">
                                     <label style={{minWidth:"200px", textAlign:"start"}}>
-                                        Pet Name:
+                                        <h3>Pet Name:</h3>
                                     </label>
-                                    <label style={{minWidth:"200px", textAlign:"start",color:"#fd6ee0", paddingLeft:"15px"}}>
+                                    <label style={{minWidth:"200px", textAlign:"start",fontSize:"24px",color:"#fd6ee0", paddingLeft:"10%"}}>
                                         {petName}
                                     </label>
                                 </div>
