@@ -2,7 +2,7 @@ import React, {useState,useEffect} from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-const PetForm = () => {
+const AdminPetForm = () => {
 
     // scroll to top fix
     useEffect(() => {
@@ -207,4 +207,4 @@ const PetForm = () => {
     )
 }
 
-export default PetForm;
+export default AdminPetForm;

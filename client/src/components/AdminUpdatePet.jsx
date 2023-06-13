@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
 
-const Update = (props) => {
+const AdminUpdatePet = (props) => {
 
     // scroll fix
     useEffect(() => {
@@ -77,7 +77,7 @@ const Update = (props) => {
     return(
         <div>
             {/* page load ternary */}
-            { name.length === 0   ? 
+            { name.length === 0  ? 
             <div className="Background">
                 <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"30px", marginTop:"20"}}>It appears your lost.. Don't worry we'll get you to your owners.</h3>
                 <Link to="/petshelter" className='ViewButton' style={{  textDecoration: "none"}}>Back To Shelter</Link>
@@ -202,4 +202,4 @@ const Update = (props) => {
     )
 }
 
-export default Update;
+export default AdminUpdatePet;
