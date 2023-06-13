@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import CardFlip from './CardFlip';
 
 const Stories = () => {
 
@@ -32,6 +33,7 @@ const Stories = () => {
             <br />
             {/* END REMOVE AND REPLACE WITH CONTENT!! */}
 
+            <CardFlip/>
 
             {/* donate button */}
             {/* <a href="https://oregonhumane.tfaforms.net/23">
