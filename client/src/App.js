@@ -41,29 +41,30 @@ function App() {
       <BrowserRouter>
         <Navibar/>
           <Routes>
-            <Route element={<Indexpage/>} path="/" default/>
+            <Route path="/" default element={<Indexpage/>}/>
             {/* admin pages */}
-            <Route element={<AdminViewAll/>} path="/admin/viewall"/>
-            <Route element={<PetForm/>} path="/admin/new" />
-            <Route element={<Update/>} path="/admin/edit/:id"/>
-            <Route element={<BadLink/>} path="/admin/:bad" />
+            <Route path="/admin/viewall" element={<AdminViewAll/>}/>
+            <Route path="/admin/new" element={<PetForm/>}/>
+            <Route path="/admin/edit/:id" element={<Update/>}/>
+            <Route path="/admin/:bad" element={<BadLink/>}/>
             {/* user pages */}
-            <Route element={<AboutMe/>} path="/petshelter/aboutme"/>
-            <Route element={<PetShow/>} path="/petshelter" />
-            <Route element={<Adopting/>} path="/petshelter/adopting" />
-            <Route element={<PetDetail/>} path="/petshelter/:id" />
-            <Route element={<TypeSort/>} path="/petshelter/sort/:type" />
-            <Route element={<LiveFeed/>} path="/petshelter/liveFeed" />
-            <Route element={<OurStory/>} path="/petshelter/ourstory"/>
-            <Route element={<ContactUs/>} path="/petshelter/contactus"/>
-            <Route element={<Construction/>} path="/petshelter/construction"/>
-            <Route element={<DontBuy/>} path="/petshelter/adopt"/>
-            <Route element={<WishList/>} path="/petshelter/wishlist"/>
-            <Route element={<Stories/>} path="/petshelter/stories"/>
-            <Route element={<Careers/>} path="/petshelter/careers"/>
-            <Route element={<BadLink/>} path="/petshelter/:bad" />
-            <Route element={<BadLink/>} path="/petshelter/edit/:bad" />
-            <Route element={<BadLink/>} path="/:bad" />
+            <Route path="/petshelter" element={<PetShow/>}/>
+            <Route path="/petshelter/aboutme" element={<AboutMe/>}/>
+            <Route path="/petshelter/adopting"element={<Adopting/>}/>
+            <Route path="/petshelter/sort/:type" element={<TypeSort/>}/>
+            <Route path="/petshelter/liveFeed" element={<LiveFeed/>}/>
+            <Route path="/petshelter/ourstory" element={<OurStory/>}/>
+            <Route path="/petshelter/contactus" element={<ContactUs/>}/>
+            <Route path="/petshelter/construction" element={<Construction/>}/>
+            <Route path="/petshelter/adopt" element={<DontBuy/>}/>
+            <Route path="/petshelter/wishlist" element={<WishList/>}/>
+            <Route path="/petshelter/stories" element={<Stories/>}/>
+            <Route path="/petshelter/careers" element={<Careers/>}/>
+            <Route path="/petshelter/:id" element={<PetDetail/>}/>
+            <Route path="/:bad" element={<BadLink/>}/>
+            {/* trash ?? */}
+            {/* <Route path="/petshelter/:bad"  element={<BadLink/>}/> */}
+            {/* <Route path="/admin/edit/:bad" element={<BadLink/>}/> */}
           </Routes>
         <Footer/>
       </BrowserRouter>
