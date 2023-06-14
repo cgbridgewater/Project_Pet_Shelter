@@ -16,6 +16,8 @@ const Footer = () => {
                     <li><a href="/petshelter/contactus">Visit Us</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/wishlist">Wish List</a></li>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
+                    <li><a href="/petshelter/events">Upcoming Events</a></li>
                 </ul>
                 {/* social media links (center) */}
                 <div className="FooterLogos">
