@@ -101,7 +101,7 @@ const TypeSort = () => {
                                                 />
                                                 :
                                                 <img 
-                                                    style={{height:"100px",borderRadius: "50%"}} 
+                                                    style={{height:"100px", width:"150px",borderRadius: "50%"}} 
                                                     src={pet.petImage} 
                                                     alt="Pet Image" 
                                                     />

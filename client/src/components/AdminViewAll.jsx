@@ -19,12 +19,11 @@ const AdminViewAll = () => {
     },[])
     
     const [ pet, setPet ] = useState([])
-    const [ sort, setSort ] = useState("TYPEA2Z") 
+    const [ petSort, setPetSort ] = useState("NONE") 
     const [getErrors, setGetErrors] = useState({});
-
-    const removeFromDom = petId => {
-        setPet(pet.filter(pet => pet._id !== petId));
-    }
+    const [ event, setEvent ] = useState([])
+    const [ eventSort, setEventSort ] = useState("NONE") 
+    const [getEventErrors, setGetEventErrors] = useState({});
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/pets")
@@ -37,64 +36,138 @@ const AdminViewAll = () => {
             console.log(err.response.data.path)
             setGetErrors(err.response.data.path); //Set Errors
         })
-    }, [sort])
+    }, [petSort])
+
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/pets/event")
+        .then((res) => {
+            console.log(res.data);
+            setEvent(res.data);
+            setGetEventErrors("")
+        })
+        .catch((err) => {
+            console.log(err.response.data.path)
+            setGetEventErrors(err.response.data.path); //Set Errors
+        })
+    }, [eventSort])
 
     return(
         <div className="Background">
-            <div className='ListContainer'>
-            <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", alignItems:"center"}}>
-                <h1> These pets are looking for a good home🐶🐱</h1>
-                <Link to="/petshelter/new" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Add a pet to the shelter</Link>
-            </div>
-            {/* sorting menu */}
-            <p style={{fontSize:"18px", fontWeight:800, color:"#073DAA",}}></p>
-            <div style={{display:"flex", justifyContent:"center"}} >
+
+            {/* LEFT TABLE */}
+            <div className='PetListTable'>
+                <div style={{padding:"0 10%",display:"flex",justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap"}}>
+                    <h1 style={{fontSize:"40px",color:"red"}}> ADMIN PAGE</h1>
+                    <Link to="/admin/new/pet" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Add a pet to the shelter</Link>
+                    <Link to="/admin/new/event" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Add a new event for the shelter</Link>
+                </div>
                 <br />
-                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA", marginRight:"10px"}} htmlFor="">Click On "Type" To Filter By Type, OR Select Drop Down To Sort:</label>
-                <select value={sort} onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
-                    <option value="NONE">Newest Added</option>
-                    <option value="ATOZ">A to Z</option>
-                    <option value="ZTOA">Z to A</option>
-                    <option value="TYPEA2Z">Type A to Z</option>
-                    <option value="TYPEZ2A">Type Z to A</option>
-                </select>
-            </div>
-            <br />
-            {/* table container */}
-            <table>
-                {/* table header */}
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Actions</th>
-                        
-                    </tr>
-                </thead>
-                    {/* mapping and sorting */}
-                    {pet.length > 0 &&[...pet]
-                        .sort(sortType[sort])
-                        .map((pet, index) => {
-                            return(
-                // table body // 
-                <tbody key={pet._id}>
-                    <tr>
-                        <td style={{ textAlign:"start",color:"#073DAA", fontSize:"30px",fontWeight:700}}>{pet.name}</td>
-                        <td style={{fontWeight:700, fontSize:"20px"}}>
-                            <a style={{textDecoration:"underline"}} href={`/petshelter/sort/${pet.type}`}>{pet.type}</a>
-                        </td>
-                        <td>
-                            {/* action pets  */}
-                            <Link style={{textDecoration:"none", color:"white"}} to={`/petshelter/${pet._id}`}><button className='ViewButton'>Details</button></Link>
-                            <Link style={{textDecoration:"none", color:"white"}} to={"/petshelter/edit/" +pet._id}><button className='EditButton'>Edit</button></Link>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-                )})
-            }  {/* end mapping */}
-            </table>
-        </div>
+
+            <div className='Tables Container' style={{display:"flex", flexWrap:"wrap"}}>
+
+
+                {/* pet table container */}
+                <table>
+                    {/* sorting menu */}
+                    <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
+                        {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                        <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                            <option value="NONE">Newest Added</option>
+                            <option value="ATOZ">A to Z</option>
+                            <option value="ZTOA">Z to A</option>
+                            <option value="TYPEA2Z">Type A to Z</option>
+                            <option value="TYPEZ2A">Type Z to A</option>
+                        </select>
+                    </div>
+                    {/* table header */}
+                    <thead>
+                        <tr>
+                            <th>Pet Name</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                        {/* mapping and sorting */}
+                        {pet.length > 0 &&[...pet]
+                            .sort(sortType[petSort])
+                            .map((pet, index) => {
+                                return(
+                    // table body // 
+                    <tbody key={pet._id}>
+                        <tr>
+                            <td>
+                                <Link className='TableLink' to={"/admin/edit/" +pet._id}>{pet.name}</Link>
+                            </td>
+                            <td style={{color:"white", fontSize:"16px"}}>
+                                {pet.type}
+                            </td>
+                        </tr>
+                    </tbody>
+                    )})
+                }  {/* end mapping */}
+                </table>
+
+
+
+            {/* RIGHT TABLE */}
+            
+                {/* table container */}
+                <table>
+                    {/* sorting menu */}
+                    <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
+                        {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                        <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                            <option value="NONE">Newest Added</option>
+                            <option value="ATOZ">A to Z</option>
+                            <option value="ZTOA">Z to A</option>
+                        </select>
+                    </div>
+                    {/* table header */}
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                        {/* mapping and sorting
+                        {event.length > 0 &&[...event]
+                            .sort(sortType[eventSort])
+                            .map((event, index) => {
+                                return( */}
+                    {/* Table Body*/}
+                    <tbody key={pet._id}>
+                        <tr>
+                            <td>
+                                <Link  className='TableLink' to={"/admin/edit/" +event._id}>FILLER</Link>
+                            </td>
+
+                            
+                            <td style={{color:"white", fontSize:"16px"}}>
+                                FILLER
+
+                            </td>
+                        </tr>
+                    </tbody>
+                    {/* ) */}
+                {/* })}  end mapping */}
+                </table>
+            
+
+                </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

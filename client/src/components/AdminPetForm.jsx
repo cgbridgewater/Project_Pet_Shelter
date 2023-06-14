@@ -44,7 +44,7 @@ const AdminPetForm = () => {
             setPetImage("")
             setNotes("")
             setErrors({})
-            navigate("/petshelter");
+            navigate("/admin/viewall");
         })
         .catch((err) => {
             console.log(err.response.data.error.errors) 
@@ -56,10 +56,10 @@ const AdminPetForm = () => {
         <div style={{minHeight:"63vh"}}>
             {/* top ribbon */}
             <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap-reverse"}}>
+                <h1 style={{fontSize:"40px",color:"RED"}}>ADMIN PAGE </h1>
                 <h1 style={{color:"#073DAA"}}>New Pet Intake Form</h1>
-                <h1 style={{color:"RED"}}>ADMIN PAGE </h1>
                 <br />
-                <Link to="/petshelter" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
+                <Link to="/admin/viewall" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Admin Main</Link>
             </div>
             {/* form start */}
             <form className="Form" style={{minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
