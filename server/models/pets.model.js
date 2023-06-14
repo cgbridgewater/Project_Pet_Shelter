@@ -3,24 +3,24 @@ const mongoose = require('mongoose');
 const PetsSchema = new mongoose.Schema({
     name: { 
         type: String,
-        required: [true, "Name required"],
+        required: [true, "Pet Name"],
         minLength: [3, "Name must be at Least 3 characters long"],
         maxLength: [50,"Name can not exceed 50 characters!"]
     },
     type: { 
         type: String,
-        required: [true, "Type required"],
+        required: [true, "Pet Type"],
         minLength: [3, "Type must be at least 3 characters long"],
     },
     description: { 
         type: String,
-        required: [true, "Description required"],
+        required: [true, "Description"],
         minLength: [3, "Description must be at least 3 characters long"],
         maxLength: [300,"Description can not exceed 300 characters!"]
     },
     age: {
         type:Number,
-        required:[true,"Age is required!"],
+        required:[true,"Pet Age"],
         min:[1,"Age must be at least 1!"],
         validate:{
             validator:Number.isInteger,
@@ -29,7 +29,7 @@ const PetsSchema = new mongoose.Schema({
     },
     petImage:{
         type:String,
-        required:[true,"Pet image link is required!"]
+        required:[true,"Image Link"]
     },
     animalFriendly:{
         type:Boolean,

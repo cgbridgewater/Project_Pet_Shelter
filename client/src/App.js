@@ -12,6 +12,7 @@ import './css/AdoptForm.css';
 import './css/Adopting.css';
 import './css/Donate.css';
 import './css/CardFlip.css';
+import './css/EventBanner.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
@@ -34,6 +35,7 @@ import AdminPetForm from './components/AdminPetForm';
 import AdminViewAll from './components/AdminViewAll';
 import AdminUpdatePet from './components/AdminUpdatePet';
 import AdminEventForm from './components/AdminEventForm';
+import EventsViewAll from './components/EventsViewAll';
 
 function App() {
 
@@ -61,6 +63,7 @@ function App() {
             <Route path="/petshelter/construction" element={<Construction/>}/>
             <Route path="/petshelter/adopt" element={<DontBuy/>}/>
             <Route path="/petshelter/wishlist" element={<WishList/>}/>
+            <Route path="/petshelter/events" element={<EventsViewAll/>}/>
             <Route path="/petshelter/stories" element={<Stories/>}/>
             <Route path="/petshelter/careers" element={<Careers/>}/>
             <Route path="/petshelter/:id" element={<PetDetail/>}/>
