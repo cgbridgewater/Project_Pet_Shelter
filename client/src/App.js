@@ -33,6 +33,7 @@ import AboutMe from './components/AboutMe';
 import AdminPetForm from './components/AdminPetForm';
 import AdminViewAll from './components/AdminViewAll';
 import AdminUpdatePet from './components/AdminUpdatePet';
+import AdminEventForm from './components/AdminEventForm';
 
 function App() {
 
@@ -45,7 +46,8 @@ function App() {
             <Route path="/" default element={<Indexpage/>}/>
             {/* admin routes */}
             <Route path="/admin/viewall" element={<AdminViewAll/>}/>
-            <Route path="/admin/new" element={<AdminPetForm/>}/>
+            <Route path="/admin/new/pet" element={<AdminPetForm/>}/>
+            <Route path="/admin/new/event" element={<AdminEventForm/>}/>
             <Route path="/admin/edit/:id" element={<AdminUpdatePet/>}/>
             <Route path="/admin/:bad" element={<BadLink/>}/>
             {/* user routes */}
