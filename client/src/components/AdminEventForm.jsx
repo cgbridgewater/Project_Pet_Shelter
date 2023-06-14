@@ -18,7 +18,7 @@ const AdminEventForm = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/pets/event", {
+        axios.post("http://localhost:8000/api/event", {
             title: title.toUpperCase(),
             date,
             description,
@@ -82,7 +82,7 @@ const AdminEventForm = () => {
                     </label>
                     <input 
                         style={{paddingLeft:"5px", marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
-                        type="text" 
+                        type="date" 
                         onChange={(e) => setDate(e.target.value)}
                         value= {date}
                         placeholder="Required"
