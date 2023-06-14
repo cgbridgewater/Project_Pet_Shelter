@@ -76,16 +76,45 @@ a:hover, .CDPS:hover {
   transition: all 0.2s ease-in;
 }
 
-table {
-  width: 55%;
+
+.TableLink {
+  font-size: 18px;
+  text-decoration: underline;
+  color: lightskyblue;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.TableLink:hover {
+  color: white;
+  filter: drop-shadow(6px 6px 3px white);
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.TableLink:visited {
+  text-decoration: none;
+  color: lightskyblue;
+}
+.TableLink:visited:hover {
+  text-decoration: none;
+  color: white;
+}
+
+table{
+  width: 30%;
+  min-width: 370px;
   margin: 0 auto;
-  /* padding: 8px, -2px, 8px, 8px; */
-  border: 10px double #073DAA;
-  background-image: url(https://media.istockphoto.com/id/1199391451/vector/paw-print-vector-illustration.jpg?s=612x612&w=0&k=20&c=ZFa-1inw6WkXKpy43nVHGe2rBCroqiw9K0TvBcNNQmI=);
+  padding: 4px;
+  border: 3px solid #073DAA;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjAKfq9Nc5vaVO_panD36TT-_7JgS1pREYVA&usqp=CAU);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-
 }
 
 thead {
@@ -98,8 +127,10 @@ th {
   padding: 10px;
 }
 
-tbody {
-  width: 50%;
+td {
+  text-align: start;
+  font-size: 16px;
+  padding: 0 10px;
 }
 
 .Title {
