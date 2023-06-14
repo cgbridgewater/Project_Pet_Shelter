@@ -3,16 +3,33 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-// sorting
-const sortType = { 
+// Pet Sorting
+const petSortType = { 
     NONE: (a,b) => a.createdAt > b.createdAt ? -1 : 1,
     TYPEA2Z: (a,b) => a.type > b.type ? 1 : -1,
     TYPEZ2A: (a,b) => a.type > b.type ? -1 : 1,
     ATOZ: (a,b) => a.name.localeCompare(b.name),                   
     ZTOA: (a,b) => b.name.localeCompare(a.name)
 }
-const AdminViewAll = () => {
 
+
+// Event sorting
+const current = new Date();
+  const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${current.getDate()}`;
+
+const eventSortType = { 
+    // NONE: (a,b) => a.createdAt > b.createdAt ? -1 : 1,
+    NONE: (a,b) => a.date > b.date ? 1 : -1,
+    ATOZ: (a,b) => a.title.localeCompare(b.title),                   
+    ZTOA: (a,b) => b.title.localeCompare(a.title),
+    // Upcoming: (a,b)=> today > b.date ? -1 : 1,
+    // DateOld: (a,b)=> today > b.date ? 1 : -1,
+}
+
+
+const AdminViewAll = () => {
+console.log("current",current)
+console.log("today",today)
     // scroll to top fix
     useEffect(() => {
         window.scrollTo(0,0)
@@ -24,6 +41,19 @@ const AdminViewAll = () => {
     const [ event, setEvent ] = useState([])
     const [ eventSort, setEventSort ] = useState("NONE") 
     const [getEventErrors, setGetEventErrors] = useState({});
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/events")
+        .then((res) => {
+            console.log(res.data);
+            setEvent(res.data);
+            setGetEventErrors("")
+        })
+        .catch((err) => {
+            console.log(err.response.data.path)
+            setGetEventErrors(err.response.data.path); //Set Errors
+        })
+    }, [eventSort])
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/pets")
@@ -39,18 +69,6 @@ const AdminViewAll = () => {
     }, [petSort])
 
 
-    useEffect(() => {
-        axios.get("http://localhost:8000/api/pets/event")
-        .then((res) => {
-            console.log(res.data);
-            setEvent(res.data);
-            setGetEventErrors("")
-        })
-        .catch((err) => {
-            console.log(err.response.data.path)
-            setGetEventErrors(err.response.data.path); //Set Errors
-        })
-    }, [eventSort])
 
     return(
         <div className="Background">
@@ -64,115 +82,101 @@ const AdminViewAll = () => {
                 </div>
                 <br />
 
-            <div className='Tables Container' style={{display:"flex", flexWrap:"wrap"}}>
+                <div className='TablesContainer' style={{display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}}>
 
 
-                {/* pet table container */}
-                <table>
-                    {/* sorting menu */}
-                    <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
-                        {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                        <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
-                            <option value="NONE">Newest Added</option>
-                            <option value="ATOZ">A to Z</option>
-                            <option value="ZTOA">Z to A</option>
-                            <option value="TYPEA2Z">Type A to Z</option>
-                            <option value="TYPEZ2A">Type Z to A</option>
-                        </select>
+                    {/* pet table container */}
+                    <div className='TableBox'>
+
+                        <table className='PetTable'>
+                            {/* sorting menu */}
+                            <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
+                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                    <option value="NONE">Newest Added</option>
+                                    <option value="ATOZ">A to Z</option>
+                                    <option value="ZTOA">Z to A</option>
+                                    <option value="TYPEA2Z">Type A to Z</option>
+                                    <option value="TYPEZ2A">Type Z to A</option>
+                                </select>
+                            </div>
+                            {/* table header */}
+                            <thead>
+                                <tr>
+                                    <th>Pet Name</th>
+                                    <th>Type</th>
+                                </tr>
+                            </thead>
+                                {/* mapping and sorting */}
+                                {pet.length > 0 &&[...pet]
+                                    .sort(petSortType[petSort])
+                                    .map((pet, index) => {
+                                        return(
+                                            // table body // 
+                                            <tbody key={pet._id}>
+                                <tr>
+                                    <td>
+                                        <Link className='TableLink' to={"/admin/edit/" +pet._id}>{pet.name}</Link>
+                                    </td>
+                                    <td style={{color:"white", fontSize:"16px"}}>
+                                        {pet.type}
+                                    </td>
+                                </tr>
+                            </tbody>
+                            )})
+                        }  {/* end mapping */}
+                        </table>
                     </div>
-                    {/* table header */}
-                    <thead>
-                        <tr>
-                            <th>Pet Name</th>
-                            <th>Type</th>
-                        </tr>
-                    </thead>
-                        {/* mapping and sorting */}
-                        {pet.length > 0 &&[...pet]
-                            .sort(sortType[petSort])
-                            .map((pet, index) => {
-                                return(
-                    // table body // 
-                    <tbody key={pet._id}>
-                        <tr>
-                            <td>
-                                <Link className='TableLink' to={"/admin/edit/" +pet._id}>{pet.name}</Link>
-                            </td>
-                            <td style={{color:"white", fontSize:"16px"}}>
-                                {pet.type}
-                            </td>
-                        </tr>
-                    </tbody>
-                    )})
-                }  {/* end mapping */}
-                </table>
 
 
 
-            {/* RIGHT TABLE */}
-            
-                {/* table container */}
-                <table>
-                    {/* sorting menu */}
-                    <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
-                        {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                        <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
-                            <option value="NONE">Newest Added</option>
-                            <option value="ATOZ">A to Z</option>
-                            <option value="ZTOA">Z to A</option>
-                        </select>
+                {/* RIGHT TABLE */}
+                
+                    {/* table container */}
+                    <div className='TableBox'>
+                        <table className='EventTable'>
+                            {/* sorting menu */}
+                            <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
+                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                    <option value="NONE">All Events</option>
+                                    <option value="ATOZ">A to Z</option>
+                                    <option value="ZTOA">Z to A</option>
+                                    {/* <option value="Past Events">Past Events</option>
+                                    <option value="Upcoming Events">Upcoming Events</option> */}
+                                </select>
+                            </div>
+                            {/* table header */}
+                            <thead>
+                                <tr>
+                                    <th>Event Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                                {/* mapping and sorting */}
+                                {event.length > 0 &&[...event]
+                                    .sort(eventSortType[eventSort])
+                                    .map((event, index) => {
+                                        return(
+                                            // table body // 
+                                            <tbody key={event._id}>
+                                <tr>
+                                    {/* Title */}
+                                    <td>
+                                        <Link  className='TableLink' to={"/admin/event/edit/" +event._id}>{event.title}</Link>
+                                    </td>
+                                    {/* Date */}
+                                    <td style={{color:"white", fontSize:"16px"}}>
+                                        {event.date}
+                                    </td>
+                                </tr>
+                            </tbody>
+                            )
+                        })}
+                        </table>
                     </div>
-                    {/* table header */}
-                    <thead>
-                        <tr>
-                            <th>Event Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                        {/* mapping and sorting
-                        {event.length > 0 &&[...event]
-                            .sort(sortType[eventSort])
-                            .map((event, index) => {
-                                return( */}
-                    {/* Table Body*/}
-                    <tbody key={pet._id}>
-                        <tr>
-                            <td>
-                                <Link  className='TableLink' to={"/admin/edit/" +event._id}>FILLER</Link>
-                            </td>
-
-                            
-                            <td style={{color:"white", fontSize:"16px"}}>
-                                FILLER
-
-                            </td>
-                        </tr>
-                    </tbody>
-                    {/* ) */}
-                {/* })}  end mapping */}
-                </table>
-            
-
                 </div>
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
         </div>
     )
 }
