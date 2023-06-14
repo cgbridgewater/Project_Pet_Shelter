@@ -5,7 +5,7 @@ const PetsSchema = new mongoose.Schema({
         type: String,
         required: [true, "Name required"],
         minLength: [3, "Name must be at Least 3 characters long"],
-        maxLength: [30,"Name can not exceed 300 characters!"]
+        maxLength: [50,"Name can not exceed 50 characters!"]
     },
     type: { 
         type: String,
