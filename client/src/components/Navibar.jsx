@@ -20,8 +20,15 @@ const Navibar = () => {
         </div>
           <Link className="LiveFeed" to={`/petshelter/livefeed`}></Link>
         {/* right side of navbar */}
-        <div style={{minWidth:"30%"}} className='RightNav'>
-          <img style={{height:"80px",width:"80px", borderRadius:"50%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLVoF89deZHiOVAJIV4NKeqnZryBNrFzUWh3vZncWmcU2qGeqGXs6LhJlwPOHkbMFEitQ&usqp=CAU" alt="" />
+        <div style={{minWidth:"30%",display:"flex",alignItems:"center"}} className='RightNav'>
+          <Link to="/petshelter/events">
+            <p className="NavTitle">
+              See Upcoming Events!
+            </p>  
+          </Link>
+          <Link to="/petshelter/events">
+            <img style={{height:"80px",width:"80px", borderRadius:"50%"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLVoF89deZHiOVAJIV4NKeqnZryBNrFzUWh3vZncWmcU2qGeqGXs6LhJlwPOHkbMFEitQ&usqp=CAU" alt="" />
+          </Link>
         </div>
       </nav>
     </div>
