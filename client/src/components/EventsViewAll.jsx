@@ -34,7 +34,7 @@ const EventsViewAll = () => {
     }, [eventSort])
 
     return(
-        <div className="Background">
+        <div className="Background2">
             {/* Page Banner */}
             <EventsBanner/>
 
