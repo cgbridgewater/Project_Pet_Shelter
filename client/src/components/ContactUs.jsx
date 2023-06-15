@@ -32,7 +32,7 @@ const ContactUs = () => {
                         <img 
                             src="https://www.9and10news.com/resizer/CgrkYgY0gbsjH1UCcKVkOlplv3Y=/600x338/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/910mediagroup/CFZXYZVUBJIHPBWS5ZHDIOKSKM.jpg" 
                             alt="adopt"
-                            style={{width:"325px",height:"170px",border:"2px solid #073DAA"}}
+                            style={{width:"325px",height:"185px",border:"2px solid #073DAA"}}
                         />
                     </Link>
                 </div>

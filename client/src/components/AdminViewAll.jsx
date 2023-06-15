@@ -139,7 +139,7 @@ console.log("today",today)
                             <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
                                 {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
                                 <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
-                                    <option value="NONE">All Events</option>
+                                    <option value="NONE">ALL Events</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
                                     {/* <option value="Past Events">Past Events</option>

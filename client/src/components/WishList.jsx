@@ -22,72 +22,72 @@ const WishList = () => {
             {/* start wish list */}
             <h2 style={{textAlign:"center"}}> Adoptions/Foster Program </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Litter scoopers
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Litter pans
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Puppy Potty pads
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Waterproof tarps
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Rolling carts
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Kitty condos
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Storage shelves
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Small stainless steel bowls
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Cotton balls
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     KMR kitten formula
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Miracle nipples for syringe-feeding neonatal orphans
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Newspaper
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Royal Canin Mother & baby cat dry & wet food  and formula
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Royal Canin Mother & baby puppy dry & wet food and starter mousse
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Baby wipes
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Puppy & kitten shampoos
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Dog toys (rope and Kong chew preferred)
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Cat toys, preferably without catnip (fuzzy mice, balls with bells, small Mylar balls)
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Medium and large pet carriers
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Shopping/grocery bags-Paper or reusable
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS">Link to Fosters wishlist</a> 
+                <li>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS">Link to Fosters wishlist</a> 
                 
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD">Link to Adoptions wishlist</a>
+                <li>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD">Link to Adoptions wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
@@ -97,20 +97,20 @@ const WishList = () => {
             {/* start wish list 2 */}
             <h2 style={{textAlign:"center"}}> AniMeals </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Any unexpired, unopened cat and dog food (can be wet or dry)
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Cat and dog treats for all sizes
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Canned food for SENIOR cats and dogs                
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Ziploc Freezer Gallon and/or Quart bags (Ziploc FREEZER brand only please)
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX">Link to Meals wishlist</a>
+                <li>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX">Link to Meals wishlist</a>
                 </li>
             </ul>
             {/* end wish list 2 */}
@@ -120,17 +120,17 @@ const WishList = () => {
             {/* start wish list 3 */}
             <h2 style={{textAlign:"center"}}> Technology and Web Needs </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Webcams
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     SD Card Readers
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Flash Memory Cards
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9">Link to Tech wishlist</a>
+                <li>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9">Link to Tech wishlist</a>
                 </li>
             </ul>
             {/* end wish list 3 */}
@@ -140,22 +140,22 @@ const WishList = () => {
             {/* start wish list 4 */}
             <h2 style={{textAlign:"center"}}> Special Events </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Banner material (specifically 24″ wide canvas rolls for our HP Design Jet 500)
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     120 Quart Coolers
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Portable Potty Patches
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     T-shirt display
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Plastic A-Frames
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Collapsible folding all-terrain wagons
                 </li>
             </ul>
@@ -166,35 +166,35 @@ const WishList = () => {
             {/* start wish list 5 */}
             <h2 style={{textAlign:"center"}}> Pet Encounter Therapy </h2>
             <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     New or gently used bagless heavy-duty vacuum
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Gift certificates to local grocery stores, hardware stores, and gas stations
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Rugs/towels
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Metallic foldable exercise pens (same type as Adoptions has on their list)
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Cuttlebone, sealed bird treats, birds toys
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Magnetic reptile ledges
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
+                <li>
                     Hand crank emergency radio for evacuation kit
                 </li>
-                <li style={{textAlign:"start", fontSize:"16px", color:"#073DAA"}}>
-                    <a style={{textDecoration:"underline"}} href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75">Link to Amazon wishlist</a>
+                <li>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75">Link to Amazon wishlist</a>
                 </li>
             </ul>
             {/* end wish list 5 */}
             <br />
             {/* link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
+            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"#073DAA", marginRight:"50px"}}>Return To Shelter Home</Link>
         </div>
     )
 }
