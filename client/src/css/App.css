@@ -272,3 +272,19 @@ tbody{
   width: 72%;
   
 }
+
+
+.AboutMeTitle {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.LeftAboutMe {
+  width: 60%;
+  min-width: 370px;
+}
+.RightAboutMe {
+  width:370px;
+  height:370px
+}
