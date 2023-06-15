@@ -76,6 +76,12 @@ a:hover, .CDPS:hover {
   transition: all 0.2s ease-in;
 }
 
+li {
+  margin: 5px;
+  color:purple;
+  font-style: 16px;
+  text-align: start;
+}
 
 .TableLink {
   font-size: 18px;
