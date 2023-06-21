@@ -41,10 +41,6 @@ const PetShow = () => {
         <div style={{padding:"20px 10px"}}>
             {/* top bar */}
             <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap", alignItems:"center"}}>
-                {/* Link to home page */}
-                <div className='Links' style={{display:"flex", flexDirection:"column"}}>
-                    <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
-                </div>
                 {/* Sort Drowpdown with image */}
                 <div className='DropdownContainer' style={{marginLeft: "5%", border:"2px solid #073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                     <img style={{height:"150px", width:"280px", margin:0}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
@@ -60,6 +56,10 @@ const PetShow = () => {
                             </select>
                         </div>
                     </div>
+                </div>
+                {/* Link to home page */}
+                <div className='Links' style={{display:"flex", flexDirection:"column"}}>
+                    <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
                 </div>
             </div>
             <br />
