@@ -36,6 +36,8 @@ import AdminViewAll from './components/AdminViewAll';
 import AdminUpdatePet from './components/AdminUpdatePet';
 import AdminEventForm from './components/AdminEventForm';
 import EventsViewAll from './components/EventsViewAll';
+import AdminUpdateEvent from './components/AdminUpdateEvent';
+import AdoptInfo from './components/AdminAdoptInfo';
 
 function App() {
 
@@ -50,7 +52,9 @@ function App() {
             <Route path="/admin/viewall" element={<AdminViewAll/>}/>
             <Route path="/admin/new/pet" element={<AdminPetForm/>}/>
             <Route path="/admin/new/event" element={<AdminEventForm/>}/>
-            <Route path="/admin/edit/:id" element={<AdminUpdatePet/>}/>
+            <Route path="/admin/edit/event/:id" element={<AdminUpdateEvent/>}/>
+            <Route path="/admin/edit/pet/:id" element={<AdminUpdatePet/>}/>
+            <Route path="/admin/adopt/:id" element={<AdoptInfo/>}/>
             <Route path="/admin/:bad" element={<BadLink/>}/>
             {/* user routes */}
             <Route path="/petshelter" element={<PetShow/>}/>
