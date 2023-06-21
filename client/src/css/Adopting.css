@@ -88,12 +88,15 @@
 .animate span:nth-of-type(20) {
 	animation-delay: .95s;
 }
+.animate span:nth-of-type(21) {
+	animation-delay: 1s;
+}
 
 .five span {
 	color: #dd3f0f;
 	opacity: 0;
 	transform: translate(0, -100px) rotate(360deg) scale(0);
-	animation: dropVanish .5s forwards;
+	animation: dropVanish .75s forwards;
 }
 
 @keyframes dropVanish {

@@ -8,23 +8,24 @@
     border-radius: 5px;
 }
 
-/* .DeleteButton {
-    color:white;
-    background-color: red;
-    margin: 0 auto;
-    box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
-} */
-
-  /* .DeleteButton:focus,  */
-/* .DeleteButton:hover {
+.DeleteButton {
     color: red;
     background-color: white;
+    padding: 5px;
+    margin: 0 auto;
+    box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
+}
+
+/* .DeleteButton:focus,  */
+.DeleteButton:hover {
+    color:white;
+    background-color: red;
     box-shadow:0 8px 12px 0 #fd6ee0;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
-} */
+}
 
 .Adopt:hover, .Deets:hover{
     animation: wobble 1.5s 1;
@@ -70,7 +71,7 @@
 }
 
 .SubmitButton:hover,.LiveFeed:hover,.ViewButton:hover,.EditButton:hover,.LikeButton:hover, .Return:hover,.EnterButton:hover {
-    color: white;
+    color: purple;
     box-shadow:0 8px 12px 0 #fd6ee0;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
