@@ -9,10 +9,13 @@ const LiveFeed = () => {
     },[])
 
     return(
+        // Background
         <div className='Background' style={{minHeight:"65vh"}}>
+            {/* Home Link */}
             <Link className='Return'  style={{textDecoration:"none"}} to={"/"}><button className='EnterButton' > Return To Pet Shelter</button></Link>
             <br />
             <br />
+            {/* Youtube feed */}
             <iframe 
                 className="video" 
                 src="https://www.youtube.com/embed/bI0hW378XsA" 

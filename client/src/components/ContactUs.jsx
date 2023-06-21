@@ -63,7 +63,7 @@ const ContactUs = () => {
             <div className='hoursFlex'>
                 <h1 className='title'>We offer Guided Shelter Tours!</h1>
                 <p className='textLeft' style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
-                <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>A </span>
+                    <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>A </span>
                     45-minute tour of our state-of-art animal shelter facility. Tours are led by our Outreach Team and will include seeing animal care spaces, potentially meeting adoptable animals, and information on our programs & services.
                 </p>
             </div>

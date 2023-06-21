@@ -17,7 +17,9 @@ const Donate = () => {
                     </h2>    
                     <br />
                     {/* This link leaves the APP!! */}
-                    <a href="https://oregonhumane.tfaforms.net/23">Yes, I want to donate!!</a>
+                    ❤️<a style={{fontSize:"20px", fontWeight:"800", textDecoration:"underline"}} href="https://oregonhumane.tfaforms.net/23">
+                        Yes, I want to donate!!
+                    </a>❤️
                     <a class="close" href="#">&times;</a>
                 </div>
             </div>

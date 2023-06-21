@@ -37,7 +37,6 @@ const EventsViewAll = () => {
         <div className="Background2">
             {/* Page Banner */}
             <EventsBanner/>
-
             {/* Container */}
             <div className='FlierBox'>
                 {/* mapping and sorting */}
@@ -58,7 +57,7 @@ const EventsViewAll = () => {
                             <hr />
                         </div>
                         )
-                    })}
+                })}
                 <br />
                 <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Go To Shelter Home</Link>
             </div>

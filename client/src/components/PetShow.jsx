@@ -14,7 +14,6 @@ import defaultPetImage from '../assets/images/dogCatDefault.png'
 
 const PetShow = () => {
 
-    
     const [ pet, setPet ] = useState([])
     const [ sort, setSort ] = useState("ATOZ") 
 

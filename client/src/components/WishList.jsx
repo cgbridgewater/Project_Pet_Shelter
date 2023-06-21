@@ -13,11 +13,10 @@ const WishList = () => {
             {/* title and image */}
             <img className='wishList' src="https://www.parpets.org/uploads/5/7/4/1/5741185/editor/wishlist.jpg?1510458017" alt="Wish List" />
             <h1 style={{textAlign:"center", color:"#073DAA", textShadow:"1px 1px 2em #172023", position:""}}>Donate Goods From Our Wish List</h1>
-
             {/* Donation text */}
             <p style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}} className='ourStory'>
-            <span style={{fontSize:"200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>T</span>
-            he Coding Dojo Pet Shelter is a nonprofit corporation who relies not only on monetary donations, but also in-kind donations to perform everyday functions.  In-kind donations are tax deductible, however we only are only able to accept certain items.  See the list of acceptable donation items below.  Please contact us at 1-877-ADOPT-ME for information on how to donate any of these items, questions about additional types of in-kind donations or assistance with a donation drive.  Donations can be dropped off at the Adoptions front desk during normal operating hours.
+                <span style={{fontSize:"200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>T</span>
+                he Coding Dojo Pet Shelter is a nonprofit corporation who relies not only on monetary donations, but also in-kind donations to perform everyday functions.  In-kind donations are tax deductible, however we only are only able to accept certain items.  See the list of acceptable donation items below.  Please contact us at 1-877-ADOPT-ME for information on how to donate any of these items, questions about additional types of in-kind donations or assistance with a donation drive.  Donations can be dropped off at the Adoptions front desk during normal operating hours.
             </p>
             {/* start wish list */}
             <h2 style={{textAlign:"center"}}> Adoptions/Foster Program </h2>

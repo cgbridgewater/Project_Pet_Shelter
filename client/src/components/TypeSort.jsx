@@ -34,6 +34,7 @@ const TypeSort = () => {
     }, [])
 
     return (
+        // Background
         <div style={{ minHeight:"70vh"}}>
             {/* page load ternary */}
             { pet.length == 0  ? 
@@ -46,7 +47,6 @@ const TypeSort = () => {
                 </a>
             </div>
                 : //ternary for bad data flow //
-
             // start content //
             <div style={{padding:"10px"}}>
                 {/* link to home page */}

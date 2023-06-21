@@ -9,15 +9,17 @@ const Careers = () => {
     },[])
 
     return (
+        // background
         <div style={{minHeight:"65vh"}}>
+            {/* container */}
             <div style={{width:"70%", margin:"10px auto" }}>
                 {/* row 1 */}
                 <div className='Flex'>
-                        <h2 style={{fontWeight:"800", fontSize:"40px"}}>There is nothing like going home at the end of the day knowing you made lives better.</h2>
+                    <h2 style={{fontWeight:"800", fontSize:"40px"}}>There is nothing like going home at the end of the day knowing you made lives better.</h2>
                     <div className='TextBox'>
                         <p style={{fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
-                        <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
-                        e all share a common passion here at the Dojo Pet Shelter. Not just for the animals saved, but for their companions and those in our community who then foster, volunteer, or adopt. Whether affected by illness, injury, or homelessness, the animals we help need our expertise and compassion. You could wake up every day knowing you’ll be “doing good work” in a fulfilling environment where no two days are the same. The SF SPCA has been at the forefront of animal welfare for 150+ years, and Vision 2030 is our plan to positively impact 5+ million lives over the next decade. We are looking for animal-loving professionals to help us turn this vision into reality!</p>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
+                            e all share a common passion here at the Dojo Pet Shelter. Not just for the animals saved, but for their companions and those in our community who then foster, volunteer, or adopt. Whether affected by illness, injury, or homelessness, the animals we help need our expertise and compassion. You could wake up every day knowing you’ll be “doing good work” in a fulfilling environment where no two days are the same. The SF SPCA has been at the forefront of animal welfare for 150+ years, and Vision 2030 is our plan to positively impact 5+ million lives over the next decade. We are looking for animal-loving professionals to help us turn this vision into reality!</p>
                     </div>
                     <img className='desktop-only' width="350px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt7MiGDPd8AWq27OEjPuLCDJ0NvgUKSb39dQ&usqp=CAU" alt="catCrate" />
                 </div>
@@ -27,8 +29,8 @@ const Careers = () => {
                     <div className='TextBox'>
                         <h2 style={{fontWeight:"800", fontSize:"40px"}}>Equality</h2>
                         <p style={{fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
-                        <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>D</span>
-                        iversity. Inclusion. They’re more than just words for us. They are on every Dojo Pet Shelter job description and are the principles guiding how we build our teams, cultivate our leaders and build a culture of belonging where differences are valued.</p>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>D</span>
+                            iversity. Inclusion. They’re more than just words for us. They are on every Dojo Pet Shelter job description and are the principles guiding how we build our teams, cultivate our leaders and build a culture of belonging where differences are valued.</p>
                     </div>
                 </div>
                 {/* row 3 */}

@@ -18,7 +18,7 @@ const Navibar = () => {
               </span>
           </Link>
         </div>
-          <Link className="LiveFeed" to={`/petshelter/livefeed`}></Link>
+        <Link className="LiveFeed" to={`/petshelter/livefeed`}></Link>
         {/* right side of navbar */}
         <div style={{minWidth:"30%",display:"flex",alignItems:"center"}} className='RightNav'>
           <Link to="/petshelter/events">

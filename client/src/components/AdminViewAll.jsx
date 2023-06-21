@@ -25,7 +25,6 @@ const AdoptSortType = {
     ZTOA: (a,b) => b.petName.localeCompare(a.petName)
 }
 
-
 const AdminViewAll = () => {
 
     // scroll to top
@@ -90,17 +89,17 @@ const AdminViewAll = () => {
                     <h1 style={{fontSize:"40px",color:"red"}}> ADMIN PAGE</h1>
                 </div>
                 <br />
-
                 {/* tables contaner */}
                 <div className='TablesContainer' style={{display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}}>
-
                     {/* LEFT TABLE */}
-                    {/* pet table */}
+                    {/* pet table container */}
                     <div className='TableBox'>
+                        {/* Table Title */}
                         <div className="TitleBox">
                             <h1><em>PETS FOR ADOPTION</em></h1>
                             <Link to="/admin/new/pet" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a pet to the shelter</Link>
                         </div>
+                        {/* pets Table */}
                         <table className='PetTable'>
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
@@ -127,29 +126,27 @@ const AdminViewAll = () => {
                                         return(
                                             // table body // 
                                             <tbody key={pet._id}>
-                                <tr>
-                                    <td>
-                                        <Link className='TableLink' to={"/admin/edit/pet/" +pet._id}>{pet.name}</Link>
-                                    </td>
-                                    <td style={{color:"white", fontSize:"16px", textAlign:"center"}}>
-                                        {pet.type}
-                                    </td>
-                                </tr>
-                            </tbody>
-                            )})
-                        }  {/* end mapping */}
+                                                <tr>
+                                                    <td>
+                                                        <Link className='TableLink' to={"/admin/edit/pet/" +pet._id}>{pet.name}</Link>
+                                                    </td>
+                                                    <td style={{color:"white", fontSize:"16px", textAlign:"center"}}>
+                                                        {pet.type}
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        )})
+                                }  {/* end mapping */}
                         </table>
                     </div>
-
-
-
-                {/* Center TABLE */}
-                <div className='TableBox'>
-                    <div className="TitleBox">
-                        <h1><em>EVENTS LIST</em></h1>
-                        <Link className="Add" to="/admin/new/event" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a new event for the shelter</Link>
-                    </div>
-
+                    {/* Center TABLE */}
+                    <div className='TableBox'>
+                        {/* Table Title */}
+                        <div className="TitleBox">
+                            <h1><em>EVENTS LIST</em></h1>
+                            <Link className="Add" to="/admin/new/event" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a new event for the shelter</Link>
+                        </div>
+                        {/* Events Table */}
                         <table className='EventTable'>
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
@@ -186,17 +183,18 @@ const AdminViewAll = () => {
                                                 </tr>
                                             </tbody>
                                         )})
-                                    }  {/* end mapping */}
+                                }  {/* end mapping */}
                         </table>
                     </div>
-
-                {/* RIGHT TABLE */}
+                    {/* RIGHT TABLE */}
                     {/* table container */}
                     <div className='TableBox'>
+                        {/* Table Title */}
                         <div className="TitleBox">
                         <h1><em>ADOPTION REQUESTS</em></h1>
                         <h3>Generated user side input</h3>
                         </div>
+                        {/* Adopt Table */}
                         <table className='AdoptTable'>
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
@@ -222,6 +220,7 @@ const AdminViewAll = () => {
                                             // table body // 
                                             <tbody key={adopt._id}>
                                                 <tr>
+                                                    {/* Contact */}
                                                     <td>
                                                         <Link 
                                                             style={{textAlign:"end"}}
@@ -235,11 +234,10 @@ const AdminViewAll = () => {
                                                     <td style={{color:"white", fontSize:"16px", textAlign:"center"}}>
                                                         {adopt.petName}
                                                     </td>
-                                                    {/* Contact */}
                                                 </tr>
                                             </tbody>
-                                            )})
-                                        }  {/* end mapping */}
+                                        )})
+                                }  {/* end mapping */}
                         </table>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ const AdminPetForm = () => {
         e.preventDefault();
         axios.post("http://localhost:8000/api/pets", {
             name: name.toUpperCase(),
-            type:type.toLowerCase(),
+            type:type.toUpperCase(),
             description,
             age,
             petImage,
@@ -64,7 +64,7 @@ const AdminPetForm = () => {
             {/* form start */}
             <form className="Form" style={{minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
             {/* inner form container */}
-                {/* name */}
+                {/* Pet name */}
                 <div className="FormInput">
                     <label>
                         { errors.name ? 
@@ -82,7 +82,7 @@ const AdminPetForm = () => {
                         placeholder="Required"
                     />
                 </div>
-                {/* type */}
+                {/* Pet type */}
                 <div className="FormInput">
                     <label>
                         { errors.type ? 
@@ -100,7 +100,7 @@ const AdminPetForm = () => {
                         placeholder="Required"
                     />
                 </div>
-                {/* description */}
+                {/* Pet description */}
                 <div className="FormInput">
                     <label>
                         { errors.description ? 
@@ -118,7 +118,7 @@ const AdminPetForm = () => {
                         placeholder="Required"
                     />
                 </div>
-                {/* age */}
+                {/* Pet age */}
                 <div className="FormInput">
                     <label>
                         { errors.age ? 
@@ -138,7 +138,7 @@ const AdminPetForm = () => {
                         placeholder="Required"
                     />
                 </div>
-                {/* Image */}
+                {/* Pet Image */}
                 <div className="FormInput">
                     <label>
                         { errors.petImage ? 

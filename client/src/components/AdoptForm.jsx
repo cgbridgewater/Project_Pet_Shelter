@@ -38,6 +38,7 @@ const AdoptForm = (props) => {
 
     return(
         <div className="Background">
+            {/* botton to trigger pop-up */}
             <a class="AdoptButton" href="#popup1">Adopt ME!</a>
             {/* pop up */}
             <div id="popup1" class="overlay">
@@ -51,7 +52,7 @@ const AdoptForm = (props) => {
                                 onSubmit={onSubmitHandler}
                                 style={{width:"50%", minWidth:"330px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} 
                         >
-                        {/* inner form container */}
+                            {/* inner form container */}
                             <div>
                                 {/* name */}
                                 <div className="FormInput">
@@ -108,8 +109,7 @@ const AdoptForm = (props) => {
                                         {petName}
                                     </label>
                                 </div>
-                                    {/* <h6 style={{margin:"3px", color:"red"}}> * is required</h6> */}
-                                {/* form button */}
+                                {/* submit button */}
                                 <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
                             </div>
                         </form>

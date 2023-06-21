@@ -67,7 +67,6 @@ const AdminUpdatePet = (props) => {
             })
     }
 
-    
     const deletePet = (e) => {
         axios.delete('http://localhost:8000/api/pets/' + id)
             .then(res => {
@@ -91,7 +90,7 @@ const AdminUpdatePet = (props) => {
             {/* form start */}
             <form className="Form" style={{minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
             {/* inner form container */}
-                {/* name */}
+                {/* Pet name */}
                 <div className="FormInput">
                     <label>
                         { errors.name ? 
@@ -109,7 +108,7 @@ const AdminUpdatePet = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* type */}
+                {/* Pet type */}
                 <div className="FormInput">
                     <label>
                         { errors.type ? 
@@ -127,7 +126,7 @@ const AdminUpdatePet = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* description */}
+                {/* Pet description */}
                 <div className="FormInput">
                     <label>
                         { errors.description ? 
@@ -145,7 +144,7 @@ const AdminUpdatePet = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* age */}
+                {/* Pet age */}
                 <div className="FormInput">
                     <label>
                         { errors.age ? 
@@ -165,7 +164,7 @@ const AdminUpdatePet = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* Image */}
+                {/* Pet Image */}
                 <div className="FormInput">
                     <label>
                         { errors.petImage ? 
@@ -241,7 +240,7 @@ const AdminUpdatePet = (props) => {
                             />
                     </div>
                 </div>
-                {/* form button */}
+                {/* form buttons */}
                 <div className="FlierFlex">
                     <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
                     <button className="SubmitButton" style={{color:"red", marginTop:"5%"}} onClick={(e) =>{deletePet(id)}}>

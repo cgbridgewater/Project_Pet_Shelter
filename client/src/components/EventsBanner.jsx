@@ -1,6 +1,5 @@
 const EventsBanner = () => {
 
-
     let spans = document.querySelectorAll('.word span');
     spans.forEach((span, idx) => {
         span.addEventListener('click', (e) => {
@@ -26,7 +25,7 @@ const EventsBanner = () => {
                 <span>I</span>
                 <span>N</span>
                 <span>G</span>
-                <br className="mobile-only"  />
+                <br className="mobile-only"  />  {/* break for mobile screen */}
                 <span>&nbsp;</span>
                 <span>E</span>
                 <span>V</span>

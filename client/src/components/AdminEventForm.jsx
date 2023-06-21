@@ -106,7 +106,6 @@ const AdminEventForm = () => {
                         placeholder="Required"
                     />
                 </div>
-                
                 {/* Flier Image */}
                 <div className="FormInput">
                     <label>

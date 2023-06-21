@@ -52,7 +52,6 @@ const AdminUpdateEvent = (props) => {
             })
     }
 
-    
     const deleteEvent = (e) => {
         axios.delete('http://localhost:8000/api/events/' + id)
             .then(res => {
@@ -76,7 +75,7 @@ const AdminUpdateEvent = (props) => {
             {/* form start */}
             <form className="Form" style={{minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
             {/* inner form container */}
-                {/* name */}
+                {/* Event Title */}
                 <div className="FormInput">
                     <label>
                         { errors.title ? 
@@ -94,7 +93,7 @@ const AdminUpdateEvent = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* type */}
+                {/* Event Date */}
                 <div className="FormInput">
                     <label>
                         { errors.Date ? 
@@ -112,7 +111,7 @@ const AdminUpdateEvent = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* description */}
+                {/* Event Description */}
                 <div className="FormInput">
                     <label>
                         { errors.description ? 
@@ -130,7 +129,7 @@ const AdminUpdateEvent = (props) => {
                         placeholder="Required"
                     />
                 </div>
-                {/* Image */}
+                {/* Event Flier Image */}
                 <div className="FormInput">
                     <label>
                         { errors.flierImage ? 
@@ -149,7 +148,7 @@ const AdminUpdateEvent = (props) => {
                     />
                 </div>
                 
-                {/* form button */}
+                {/* Event form button */}
                 <div className="FlierFlex">
                     <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
                     <button className="SubmitButton" style={{color:"red", marginTop:"5%"}} onClick={(e) =>{deleteEvent(id)}}>

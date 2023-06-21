@@ -26,7 +26,6 @@ const TypingText = () => {
         }
         // add span text //
         this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
         var that = this;
         var delta = 275; // type speed variable higher is faster //
         // delete speed //

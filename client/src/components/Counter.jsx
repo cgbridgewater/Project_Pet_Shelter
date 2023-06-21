@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import TypingText from './TypingText';
 
-
 const Counter = () => {
 
     useEffect(() => {

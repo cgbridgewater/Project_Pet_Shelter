@@ -4,7 +4,6 @@ const Adopting = () => {
 
     return(
         <div className="Background">
-
             {/* thank you animation */}
             <div className="ThanksFlex">
                 <div class="animate five">
@@ -15,10 +14,8 @@ const Adopting = () => {
                 <img style={{height:"200px", borderRadius:"5%", margin:'20px'}} src="https://adopthope.org/wp-content/uploads/2018/12/Thank-You-Dog-and-Cat.jpg" alt="Thanks" />
             </div>
             <br />
-
             {/* text container */}
             <div className="TextBox">
-
                 <br /><hr className="Divide"/><br />
                 {/* Thanks info */}
                 <h3 style={{textAlign:"start"}}>

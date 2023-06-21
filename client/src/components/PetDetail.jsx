@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link, useParams } from 'react-router-dom';
 import AdoptForm from "./AdoptForm";
 
-
 const Detail = () => {
 
     // scroll to top fix
@@ -23,26 +22,26 @@ const Detail = () => {
     const [ animalFriendly, setAnimalFriendly ] = useState("");
     const [getErrors, setGetErrors] = useState("null");
 
-        useEffect(() => {
-            axios.get("http://localhost:8000/api/pets/" + id)
-            .then( res => {
-                console.log(res.data);
-                setName(res.data.name);
-                setType(res.data.type);
-                setDescription(res.data.description);
-                setAge(res.data.age);
-                setpetImage(res.data.petImage);
-                setNotes(res.data.notes);
-                setFixed(res.data.fixed);
-                setChildFriendly(res.data.childFriendly);
-                setAnimalFriendly(res.data.animalFriendly);
-                setGetErrors("")
-            })
-            .catch((err) => {
-                console.log(err.response.data)
-                setGetErrors(err.response.data); 
-            })
-        }, []);
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/pets/" + id)
+        .then( res => {
+            console.log(res.data);
+            setName(res.data.name);
+            setType(res.data.type);
+            setDescription(res.data.description);
+            setAge(res.data.age);
+            setpetImage(res.data.petImage);
+            setNotes(res.data.notes);
+            setFixed(res.data.fixed);
+            setChildFriendly(res.data.childFriendly);
+            setAnimalFriendly(res.data.animalFriendly);
+            setGetErrors("")
+        })
+        .catch((err) => {
+            console.log(err.response.data)
+            setGetErrors(err.response.data); 
+        })
+    }, []);
 
     return (
         <div>
@@ -57,7 +56,6 @@ const Detail = () => {
                 </Link>
             </div>
                 : //ternary for bad data flow //
-
             // start content //
             <div>
                 <div className="DetailContainer" style={{ minHeight:"61vh"}}>
