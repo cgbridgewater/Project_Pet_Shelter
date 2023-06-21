@@ -79,7 +79,7 @@ const Detail = () => {
                     {/* Details Container */}
                     <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://media.istockphoto.com/id/1064117208/vector/animal-paw-prints-on-blue-winter-background.jpg?s=612x612&w=0&k=20&c=SxtfxxqqSEHv8ms2EhMAvAuYZGFdQtqbcUOY4D3JIaU=)",backgroundSize:"cover", border:"2px solid white", borderRadius:"15px"}}>
                         {/* pet image */}
-                        <img style={{width:"350px", borderRadius:"10px"}} src={petImage} alt="" />
+                        <img style={{width:"350px", borderRadius:"10px"}} src={petImage} alt="pet image" />
                         {/* pet details */}
                         <div style={{width:"60%",minWidth:"350px", padding:"2%"}} className="details">
                             {/* Type */}
@@ -127,7 +127,7 @@ const Detail = () => {
                     </div>
                 </div>
                 {/* adoption form popup */}
-                <AdoptForm petName= {name} petId={id} />
+                <AdoptForm petName= {name} petId={id} petImage={petImage} />
                 <br />
             </div>    
             }
