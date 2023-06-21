@@ -22,7 +22,7 @@ const Navibar = () => {
         {/* right side of navbar */}
         <div style={{minWidth:"30%",display:"flex",alignItems:"center"}} className='RightNav'>
           <Link to="/petshelter/events">
-            <p className="NavTitle">
+            <p className="ActionNavTitle">
               See Upcoming Events!
             </p>  
           </Link>
