@@ -67,11 +67,11 @@ const AdminUpdatePet = (props) => {
             })
     }
 
-    const adopt = (e) => {
+    
+    const deletePet = (e) => {
         axios.delete('http://localhost:8000/api/pets/' + id)
             .then(res => {
-                alert(`Congratulations!! ${name} has lots of love to give and will make a great pet in your home.`)
-                navigate("/petshelter");
+                navigate("/admin/viewall");
             })
             .catch((err) => {
                 console.log(err.response.data)
@@ -242,8 +242,11 @@ const AdminUpdatePet = (props) => {
                     </div>
                 </div>
                 {/* form button */}
-                <div>
+                <div className="FlierFlex">
                     <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
+                    <button className="SubmitButton" style={{color:"red", marginTop:"5%"}} onClick={(e) =>{deletePet(id)}}>
+                        Delete 
+                    </button>
                 </div>
             </form>
         </div>
