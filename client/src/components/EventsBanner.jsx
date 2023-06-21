@@ -1,12 +1,6 @@
-// import {useEffect} from 'react';
-
 const EventsBanner = () => {
 
-    // useEffect(() => {
 
-    // },[])
-
-    
     let spans = document.querySelectorAll('.word span');
     spans.forEach((span, idx) => {
         span.addEventListener('click', (e) => {
@@ -15,7 +9,6 @@ const EventsBanner = () => {
         span.addEventListener('animationend', (e) => {
             e.target.classList.remove('active');
         });
-        
         // Initial animation
         setTimeout(() => {
             span.classList.add('active');
