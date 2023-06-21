@@ -1,11 +1,10 @@
 const AdoptController = require('../controllers/adopt.controller');
 
 module.exports = (app) => {
-    // app.get('/api', AdoptController.index);
-    // app.get('/api/pets', AdoptController.getAll);
-    // app.get('/api/pets/:id', AdoptController.getOne);
-    // app.get('/api/pets/sort/:type', AdoptController.sorter);
-    app.post('/api/pets/adopt', AdoptController.create);
-    // app.put('/api/pets/:id', AdoptController.update);
-    // app.delete('/api/pets/:id', AdoptController.delete);
+    app.get('/api/adopt', AdoptController.getAll);
+    app.get('/api/adopt/:id', AdoptController.getOne);
+    app.post('/api/adopt/adopt', AdoptController.create);
+    app.delete('/api/adopt/:id', AdoptController.delete);
+    // app.put('/api/adopt/:id', AdoptController.update); // just in case!
+    // app.get('/api/adopt/sort/:type', AdoptController.sorter); // just in case!
 }
