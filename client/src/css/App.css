@@ -328,15 +328,6 @@ tbody{
   flex-wrap: wrap-reverse;
   align-items: center;
 }
-.RightAboutMe {
-  width: 45%;
-  min-width: 370px;
-}
-
-.LeftAboutMe {
-  width:370px;
-  height:370px
-}
 
 .GitHub {
   width: 45%;
@@ -344,4 +335,17 @@ tbody{
   border: 3px solid #073DAA;
   padding: 3px;
   margin: 15px 0;
+}
+
+.AboutMePic {
+  width: 375px;
+  padding: 3px;
+  margin: 5px 0;
+}
+.MailPic {
+  width: 200px;
+  padding: 3px;
+  margin: 15px 0;
+  border: 2px solid #073DAA;
+  border-radius: 50%;
 }
