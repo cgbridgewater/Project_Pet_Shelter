@@ -26,7 +26,6 @@ import Careers from './components/Careers';
 import TypeSort from './components/TypeSort';
 import PetShow from './components/PetShow';
 import ContactUs from './components/ContactUs';
-import OurStory from './components/ourStory'
 import WishList from './components/WishList';
 import Stories from './components/Stories';
 import Adopting from './components/Adopting';
@@ -38,6 +37,7 @@ import AdminEventForm from './components/AdminEventForm';
 import EventsViewAll from './components/EventsViewAll';
 import AdminUpdateEvent from './components/AdminUpdateEvent';
 import AdoptInfo from './components/AdminAdoptInfo';
+import OurStory from './components/OurStory';
 
 function App() {
 
