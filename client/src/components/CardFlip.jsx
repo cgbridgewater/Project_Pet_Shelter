@@ -20,12 +20,12 @@ const CardFlip = () => {
             </a>
             {/* Card 2 */}
             <a className="Card" href="#!">
-                <div className="CardFront" style={{backgroundImage: "url(https://animalhaven.org/wp-content/uploads/2021/06/Doris-Dottie.png)"}}>
+                <div className="CardFront" style={{backgroundImage: "url(https://cattalesinc.org/wp-content/uploads/2020/09/Screenshot_20200917-132708-991x1024.jpg)"}}>
                     <p style={{color:"white", fontWeight:"bolder", fontSize:"14px", background:"darkgrey", borderRadius:"5px",opacity:"80%"}}>
                         Doris Murphy and Dottie Hinson, two sweet kittens from the litter we named after “A League of Their Own” were brought in to Animal Haven after they were found as strays without their mother.
                     </p>
                 </div>
-                <div className="CardBack"style={{backgroundImage: "url(https://animalhaven.org/wp-content/uploads/2021/06/Doris-Dottie.png)"}}>
+                <div className="CardBack"style={{backgroundImage: "url(https://cattalesinc.org/wp-content/uploads/2020/09/Screenshot_20200921-190239.jpg)"}}>
                     <p style={{color:"white", fontWeight:"bolder", fontSize:"14px", background:"darkgrey", borderRadius:"5px",opacity:"80%"}}>
                         It didn’t take long for their adopters to fall in love with them. Now named Momo & Yuki, these adorable ladies spend their days lounging and squirrel watching from the comfort of a loving home!
                     </p>
