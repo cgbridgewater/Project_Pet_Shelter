@@ -23,7 +23,7 @@ const Stories = () => {
             <CardFlip/>
             <br />
             {/* Link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
+            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>
         </div>
     )
 }

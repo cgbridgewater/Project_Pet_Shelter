@@ -35,8 +35,8 @@ const DontBuy = () => {
                     <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>See Our Pets!</Link>
                 </div>
             </div>
-            <Link className='Return'  style={{textDecoration:"none"}} to={"/"}><button className='EnterButton' > Return To Pet Shelter</button></Link>
-        </div>
+            {/* Link to home page */}
+            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>        </div>
     )
 }
 

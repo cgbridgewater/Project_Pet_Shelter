@@ -167,12 +167,8 @@ const ContactUs = () => {
                 {/* <!-- end google MAP --> */}
             </div>
             <br />
-            {/* home link */}
-            <Link 
-                className='Return'  
-                style={{textDecoration:"none"}} 
-                to={"/"}><button className='EnterButton' > Return To Pet Shelter</button>
-            </Link>
+            {/* Link to home page */}
+            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>
         </div>
     )
 }

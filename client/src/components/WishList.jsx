@@ -193,8 +193,8 @@ const WishList = () => {
             </ul>
             {/* end wish list 5 */}
             <br />
-            {/* link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"#073DAA", marginRight:"50px"}}>Return To Shelter Home</Link>
+            {/* Link to home page */}
+            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>
         </div>
     )
 }
