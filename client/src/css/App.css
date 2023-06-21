@@ -274,9 +274,11 @@ tbody{
   width: 200px;
   margin: 10px auto;
 }
+
 .fade-in {
   animation: fadeIn ease 10s;
 }
+
 @keyframes fadeIn{
   0% {
     opacity:0;
@@ -342,6 +344,7 @@ tbody{
   padding: 3px;
   margin: 5px 0;
 }
+
 .MailPic {
   width: 200px;
   padding: 3px;
