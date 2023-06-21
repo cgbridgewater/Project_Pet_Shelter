@@ -97,7 +97,7 @@ const PetShow = () => {
                                 </Link>
                                 {/* Link to view pet */}
                                 <p>
-                                    <Link style={{textDecoration:"none", color:"white"}} to={`/petshelter/${pet._id}`}>
+                                    <Link style={{textDecoration:"none"}} to={`/petshelter/${pet._id}`}>
                                         <button className='ViewButton'>
                                             <h3>View</h3>
                                             <h3>{pet.name}</h3>

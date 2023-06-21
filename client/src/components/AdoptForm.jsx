@@ -4,7 +4,7 @@ import axios from "axios";
 
 const AdoptForm = (props) => {
 
-    const { petName, petId } = props;
+    const { petName, petId, petImage } = props;
     const[ userName, setUserName ] = useState("");
     const[ email, setEmail ] = useState("");
     const[ phone, setPhone ] = useState("");
@@ -13,9 +13,10 @@ const AdoptForm = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/pets/adopt", {
+        axios.post("http://localhost:8000/api/adopt", {
         petName,
         petId,
+        petImage,
         userName,
         email,
         phone
