@@ -21,5 +21,9 @@ const AdoptSchema = new mongoose.Schema({
         type:String,
         required:[true,"Valid email required!"]
     },
+    petImage:{
+        type:String,
+        required:[true,"Image Link"]
+    }
 }, { timestamps: true }); 
 module.exports = mongoose.model('Adopt', AdoptSchema);
