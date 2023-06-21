@@ -18,7 +18,7 @@ const AdminEventForm = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8000/api/event", {
+        axios.post("http://localhost:8000/api/events", {
             title: title.toUpperCase(),
             date,
             description,
