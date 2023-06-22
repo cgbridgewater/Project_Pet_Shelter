@@ -39,9 +39,9 @@ const PetShow = () => {
         // Show All Container
         <div style={{padding:"20px 10px"}}>
             {/* top bar */}
-            <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap", alignItems:"center"}}>
+            <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap-reverse", alignItems:"center"}}>
                 {/* Sort Drowpdown with image */}
-                <div className='DropdownContainer' style={{marginLeft: "5%", border:"2px solid #073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                <div className='DropdownContainer' style={{border:"2px solid #073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                     <img style={{height:"150px", width:"280px", margin:0}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
                     <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap" }}>
                         <div className='DropdownFlex' style={{display:"flex", flexDirection:"column"}}>
@@ -57,9 +57,7 @@ const PetShow = () => {
                     </div>
                 </div>
                 {/* Link to home page */}
-                <div className='Links' style={{display:"flex", flexDirection:"column"}}>
-                    <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Return To Shelter Home</Link>
-                </div>
+                <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Return To Shelter Home</Link>
             </div>
             <br />
             {/* Main Content Cards */}
@@ -70,41 +68,66 @@ const PetShow = () => {
                     .map((pet, index) => {
                     return(
                         // Each Card //
-                        <div key={pet._id}  className='PetCardContainer'>
-                            <div className="PetCard">
-                                {/* Pet Name */}
-                                <h1 style={{color:"#073DAA"}}>{pet.name}</h1>
-                                {/* Link To Pet Type */}
-                                <h2>
-                                    <Link style={{textDecoration:"underline"}} to={`/petshelter/sort/${pet.type}`}>({pet.type})</Link>
-                                </h2>
-                                {/* Image Link to view pet */}
-                                <Link to={`/petshelter/${pet._id}`}>
-                                    {/* Check For Pet Image */}
-                                    { pet.petImage == null  ?
-                                    <img 
-                                        style={{height:"100px",borderRadius: "50%"}} 
-                                        src={defaultPetImage}
-                                        alt="Pet Image" 
-                                    />
-                                    :
-                                    <img 
-                                        style={{height:"100px",borderRadius: "50%"}} 
-                                        src={pet.petImage} 
-                                        alt="Pet Image" />
-                                    }
-                                </Link>
-                                {/* Link to view pet */}
-                                <p>
-                                    <Link style={{textDecoration:"none"}} to={`/petshelter/${pet._id}`}>
-                                        <button className='ViewButton'>
-                                            <h3>View</h3>
-                                            <h3>{pet.name}</h3>
-                                        </button>
-                                    </Link>
-                                </p>
+                        <div class="pet-container">
+                            <div class="row">
+                                <div class="pet-1">
+                                    <div class="pet">
+                                        <div class="pet-image">
+                                            <img src={pet.petImage} alt="pet-image"/>
+                                        </div>
+                                        <div class="pet-details">
+                                            <div class="pet-social-link">
+                                                <ul>
+                                                    <li style={{color:"white",fontWeight:800}}>{pet.name}</li>
+                                                    <li><Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                        {pet.type}
+                                                    </Link></li>
+                                                    <li><Link to={`/petshelter/${pet._id}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                        View {pet.name}
+                                                    </Link></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        // Each Card //
+                        // <div key={pet._id}  className='PetCardContainer'>
+                        //     <div className="PetCard">
+                        //         {/* Pet Name */}
+                        //         <h1 style={{color:"#073DAA"}}>{pet.name}</h1>
+                        //         {/* Link To Pet Type */}
+                        //         <h2>
+                        //             <Link style={{textDecoration:"underline"}} to={`/petshelter/sort/${pet.type}`}>({pet.type})</Link>
+                        //         </h2>
+                        //         {/* Image Link to view pet */}
+                        //         <Link to={`/petshelter/${pet._id}`}>
+                        //             {/* Check For Pet Image */}
+                        //             { pet.petImage == null  ?
+                        //             <img 
+                        //                 style={{height:"100px",borderRadius: "50%"}} 
+                        //                 src={defaultPetImage}
+                        //                 alt="Pet Image" 
+                        //             />
+                        //             :
+                        //             <img 
+                        //                 style={{height:"100px",borderRadius: "50%"}} 
+                        //                 src={pet.petImage} 
+                        //                 alt="Pet Image" />
+                        //             }
+                        //         </Link>
+                        //         {/* Link to view pet */}
+                        //         <p>
+                        //             <Link style={{textDecoration:"none"}} to={`/petshelter/${pet._id}`}>
+                        //                 <button className='ViewButton'>
+                        //                     <h3>View</h3>
+                        //                     <h3>{pet.name}</h3>
+                        //                 </button>
+                        //             </Link>
+                        //         </p>
+                        //     </div>
+                        // </div>
                     )})
             }</div>
         </div>

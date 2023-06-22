@@ -84,36 +84,31 @@ const TypeSort = () => {
                             .sort(sortType[sort])
                             .map((pet, index) => {
                             return(
-                                // Pet Card //
-                                <div key={pet._id}  className='PetCardContainer'>
-                                    {/* contents of the pet card */}
-                                    <div className="PetCard">
-                                        {/* Link to view pet */}
-                                        <Link to={`/petshelter/${pet._id}`}>
-                                            {/* Name */}    
-                                            <h1 style={{color:"#073DAA"}}>{pet.name}</h1>
-                                            {/* Check For Pet Image and display or default */}
-                                            { pet.petImage == null  ?
-                                                <img 
-                                                style={{height:"100px",borderRadius: "50%"}} 
-                                                src={defaultPetImage}
-                                                alt="Pet Image" 
-                                                />
-                                                :
-                                                <img 
-                                                    style={{height:"100px", width:"150px",borderRadius: "50%"}} 
-                                                    src={pet.petImage} 
-                                                    alt="Pet Image" 
-                                                    />
-                                            }
-                                            {/* view button */}
-                                            <button className='ViewButton2'>
-                                                <h3>View</h3>
-                                                <h3>{pet.name}</h3>
-                                            </button>
-                                        </Link>
+                            // Each Card //
+                            <div class="pet-container">
+                                <div class="row">
+                                    <div class="pet-1">
+                                        <div class="pet">
+                                            <div class="pet-image">
+                                                <img src={pet.petImage} alt="pet-image"/>
+                                            </div>
+                                            <div class="pet-details">
+                                                <div class="pet-social-link">
+                                                    <ul>
+                                                        <li style={{color:"white",fontWeight:800}}>{pet.name}</li>
+                                                        <li><Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                            {pet.type}
+                                                        </Link></li>
+                                                        <li><Link to={`/petshelter/${pet._id}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                            View {pet.name}
+                                                        </Link></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
                             )})
                     }</div>
                 </div>
