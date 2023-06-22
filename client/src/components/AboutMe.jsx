@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import GitHub from "./GitHubGraph"
 
 const AboutMe = () => {
 
@@ -7,7 +8,7 @@ const AboutMe = () => {
             {/* Container */}
             <div className="PageContainer" style={{width:"80%", margin:"15px auto"}}>
                 {/* Title */}
-                <h1 style={{margin:"15px"}}>Welcome To My Pet Shelter Website!</h1>
+                <h1 style={{margin:"15px"}}>Welcome To My Pet Shelter Project Website!</h1>
                 {/* Row 1 */}
                 <div className="FlexBox">
                     <img className="AboutMePic" src="https://i.pinimg.com/originals/60/a0/f1/60a0f10e9227fa654939884d40c2d8f3.gif" alt="dog" />
@@ -44,7 +45,8 @@ const AboutMe = () => {
                 <hr />
                 {/* Row 3 */}
                 <div className="FlexBox">
-                    <img className="GitHub"src="https://ghchart.rshah.org/073DAA/cgbridgewater" alt="cgbridgewater's Github chart" />
+                    {/* <img className="GitHub"src="https://ghchart.rshah.org/073DAB/cgbridgewater" alt="cgbridgewater's Github chart" /> */}
+                    <GitHub/>
                     <div className="TextBox">
                         <h3 style={{textAlign:"start",color:"#073DAA", color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
                         <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
