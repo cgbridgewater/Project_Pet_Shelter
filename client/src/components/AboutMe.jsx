@@ -15,7 +15,7 @@ const AboutMe = () => {
                     <div className="TextBox">
                         <p style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>T</span>
-                                his single page app was created utilizing the MERN stack, and was built with a handfull of features. Here is a few of them:
+                            his single page app was created utilizing the MERN stack, and was built with a handfull of features. Here is a few of them:
                         </p>
                         <ul style={{width:"80%", margin:"15px", textAlign:"start"}}>
                             <li>Full CRUD functionality on both the pets up for adoptoin and the event fliers</li>
@@ -35,7 +35,7 @@ const AboutMe = () => {
                 <div className="FlexBox">
                     <div className="TextBox">
                         <h3 style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
-                        <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
                             ant to see The Code for this site? Check out the GitHub repo for<a style={{textDecoration:"underline"}} href="https://github.com/cgbridgewater/Project_Pet_Shelter">"Project Pet Shelter"</a>. While you're there, check out the ReadMe file for more info and details.  
                         </h3>
                     </div>
@@ -48,7 +48,7 @@ const AboutMe = () => {
                     <GitHub/>
                     <div className="TextBox">
                         <h3 style={{textAlign:"start",color:"#073DAA", color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
-                        <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
                             nterested in what other projects I've worked on? <br /> Want to see the technologies I know. <br /> Check out my <a style={{textDecoration:"underline"}} href="https://github.com/cgbridgewater">GitHub</a>
                         </h3>
                     </div>
@@ -59,7 +59,7 @@ const AboutMe = () => {
                 <div className="FlexBox">
                     <div className="TextBox">
                         <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
-                        <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>F</span>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>F</span>
                             ind out more about me, or connect with me on <a style={{textDecoration:"underline"}} href="https://www.linkedin.com/in/chris-bridgewater/">LinkedIn</a>
                         </h3>
                     </div>
@@ -72,7 +72,7 @@ const AboutMe = () => {
                     <img className="MailPic" src="https://cliply.co/wp-content/uploads/2020/04/392004110_MAILBOX_3D_400px.gif" alt="mail" />
                     <div className="TextBox">
                         <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
-                        <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>H</span>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>H</span>
                             ave questions, want to know more or want to collaborate on something? <br /> Click <a style={{textDecoration:"underline"}} href="mailto:cgbridgewater@outlook.com">HERE</a> to get in contact with me!
                         </h3>
                     </div>
