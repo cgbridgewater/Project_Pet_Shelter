@@ -9,8 +9,6 @@ const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStar
 
 const EventsViewAll = () => {
     
-    console.log("current",current)
-    console.log("events today",today)
     // scroll to top fix
     useEffect(() => {
         window.scrollTo(0,0)
@@ -46,7 +44,7 @@ const EventsViewAll = () => {
                     return(
                         <div className='FlierContainer'key={event._id}>
                             <div className='FlierFlex'>
-                                <img width="325px" src={event.flierImage} alt="img" />
+                                <img className='FlierImg' src={event.flierImage} alt="img" />
                                 <div className='FlierInfo'>
                                     <h3>{event.title} on {event.date}</h3>
                                     <hr className='FlierDivide' />
