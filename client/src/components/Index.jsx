@@ -12,19 +12,19 @@ const Indexpage = () => {
     return(
         <div className='Background'>
             {/* sliding Title */}
-            <div class='TitleContainer'>
+            <div className='TitleContainer'>
                 {/* slide from Left to Right */}
-                <div class="slide-right">
+                <div className="slide-right">
                     <h2>Welcome to the</h2>
                     <span>
-                        <div class="line fade-in"></div>
+                        <div className="line fade-in"></div>
                     </span>
                     <h1 className='Title'><em>Coding Dojo Pet Shelter</em></h1>
                 </div>
                 {/* Counter Insert */}
                 <Counter/>
                 {/* slide from Right to Left */}
-                <div class="slide-left">
+                <div className="slide-left">
                     <div className="AnimalLinks" style={{display:"flex",width:"90%",margin:"0% auto", flexWrap:"wrap", justifyContent:"space-evenly", marginTop:"3%"}}>
                         {/* all pets link */}
                         <Link to="/petshelter">

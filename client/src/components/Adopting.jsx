@@ -6,7 +6,7 @@ const Adopting = () => {
         <div className="Background">
             {/* thank you animation */}
             <div className="ThanksFlex">
-                <div class="animate five">
+                <div className="animate five">
                     <span>T</span><span>h</span><span>a</span><span>n</span><span>k</span><span>s</span>&nbsp;
                     <span>F</span><span>o</span><span>r</span>&nbsp;
                     <span>R</span><span>e</span><span>g</span><span>i</span><span>s</span><span>t</span><span>e</span><span>r</span><span>i</span><span>n</span><span>g</span><span>!</span>

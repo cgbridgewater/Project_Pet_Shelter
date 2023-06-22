@@ -68,15 +68,15 @@ const PetShow = () => {
                     .map((pet, index) => {
                     return(
                         // Each Card //
-                        <div class="pet-container">
-                            <div class="row">
-                                <div class="pet-1">
-                                    <div class="pet">
-                                        <div class="pet-image">
+                        <div key={index} className="pet-container">
+                            <div className="row">
+                                <div className="pet-1">
+                                    <div className="pet">
+                                        <div className="pet-image">
                                             <img src={pet.petImage} alt="pet-image"/>
                                         </div>
-                                        <div class="pet-details">
-                                            <div class="pet-social-link">
+                                        <div className="pet-details">
+                                            <div className="pet-social-link">
                                                 <ul>
                                                     <li style={{color:"white",fontWeight:800}}>{pet.name}</li>
                                                     <li><Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>

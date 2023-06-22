@@ -15,8 +15,8 @@ const EventsBanner = () => {
     });
 
     return(
-        <div class="FlierBanner">
-            <div class="word">
+        <div className="FlierBanner">
+            <div className="word">
                 <span>U</span>
                 <span>P</span>
                 <span>C</span>

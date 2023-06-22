@@ -4,68 +4,68 @@ const Login = () => {
     return(
         <div className="Wrapper" >
 
-  <div class="LoginContainer">
+  <div className="LoginContainer">
           {/* <!-- trim area for spinner --> */}
-          <span class="borderLine"></span> 	
+          <span className="borderLine"></span> 	
           {/* <!-- ... -->  */}
-              <div class="formContainer">
+              <div className="formContainer">
                 {/* <!-- FORM REGISTER SECTION --> */}
                 <form action="/register" method="POST" modelAttribute="user">
                   <h1 style={{color:"red"}} className="BigText"> Admin Login </h1>
 
                   <h2 className="SmallText">Register Here:</h2>
                     {/* <!-- FORM USER Name SECTION --> */}
-                    <div class="sectionOne">
-                        <div class="formation">
+                    <div className="sectionOne">
+                        <div className="formation">
                             <label path="userName"> User Name:  </label>	
-                          <errors path="userName" class="errors"/>
+                          <errors path="userName" className="errors"/>
                         </div>
                         
-                        <div class="errors">
-                            <input path="userName" class="input" />
+                        <div className="errors">
+                            <input path="userName" className="input" />
                         </div>
                     </div>
                     {/* <!-- ...  --> */}
 
                     {/* <!-- FORM EMAIL SECTION --> */}
-                    <div class="sectionTwo">
-                        <div class="formation">
+                    <div className="sectionTwo">
+                        <div className="formation">
                             <label path="email"> Email: </label>	
-                            <errors path="email" class="errors"/>
+                            <errors path="email" className="errors"/>
                         </div>
-                        <div class="errorBox">
-                            <input path="email" type="email" class="input" />
+                        <div className="errorBox">
+                            <input path="email" type="email" className="input" />
                         </div>
                     </div>
                     {/* <!-- ...  --> */}
 
                     {/* <!-- FORM PASSWORD SECTION --> */}
-                    <div class="sectionThree">
-                        <div class="formation">
+                    <div className="sectionThree">
+                        <div className="formation">
                             <label path="password"> Password: </label>	
-                            <errors path="password" class="errors"/>
+                            <errors path="password" className="errors"/>
                         </div>
-                        <div class="errors">
-                            <input path="password" type="password" class="input" />
+                        <div className="errors">
+                            <input path="password" type="password" className="input" />
                         </div>
                     </div>
                     {/* <!-- ...  --> */}
 
                     {/* <!-- FORM CONF PW SECTION --> */}
-                    <div class="sectionFour">
-                        <div class="formation">
+                    <div className="sectionFour">
+                        <div className="formation">
                             <label path="confirmPass"> Confirm Password: </label>	
-                            <errors path="confirmPass" class="errors"/>
+                            <errors path="confirmPass" className="errors"/>
                         </div>
-                        <div class="errors">
-                            <input path="confirmPass" type="password" class="input" />
+                        <div className="errors">
+                            <input path="confirmPass" type="password" className="input" />
                         </div>
                     </div>
                   {/* <!-- ...  --> */}
                 
                   {/* <!-- FORM BUTTON --> */}
-                    <div class="buttonContainer">		 		
-                        <button disabled class="button" type="submit">Register</button>
+                    <div className="buttonContainer">		 		
+                        <button disabled className="button" type="submit">Register</button>
                     </div>
                   {/* <!-- ... --> */}
                   
@@ -79,32 +79,32 @@ const Login = () => {
                   <h2 className="SmallText">Login Here:</h2>
                   
                   {/* <!-- FORM EMAIL SECTION --> */}
-                    <div class="sectionOne">
-                        <div class="formation">
+                    <div className="sectionOne">
+                        <div className="formation">
                             <label path="email"> Email: </label>	
-                  <errors path="email" class="errors"/>
+                  <errors path="email" className="errors"/>
                         </div>
-                        <div class="errors">
-                            <input path="email" class="input" />
+                        <div className="errors">
+                            <input path="email" className="input" />
                         </div>
                     </div>
               {/* <!-- ...  --> */}
               
               {/* <!-- FORM PASSWORD SECTION --> */}
-                    <div class="sectionTwo">
-                        <div class="formation">
+                    <div className="sectionTwo">
+                        <div className="formation">
                             <label path="password"> Password: </label>	
-                          <errors path="password" class="errors"/>
+                          <errors path="password" className="errors"/>
                         </div>
-                        <div class="errors">
-                            <input path="password" type="password" class="input"/>
+                        <div className="errors">
+                            <input path="password" type="password" className="input"/>
                         </div>
                     </div>
                   {/* <!-- ... --> */}
                   
                   {/* <!-- FORM BUTTON --> */}
-                    <div class="buttonContainer">		 		
-                        <button disabled class="button" type="submit">Login</button>
+                    <div className="buttonContainer">		 		
+                        <button disabled className="button" type="submit">Login</button>
                     </div>
                     {/* <!-- ... --> */}
                     

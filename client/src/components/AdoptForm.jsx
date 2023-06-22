@@ -39,13 +39,13 @@ const AdoptForm = (props) => {
     return(
         <div className="Background">
             {/* botton to trigger pop-up */}
-            <a class="AdoptButton" href="#popup1">Adopt ME!</a>
+            <a className="AdoptButton" href="#popup1">Adopt ME!</a>
             {/* pop up */}
-            <div id="popup1" class="overlay">
-                <div class="popup">
+            <div id="popup1" className="overlay">
+                <div className="popup">
                     <h2>Sign-up to be contacted about <span style={{fontSize:"24px",color:"#fd6ee0"}}><em>{petName}</em></span></h2>
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
+                    <a className="close" href="#">&times;</a>
+                    <div className="content">
                         {/* form start */}
                         <form 
                                 className="FormAdopt"    

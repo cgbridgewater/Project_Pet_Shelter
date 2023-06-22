@@ -25,7 +25,7 @@ const TypingText = () => {
           this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
         // add span text //
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        this.el.innerHTML = '<span className="wrap">'+this.txt+'</span>';
         var that = this;
         var delta = 275; // type speed variable higher is faster //
         // delete speed //
@@ -68,7 +68,7 @@ const TypingText = () => {
             {/* optional words to rotate through */}
             <span
             style={{fontWeight:500, marginLeft:"-20px"}}
-                class="txt-rotate"
+                className="txt-rotate"
                 data-period="2000"
                 data-rotate='["saving!", "adopting!", "caring!", "fun!"]'>
             </span>
