@@ -18,7 +18,9 @@ const Navibar = () => {
               </span>
           </Link>
         </div>
-        <Link className="LiveFeed" to={`/petshelter/livefeed`} alt="livefeed"></Link>
+        <Link to="/petshelter/livefeed">
+          <img className="LiveFeed" src="https://www.rosen-group.com/.imaging/stk/rosen-website-mobile/gallery-zoom/dms/rosen-website/rosen-pictures/company/insight/news/latest-news/2018/Live-Stream/LiveStreaming_Button_PTC2018/document/LiveStreaming_Button_PTC2018.png" alt="live feed" />
+        </Link>
         {/* right side of navbar */}
         <div style={{minWidth:"30%",display:"flex",alignItems:"center"}} className='RightNav'>
           <Link to="/petshelter/events">

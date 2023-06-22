@@ -128,19 +128,18 @@
 }
 
 .LiveFeed {
-    background-image: url(https://i.gifer.com/9XLg.gif);
-    background-position: center;
-    background-size: cover;
+    /* background-image: url(https://i.gifer.com/9XLg.gif); */
     width: 180px;
-    height:40px;
+    height:115px;
     border: 2px solid black;
-    background-color: #073DAA;
-    padding: 20px 34px;
+    border-radius: 10px;
+    /* background-color: #073DAA; */
+    /* padding: 20px 34px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
-    margin: 4px 2px;
+    margin: 4px 2px; */
     cursor: pointer;
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
 }
