@@ -14,6 +14,7 @@ import './css/Donate.css';
 import './css/CardFlip.css';
 import './css/EventBanner.css';
 import './css/PetCards.css';
+import './css/Login.css';
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import BadLink from './components/BadLink';
@@ -40,6 +41,7 @@ import EventsViewAll from './components/EventsViewAll';
 import AdminUpdateEvent from './components/AdminUpdateEvent';
 import AdoptInfo from './components/AdminAdoptInfo';
 import OurStory from './components/OurStory';
+import Login from './components/AdminLogin';
 
 function App() {
 
@@ -51,6 +53,7 @@ function App() {
             {/* Landing */}
             <Route path="/" default element={<Indexpage/>}/>
             {/* admin routes */}
+            <Route path="/admin" element={<Login/>}/>
             <Route path="/admin/viewall" element={<AdminViewAll/>}/>
             <Route path="/admin/new/pet" element={<AdminPetForm/>}/>
             <Route path="/admin/new/event" element={<AdminEventForm/>}/>
