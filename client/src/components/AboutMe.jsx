@@ -45,7 +45,6 @@ const AboutMe = () => {
                 <hr />
                 {/* Row 3 */}
                 <div className="FlexBox">
-                    {/* <img className="GitHub"src="https://ghchart.rshah.org/073DAB/cgbridgewater" alt="cgbridgewater's Github chart" /> */}
                     <GitHub/>
                     <div className="TextBox">
                         <h3 style={{textAlign:"start",color:"#073DAA", color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
