@@ -44,7 +44,7 @@ const EventsViewAll = () => {
                     return(
                         <div className='FlierContainer'key={event._id}>
                             <div className='FlierFlex'>
-                                <img className='FlierImg' src={event.flierImage} alt="img" />
+                                <img className='FlierImg' src={event.flierImage} alt="flier image"/>
                                 <div className='FlierInfo'>
                                     <h3>{event.title} on {event.date}</h3>
                                     <hr className='FlierDivide' />

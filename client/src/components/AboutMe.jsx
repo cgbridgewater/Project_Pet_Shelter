@@ -35,10 +35,10 @@ const AboutMe = () => {
                 {/* Row 2 */}
                 <div className="FlexBox">
                     <div className="TextBox">
-                        <h3 style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
+                        <p style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
                             ant to see The Code for this site? Check out the GitHub repo for<a style={{textDecoration:"underline"}} href="https://github.com/cgbridgewater/Project_Pet_Shelter">"Project Pet Shelter"</a>. While you're there, check out the ReadMe file for more info and details.  
-                        </h3>
+                        </p>
                     </div>
                     <img className="AboutMePic" src="https://media.tenor.com/GVk4jB2u_i8AAAAd/coding.gif" alt="code" />
                 </div>
@@ -48,10 +48,10 @@ const AboutMe = () => {
                 <div className="FlexBox">
                     <GitHub/>
                     <div className="TextBox">
-                        <h3 style={{textAlign:"start",color:"#073DAA", color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
+                        <p style={{textAlign:"start",color:"#073DAA", color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
                             nterested in what other projects I've worked on? <br /> Want to see the technologies I know. <br /> Check out my <a style={{textDecoration:"underline"}} href="https://github.com/cgbridgewater">GitHub</a>
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 {/* spliter */}
@@ -59,10 +59,10 @@ const AboutMe = () => {
                 {/* Row 4 */}
                 <div className="FlexBox">
                     <div className="TextBox">
-                        <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
+                        <p style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>F</span>
                             ind out more about me, or connect with me on <a style={{textDecoration:"underline"}} href="https://www.linkedin.com/in/chris-bridgewater/">LinkedIn</a>
-                        </h3>
+                        </p>
                     </div>
                     <img className="AboutMePic" src="https://s3.amazonaws.com/media.thecrimson.com/photos/2021/04/05/232322_1349708.gif" alt="" />
                 </div> 
@@ -72,10 +72,10 @@ const AboutMe = () => {
                 <div className="FlexBox">
                     <img className="MailPic" src="https://cliply.co/wp-content/uploads/2020/04/392004110_MAILBOX_3D_400px.gif" alt="mail" />
                     <div className="TextBox">
-                        <h3 style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
+                        <p style={{color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>H</span>
                             ave questions, want to know more or want to collaborate on something? <br /> Click <a style={{textDecoration:"underline"}} href="mailto:cgbridgewater@outlook.com">HERE</a> to get in contact with me!
-                        </h3>
+                        </p>
                     </div>
                 </div>
                 {/* spliter */}

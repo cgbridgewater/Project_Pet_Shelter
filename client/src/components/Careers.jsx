@@ -21,7 +21,7 @@ const Careers = () => {
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
                             e all share a common passion here at the Dojo Pet Shelter. Not just for the animals saved, but for their companions and those in our community who then foster, volunteer, or adopt. Whether affected by illness, injury, or homelessness, the animals we help need our expertise and compassion. You could wake up every day knowing you’ll be “doing good work” in a fulfilling environment where no two days are the same. The SF SPCA has been at the forefront of animal welfare for 150+ years, and Vision 2030 is our plan to positively impact 5+ million lives over the next decade. We are looking for animal-loving professionals to help us turn this vision into reality!</p>
                     </div>
-                    <img className='desktop-only' width="350px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt7MiGDPd8AWq27OEjPuLCDJ0NvgUKSb39dQ&usqp=CAU" alt="catCrate" />
+                    <img className='desktop-only' width="450px" src="https://newsroom.ocfl.net/wp-content/uploads/2016/03/AnimalServicesVolunteer.jpg" alt="Volunteer" />
                 </div>
                 {/* row 2 */}
                 <div className='Flex'>
