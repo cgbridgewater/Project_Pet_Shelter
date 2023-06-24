@@ -36,19 +36,19 @@ const Counter = () => {
                 <div className='CounterBox'>
                     <i className="fab fa-youtube fa-4x"></i>
                     <div className="counter" data-target="812">0</div>
-                    <h3 style={{color:"lightblue"}}>Animals Adopted</h3>
+                    <p style={{color:"lightblue", fontWeight:"bold"}}>Animals Adopted</p>
                 </div>
                 {/* Counter box 2 */}
                 <div className='CounterBox'>
                     <i className="fab fa-twitter fa-4x"></i>
                     <div className="counter" data-target="1291">0</div>
-                    <h3 style={{color:"lightblue"}}>Surgeries Performed</h3>
+                    <p style={{color:"lightblue", fontWeight:"bold"}}>Surgeries Performed</p>
                 </div>
                 {/* Counter box 3 */}
                 <div className='CounterBox'>
                     <i className="fab fa-facebook fa-4x"></i>
-                    <div className="counter" data-target="322">0</div>
-                    <h3 style={{color:"lightblue"}}>Pets Returned To Owners</h3>
+                    <div className="counter" data-target="407">0</div>
+                    <p style={{color:"lightblue", fontWeight:"bold"}}>Reunited With Owners</p>
                 </div>
             </div>
         </section>

@@ -67,7 +67,7 @@ const TypingText = () => {
         <h1 style={{ fontFamily:"Raleway", color:"lightblue", fontWeight:"300", margin:"0.4em 0", fontSize:"3.5em"}}>The Coding Dojo Shelter: &nbsp; 
             {/* optional words to rotate through */}
             <span
-            style={{fontWeight:500, marginLeft:"-20px"}}
+            style={{fontWeight:500, marginLeft:"-25px"}}
                 className="txt-rotate"
                 data-period="2000"
                 data-rotate='["saving!", "adopting!", "caring!", "fun!"]'>

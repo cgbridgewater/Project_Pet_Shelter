@@ -26,6 +26,7 @@ const AboutMe = () => {
                             <li>Backend Data filtering for event fliers display to ensure old data is not rendered</li>
                             <li>All displays, actions and animations are built with pure CSS and with no added libraries used</li>
                             <li>A responsive design for friendly viewing across multiple devices and screen sizes, which includes phones and tablets</li>
+                            <li>Utilizing Lighthouse for optimization in Performance, Best Practices, Accessibility and SEO performance</li>
                         </ul>
                     </div>
                 </div>
