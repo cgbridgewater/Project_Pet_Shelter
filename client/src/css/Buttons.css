@@ -130,7 +130,7 @@
 .LiveFeed {
     /* background-image: url(https://i.gifer.com/9XLg.gif); */
     width: 180px;
-    height:115px;
+    height:66px;
     border: 2px solid black;
     border-radius: 10px;
     /* background-color: #073DAA; */
@@ -146,9 +146,11 @@
 
 .PetLink { 
     margin-top: 3%;
-    padding: 4% 0; 
-    width: 30%;
-    min-width: 350px;
+    height:156px ;
+    width: 260px ;
+    /* min-width: 350px; */
+    border:2px solid #073DAA;
+    border-radius: 50%;
 }
 
 .PetLink:hover {
