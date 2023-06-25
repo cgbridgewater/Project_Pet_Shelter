@@ -1,4 +1,4 @@
-# Project_Pet_Shelter
+# Project Pet Shelter
 
 Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter Coding Dojo.
 
