@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import GoHome from './HomeButton';
 
 // get Google API key
 const Google_API = process.env.REACT_APP_GOOGLE_API;
@@ -170,8 +171,8 @@ const ContactUs = () => {
                 {/* <!-- end google MAP --> */}
             </div>
             <br />
-            {/* Link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>
+            {/* Home Link */}
+            <GoHome/>
         </div>
     )
 }

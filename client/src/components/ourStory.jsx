@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import GoHome from './HomeButton';
 
 const OurStory = () => {
 
@@ -32,8 +32,9 @@ const OurStory = () => {
             {/* image 3 */}
             <img style={{marginBottom:"10px"}} className='storyImg' src="https://advancelocal-adapter-image-uploads.s3.amazonaws.com/image.mlive.com/home/mlive-media/width2048/img/news_impact/photo/23192288-standard.jpg" alt="kitten" />
             <br /><br />
-            {/* Link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>        </div>
+            {/* Home Link */}
+            <GoHome/>
+        </div>
     )
 }
 

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from "react-router-dom";
+import GoHome from './HomeButton';
 
 const DontBuy = () => {
 
@@ -35,8 +36,9 @@ const DontBuy = () => {
                     <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>See Our Pets!</Link>
                 </div>
             </div>
-            {/* Link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>        </div>
+            {/* Home Link */}
+            <GoHome/>
+        </div>
     )
 }
 

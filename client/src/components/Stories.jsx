@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import CardFlip from './CardFlip';
+import GoHome from './HomeButton';
 
 const Stories = () => {
 
@@ -24,8 +24,8 @@ const Stories = () => {
             {/* Card Flip Insert */}
             <CardFlip/>
             <br />
-            {/* Link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>
+            {/* Home Link */}
+            <GoHome/>
         </div>
     )
 }

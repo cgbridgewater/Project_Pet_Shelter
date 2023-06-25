@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import EventsBanner from './EventsBanner';
+import GoHome from './HomeButton';
 
 // Fetch Date
 const current = new Date();
@@ -57,7 +57,8 @@ const EventsViewAll = () => {
                         )
                 })}
                 <br />
-                <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Go To Shelter Home</Link>
+                {/* Home Link */}
+                <GoHome/>
             </div>
         </div>
     )

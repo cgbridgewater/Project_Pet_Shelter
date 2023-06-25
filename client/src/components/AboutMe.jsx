@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
 import GitHub from "./GitHubGraph"
+import GoHome from "./HomeButton"
 
 const AboutMe = () => {
 
@@ -82,9 +82,8 @@ const AboutMe = () => {
                 <hr />
                 {/* Home Link */}
                 <br />
-                <Link to="/" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}>
-                    Take Me Back To The Shelter!
-                </Link>
+                {/* Home Link */}
+                <GoHome/>
             </div>
         </div>
     )

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import GoHome from './HomeButton';
 
 const LiveFeed = () => {
 
@@ -12,7 +12,7 @@ const LiveFeed = () => {
         // Background
         <div className='Background' style={{minHeight:"65vh"}}>
             {/* Home Link */}
-            <Link className='Return'  style={{textDecoration:"none"}} to={"/"}><button className='EnterButton' > Return To Pet Shelter</button></Link>
+            <GoHome/>
             <br />
             <br />
             {/* Youtube feed */}

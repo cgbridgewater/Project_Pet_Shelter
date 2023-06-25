@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import GoHome from './HomeButton';
 
 const WishList = () => {
 
@@ -192,8 +192,8 @@ const WishList = () => {
             </ul>
             {/* end wish list 5 */}
             <br />
-            {/* Link to home page */}
-            <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline", marginRight:"50px"}}>Go To Shelter Home</Link>
+            {/* Home Link */}
+            <GoHome/>
         </div>
     )
 }
