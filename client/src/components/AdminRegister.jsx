@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const Register = (props) => {
 
+    const [errors, setErrors] = useState("");
     const [state, setState] = useState ({
         register: {
             email:"",
@@ -25,7 +26,10 @@ const Register = (props) => {
             .then(res => {console.log(res)
                 navigate("/admin/viewall")
             })
-            .catch(err => console.log(err))
+            .catch(err =>  {
+                console.log(err) 
+                setErrors(err.response.data.error.errors); //Set Errors
+            })
     }
 
     return(
@@ -46,50 +50,71 @@ const Register = (props) => {
                         <div className="InputContainer"> 
                             {/* EMAIL SECTION  */}
                             <div className="sectionOne" >
-                                <div className="formation">
-                                    {/* <label path="email"> Email: </label>	 */}
-                                    {/* <errors path="email" className="errors"/> */}
-                                </div>
-                                <input 
+                            { errors.email ? 
+                                    <input
+                                    style={{borderColor:"red"}} 
                                     onChange={handleRegInputs}
+                                    type='text'
                                     name="email" 
-                                    type="email" 
                                     className="input" 
-                                    placeholder="Enter Email"
-                                />
+                                    placeholder={errors.email.message}
+                                    /> 
+                                    :
+                                    <input 
+                                        onChange={handleRegInputs}
+                                        type='text'
+                                        name="email" 
+                                        className="input" 
+                                        placeholder="Enter Email"
+                                    />
+                            }
                             </div>
                             {/* PASSWORD SECTION  */}
                             <div className="sectionTwo">
-                                <div className="formation">
-                                    {/* <label path="password"> Password: </label>	 */}
-                                    {/* <errors path="password" className="errors"/> */}
-                                </div>
-                                <input 
+                            { errors.password ? 
+                                    <input
+                                    style={{borderColor:"red"}} 
                                     onChange={handleRegInputs}
                                     name="password" 
                                     type="password" 
                                     className="input" 
-                                    placeholder="Enter Password"
-                                />
+                                    placeholder={errors.password.message}
+                                    /> 
+                                    :
+                                    <input 
+                                        onChange={handleRegInputs}
+                                        name="password" 
+                                        type="password" 
+                                        className="input" 
+                                        placeholder="Create Password"
+                                    />
+                            }
                             </div>
                             {/* CONF PW SECTION  */}
                             <div className="sectionThree">
-                                <div className="formation">
-                                    {/* <label path="confirmPass"> Confirm Password: </label>	 */}
-                                    {/* <errors path="confirmPass" className="errors"/> */}
-                                </div>
-                                <input 
+                            { register.password !== register.confirmPassword ? 
+                                    <input
+                                    style={{borderColor:"red"}} 
                                     onChange={handleRegInputs}
                                     name="confirmPassword" 
                                     type="password" 
                                     className="input" 
-                                    placeholder="Confirm Password"
-                                />
+                                    placeholder="Passwords Must Match"
+                                    /> 
+                                    :
+                                    <input 
+                                        onChange={handleRegInputs}
+                                        name="password" 
+                                        type="password" 
+                                        className="input" 
+                                        placeholder="Confirm Password"
+                                    />
+                            }
                             </div>
                         </div>
                         {/* FORM BUTTON  */}
                         <div className="buttonContainer">		 		
-                            <button className="button" type="submit">Register</button>
+                            <button disabled className="button" type="submit">Register</button>
                         </div>
                     </form>
                     {/* END FORM SECTION  */}

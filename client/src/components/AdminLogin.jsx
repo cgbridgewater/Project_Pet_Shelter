@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 const Login = (props) => {
-
+    const [errors, setErrors] = useState("");
     const [state, setState] = useState ({
         login: {
             email:"",
@@ -24,7 +24,11 @@ const Login = (props) => {
             .then(res => { console.log(res)
                 navigate("/admin/viewall")
             })
-            .catch(err => console.log(err))
+            .catch(err =>  {
+                console.log(err) 
+                setErrors(err.response.data); //Set Errors
+            })
+            
     }
 
     return(
@@ -44,26 +48,40 @@ const Login = (props) => {
                         <div className="InputContainer">
                         {/* <!-- EMAIL SECTION --> */}
                             <div className="sectionOne">
-                                <div className="formation">
-                                    {/* <label path="email"> Email: </label>	 */}
-                                    {/* <errors path="email" className="errors"/> */}
-                                </div>
                                 <div className="errors">
+                                { errors.message ? 
+                                    <input
+                                    style={{borderColor:"red"}} 
+                                    onChange={handleLoginInputs}
+                                    type='text'
+                                    name="email" 
+                                    className="input" 
+                                    placeholder="Invalid Login"
+                                    /> 
+                                    :
                                     <input 
                                         onChange={handleLoginInputs}
                                         type='text'
                                         name="email" 
                                         className="input" 
-                                        placeholder="Enter Email"/>
+                                        placeholder="Enter Email"
+                                    />
+                                }
                                 </div>
                             </div>
                             {/* <!-- PASSWORD SECTION --> */}
                             <div className="sectionTwo">
-                                <div className="formation">
-                                    {/* <label path="password"> Password: </label>	 */}
-                                    {/* <errors path="password" className="errors"/> */}
-                                </div>
                                 <div className="errors">
+                                { errors.message ? 
+                                    <input
+                                    style={{borderColor:"red"}} 
+                                    onChange={handleLoginInputs}
+                                    type='password'
+                                    name="password" 
+                                    className="input" 
+                                    placeholder="Invalid Login"
+                                    /> 
+                                    :
                                     <input 
                                     onChange={handleLoginInputs}
                                         name="password" 
@@ -71,6 +89,7 @@ const Login = (props) => {
                                         className="input" 
                                         placeholder="Enter Password"
                                     />
+                                }
                                 </div>
                             </div>
                         </div>
