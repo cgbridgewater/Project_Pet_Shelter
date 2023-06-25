@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express();
 const PORT = 8000;
 
-require('dotenv').config();
+require('dotenv').config(); 
 
 app.use(cookieParser());
 app.use(cors({credentials:true, origin: 'http://localhost:3000'}));

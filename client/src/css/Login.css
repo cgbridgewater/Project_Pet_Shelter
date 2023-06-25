@@ -27,7 +27,7 @@
 	left: 49%;
 	width: 100px;
 	height:325px;
-	background: linear-gradient(0deg,transparent, transparent,#45f3ff,#45f3ff,#45f3ff);
+	background: linear-gradient(0deg,transparent,transparent,transparent,transparent, #45f3ff,#45f3ff,#45f3ff,#45f3ff,#073DAA,#073DAA);
 	z-index:1;
 	transform-origin: bottom left;
 	animation: animate-border 6s linear infinite;
@@ -40,7 +40,7 @@
 	left: 49%;
 	width: 100px;
 	height:325px;
-	background: linear-gradient(0deg,transparent, transparent,#45f3ff,#45f3ff,#45f3ff);
+	background: linear-gradient(0deg,transparent,transparent,transparent, transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff,#073DAA,#073DAA);
 	z-index:1;
 	transform-origin: bottom left;
 	animation: animate-border 6s linear infinite;
@@ -61,7 +61,7 @@
 	left: 49%;
 	width: 100px;
 	height:325px;
-	background: linear-gradient(0deg,transparent, transparent,#45f3ff,#45f3ff,#45f3ff);
+	background: linear-gradient(0deg,transparent, transparent,transparent,transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff,#073DAA,#073DAA);
 	z-index:1;
 	transform-origin: bottom left;
 	animation: animate-border 6s linear infinite;
@@ -76,7 +76,7 @@
 	left: 49%;
 	width: 100px;
 	height:325px;
-	background: linear-gradient(0deg, transparent, transparent,#45f3ff,#45f3ff,#45f3ff);
+	background: linear-gradient(0deg,transparent, transparent,transparent,transparent,#45f3ff,#45f3ff,#45f3ff,#45f3ff,#073DAA,#073DAA);
 	z-index:1;
 	transform-origin: bottom left;
 	animation: animate-border 6s linear infinite;
@@ -98,33 +98,49 @@
 	position: absolute;
 	inset:6px;
 	background: #222;
-	padding: 35px;
+	padding: 15px;
 	border-radius: 8px;
 	z-index: 2;
 	display: flex;
 	flex-direction: column;
 }
 
-.BigText, .SmallText {
+
+.SmallText {
 	color: #fff;
 	font-weight:700;
 	text-align:center;
-	letter-spacing: 0.1em;
+    font-size: 1.8em;
+    margin: 5px 0;
+	/* letter-spacing: 0.1em; */
+}
+.BigText {
+	color: red;
+	font-weight:900;
+	text-align:center;
+	font-size: 1.8em;
 }
 
 .formation {
 	margin-bottom:5px;
 	display:flex;
 	flex-direction:column;
-	align-items:start;
+}
+
+.InputContainer {
+    margin-top: 5px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .sectionOne, .sectionTwo, .sectionThree, .sectionFour {
 	margin-bottom:5px;
 	display:flex;
-	justify-content:space-between;
+	justify-content:center;
 	align-items:center;
-	
+    flex-wrap: wrap;
 }
 
 .input {
@@ -139,6 +155,11 @@
 	letter-spacing: 0.1em;
 	padding:5px;
 	margin:3px;
+    padding-left:10px;
+}
+
+.input::placeholder {
+    color:lightslategray;
 }
 
 
@@ -148,9 +169,8 @@ label {
 }
 
 .buttonContainer {
-	width:20%;
-	margin:0 auto;
-	margin-top:5px;
+	width:80%;
+	margin: 15px auto;
 }
 
 button {
@@ -166,7 +186,7 @@ button {
     color: #fff;
    	letter-spacing: 0.1em;
     cursor: pointer;
-    margin: 20px;
+    margin: 5px auto;
     height: 30px;
     text-align:center;
     border: none;

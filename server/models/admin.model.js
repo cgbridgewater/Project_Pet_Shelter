@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+
 const AdminSchema = new mongoose.Schema({
     // Created incase name registration is required later
     // firstName: {
@@ -52,4 +53,4 @@ AdminSchema.pre('save', function(next) {
 });
 
 
-module.exports = mongoose.model("Admin", AdminSchema)
+module.exports = mongoose.model("User", AdminSchema)
