@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import GoHome from "./HomeButton"
 
 const Adopting = () => {
 
@@ -89,10 +89,8 @@ const Adopting = () => {
             </div>
             {/* break */}
             <br /><hr className="Divide2"/><br />
-            {/* home link */}
-            <Link  to="/" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}>
-                Back To Shelter Home
-            </Link>
+            {/* Home Link */}
+            <GoHome/>
             <br />
         </div>
     )

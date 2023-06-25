@@ -100,17 +100,8 @@ const AdoptForm = (props) => {
                                         value= {phone}
                                     />
                                 </div>
-                                {/* Pet Name */}
-                                <div className="FormInput">
-                                    <label style={{minWidth:"200px", textAlign:"start"}}>
-                                        <h3>Pet Name:</h3>
-                                    </label>
-                                    <label style={{minWidth:"200px", textAlign:"start",fontSize:"24px",color:"#fd6ee0", paddingLeft:"10%"}}>
-                                        {petName}
-                                    </label>
-                                </div>
                                 {/* submit button */}
-                                <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
+                                <input className="SubmitButton" style={{color:"#073DAA", margin:"5% 0"}} type="submit" />
                             </div>
                         </form>
                     </div>

@@ -4,7 +4,7 @@ const Navibar = () => {
 
   return (
     // Container background
-    <div style={{background:"url('https://media.istockphoto.com/id/1276581591/vector/cute-simple-seamless-pattern-with-paw-prints.jpg?s=612x612&w=0&k=20&c=qRxqN8NX0Q0VkLOOj0NCysIZZ37328M4W2Kze2Xofro=')"}}>
+    <div className="NavBackground">
       {/* navbar container */}
       <nav style={{flexWrap:"wrap",height:"auto", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"1%", paddingLeft:"5%", borderBottom:"10px double #073DAA"}}>
         {/* left side of navbar */}

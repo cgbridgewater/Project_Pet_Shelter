@@ -69,55 +69,55 @@ const Detail = () => {
                             <Link to="/" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
                             <div className="Flex">
                                 <Link to="/petshelter" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",width:"65px",margin:"10px"}}>All Pets</Link>
-                                <Link to="/petshelter/sort/dog" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Dogs</Link>
-                                <Link to="/petshelter/sort/cat" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Cats</Link>
+                                <Link to="/petshelter/sort/DOG" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Dogs</Link>
+                                <Link to="/petshelter/sort/CAT" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Cats</Link>
                             </div>
                         </div>
                     </div>
                     {/* Details Container */}
-                    <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://media.istockphoto.com/id/1064117208/vector/animal-paw-prints-on-blue-winter-background.jpg?s=612x612&w=0&k=20&c=SxtfxxqqSEHv8ms2EhMAvAuYZGFdQtqbcUOY4D3JIaU=)",backgroundSize:"cover", border:"2px solid #073DAA", borderRadius:"15px"}}>
+                    <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0KsyQv5YwZXalff-qFUxzk_C_rL80pkG3w&usqp=CAU)",backgroundSize:"cover", border:"2px solid #073DAA", borderRadius:"15px"}}>
                         {/* pet image */}
-                        <img style={{width:"350px", height:"auto", borderRadius:"10px"}} src={petImage} alt="pet image" />
+                        <img style={{width:"350px", height:"auto",border:"2px solid #073DAA", borderRadius:"10px"}} src={petImage} alt="pet image" />
                         {/* pet details */}
                         <div style={{width:"60%",minWidth:"350px", padding:"2%"}} className="details">
                             {/* Type */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px",marginTop:"0px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px",marginTop:"0px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Type</p>
                                 <p  style={{width:"250px", textAlign:"end"}}>{type}</p>
                             </div>
                         <hr />
                             {/* Description */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Description</p>
                                 <p  style={{width:"250px", textAlign:"end"}}>{description}</p>
                             </div>
                         <hr />
                             {/* Age */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Age</p>
                                 <p  style={{width:"250px", textAlign:"end"}}>{age}</p>
                             </div>
                         <hr />
                             {/* Notes */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Notes</p>
                                 <p style={{width:"250px", textAlign:"end"}}>{notes}</p>
                             </div>
                         <hr />
                             {/* Fixed */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{textAlign:"start" }}>Fixed?</p>
                                 <p style={{width:"250px", textAlign:"end"}}>{fixed ? "Yes":"No"}</p>
                             </div>
                         <hr />
                             {/* Animal Friendly */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{textAlign:"start" }}>Friendly to other animals?</p>
                                 <p style={{width:"250px", textAlign:"end"}}>{animalFriendly ? "Yes":"No"}</p>
                             </div>
                         <hr />
                             {/* pet friendly */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{textAlign:"start" }}>Plays well with childern?</p>
                                 <p style={{width:"250px", textAlign:"end"}}>{childFriendly ? "Yes":"No"}</p>
                             </div>

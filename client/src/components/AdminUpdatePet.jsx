@@ -60,7 +60,7 @@ const AdminUpdatePet = (props) => {
         e.preventDefault();
         axios.put('http://localhost:8000/api/pets/' + id, {
             name: name.toUpperCase(),
-            type:type.toLowerCase(),
+            type:type.toUpperCase(),            
             description,
             age,
             petImage,

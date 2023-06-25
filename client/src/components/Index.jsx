@@ -35,7 +35,7 @@ const Indexpage = () => {
                             </div>
                         </Link>
                         {/* dogs link */}
-                        <Link to="/petshelter/sort/dog  ">
+                        <Link to="/petshelter/sort/DOG">
                             <div style={{color:"#073DAA", fontWeight:"bold"}}>
                                     <img className="PetLink" src="https://a-z-animals.com/media/2022/05/group-of-six-dogs-picture-id1175747279-1024x614.jpg" alt="dogs" />
                                     <br />
@@ -43,7 +43,7 @@ const Indexpage = () => {
                             </div>
                         </Link>
                         {/* cats link */}
-                        <Link to="/petshelter/sort/cat">
+                        <Link to="/petshelter/sort/CAT">
                             <div style={{color:"#073DAA", fontWeight:"bold"}}>
                                     <img className="PetLink" src="https://a-z-animals.com/media/2022/05/Multiple-cats-on-white-background.jpg" alt="cats" />
                                     <br />                                    

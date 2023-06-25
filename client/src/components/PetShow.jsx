@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import GoHome from './HomeButton';
 
     // sorting
     const sortType = { 
@@ -72,19 +73,27 @@ const PetShow = () => {
                             <div className="row">
                                 <div className="pet-1">
                                     <div className="pet">
-                                        <div className="pet-image">
-                                            <img src={pet.petImage} alt="pet-image"/>
+                                        <div className="pet-image desktop-only">
+                                            <Link to={`/petshelter/${pet._id}`}>
+                                                <img src={pet.petImage} alt="pet-image"/>
+                                            </Link>
+                                        </div>
+                                        <div className="pet-image mobile-only">
+                                                <img src={pet.petImage} alt="pet-image"/>
                                         </div>
                                         <div className="pet-details">
                                             <div className="pet-social-link">
                                                 <ul>
-                                                    <li style={{color:"white",fontWeight:800}}>{pet.name}</li>
-                                                    <li><Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>
-                                                        {pet.type}
-                                                    </Link></li>
-                                                    <li><Link to={`/petshelter/${pet._id}`} style={{textDecoration:"underline",fontWeight:600}}>
-                                                        View {pet.name}
-                                                    </Link></li>
+                                                    <li>
+                                                        <Link to={`/petshelter/${pet._id}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                            View {pet.name}
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                            {pet.type}
+                                                        </Link>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -92,44 +101,12 @@ const PetShow = () => {
                                 </div>
                             </div>
                         </div>
-                        // Each Card //
-                        // <div key={pet._id}  className='PetCardContainer'>
-                        //     <div className="PetCard">
-                        //         {/* Pet Name */}
-                        //         <h1 style={{color:"#073DAA"}}>{pet.name}</h1>
-                        //         {/* Link To Pet Type */}
-                        //         <h2>
-                        //             <Link style={{textDecoration:"underline"}} to={`/petshelter/sort/${pet.type}`}>({pet.type})</Link>
-                        //         </h2>
-                        //         {/* Image Link to view pet */}
-                        //         <Link to={`/petshelter/${pet._id}`}>
-                        //             {/* Check For Pet Image */}
-                        //             { pet.petImage == null  ?
-                        //             <img 
-                        //                 style={{height:"100px",borderRadius: "50%"}} 
-                        //                 src={defaultPetImage}
-                        //                 alt="Pet Image" 
-                        //             />
-                        //             :
-                        //             <img 
-                        //                 style={{height:"100px",borderRadius: "50%"}} 
-                        //                 src={pet.petImage} 
-                        //                 alt="Pet Image" />
-                        //             }
-                        //         </Link>
-                        //         {/* Link to view pet */}
-                        //         <p>
-                        //             <Link style={{textDecoration:"none"}} to={`/petshelter/${pet._id}`}>
-                        //                 <button className='ViewButton'>
-                        //                     <h3>View</h3>
-                        //                     <h3>{pet.name}</h3>
-                        //                 </button>
-                        //             </Link>
-                        //         </p>
-                        //     </div>
-                        // </div>
                     )})
             }</div>
+            <br />
+            <br />
+            {/* Home Link */}
+            <GoHome/>
         </div>
     );
 }

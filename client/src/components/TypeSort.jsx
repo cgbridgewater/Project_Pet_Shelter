@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
+import GoHome from './HomeButton';
 
 // sorting
 const sortType = { 
@@ -34,7 +35,7 @@ const TypeSort = () => {
 
     return (
         // Background
-        <div style={{ minHeight:"70vh"}}>
+        <div style={{ minHeight:"70vh",padding:"20px 10px"}}>
             {/* page load ternary */}
             { pet.length == 0  ? 
             <div className="Background">
@@ -47,37 +48,46 @@ const TypeSort = () => {
             </div>
                 : //ternary for bad data flow //
             // start content //
-            <div style={{padding:"10px"}}>
-                {/* link to home page */}
-                <Link  to="/" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800", marginLeft:"45%"}}>Return To Shelter Home</Link>
-                <br />
-                {/* link to all pets */}
-                <Link  to="/petshelter" style={{textDecoration:"underline", color:"#073DAA", fontWeight:"800", marginLeft:"45%"}}>See All Of Our Pets!</Link>
-                {/* top bar */}
-                <div style={{marginTop:"10px",display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}} >
-                    <div>
-                        {/* spacer */}
+            <div>
+                <div style={{padding:"0 10%",display:"flex",justifyContent:"space-between", flexWrap:"wrap-reverse", alignItems:"center"}}>
+                    <div style={{marginTop:"10px",display:"flex", justifyContent:"space-evenly", flexWrap:"wrap"}} >
+                        {/* remove sort ternary if only 1 tag */}
+                        { pet.length == 1  ? 
+                        "":
+                        // Sorting section //
+                        <div>
+                            {/* Sort Drowpdown with image */}
+                            <div className='DropdownContainer' style={{border:"2px solid #073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                <img style={{height:"150px", width:"280px", margin:0}}  src="https://www.ochd.org/wp-content/uploads/2019/04/pet-new-slider3-1200x644.jpg" alt="" />
+                                <div style={{display:"flex", justifyContent:"center", flexWrap:"wrap" }}>
+                                    <div className='DropdownFlex' style={{display:"flex", flexDirection:"column"}}>
+                                        <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA", minWidth:"240px",marginTop:"-7px", backgroundColor:"#EFEDEF",textAlign:"center"}}>Select Drop Down To Sort:</label>
+                                        <select className='dropdown' value={sort} onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA", width:"280px",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)", textAlign:"center"}}>
+                                            <option value="NONE">Newest Added</option>
+                                            <option value="ATOZ">Name A to Z</option>
+                                            <option value="ZTOA">Name Z to A</option>
+                                            <option value="TYPEA2Z">Type A to Z</option>
+                                            <option value="TYPEZ2A">Type Z to A</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        }
                     </div>
-                    {/* remove sort ternary if only 1 tag */}
-                    { pet.length == 1  ? 
-                    "":
-                    // Sorting section //
-                    <div>
-                        <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA", marginRight:"10px"}} htmlFor="">Select Drop Down To Sort:</label>
-                        <select onChange={(e) => setSort(e.target.value)} style={{border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
-                            <option value="NONE">Newest Added</option>
-                            <option value="ATOZ">A to Z</option>
-                            <option value="ZTOA">Z to A</option>
-                        </select>
+                    {/* Link to home page and view all */}
+                    <div style={{display:"flex",flexDirection:"column"}}>
+                        <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Return To Shelter Home</Link>
+                        <Link to="/petshelter" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>View All Pets</Link>
                     </div>
-                    }
                 </div>
                 <br />
+                <p className="mobile-only">Click Image To View Pet Details</p>
+                
                 {/* Main content */}
-                <div className='Main' style={{ display:'flex',justifyContent:"center"}}>
+                <div className='Main'>
                     {/* Cards Container */}
-                    <div className='Boxes' 
-                        style={{display:"flex", flexWrap:"wrap"}}>
+                    <div className='Boxes' style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                         {/* mapping */}
                         {pet.length > 0 &&[...pet]
                             .sort(sortType[sort])
@@ -88,20 +98,28 @@ const TypeSort = () => {
                                 <div className="row">
                                     <div className="pet-1">
                                         <div className="pet">
-                                            <div className="pet-image">
-                                                <img src={pet.petImage} alt="pet-image"/>
+                                            <div className="pet-image desktop-only">
+                                                <Link to={`/petshelter/${pet._id}`}>
+                                                    <img src={pet.petImage} alt="pet-image"/>
+                                                </Link>
+                                            </div>
+                                            <div className="pet-image mobile-only">
+                                                    <img src={pet.petImage} alt="pet-image"/>
                                             </div>
                                             <div className="pet-details">
                                                 <div className="pet-social-link">
-                                                    <ul>
-                                                        <li style={{color:"white",fontWeight:800}}>{pet.name}</li>
-                                                        <li><Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>
-                                                            {pet.type}
-                                                        </Link></li>
-                                                        <li><Link to={`/petshelter/${pet._id}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                <ul>
+                                                    <li>
+                                                        <Link to={`/petshelter/${pet._id}`} style={{textDecoration:"underline",fontWeight:600}}>
                                                             View {pet.name}
-                                                        </Link></li>
-                                                    </ul>
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to={`/petshelter/sort/${pet.type}`} style={{textDecoration:"underline",fontWeight:600}}>
+                                                            {pet.type}
+                                                        </Link>
+                                                    </li>
+                                                </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -111,8 +129,13 @@ const TypeSort = () => {
                             )})
                     }</div>
                 </div>
+
             </div>
             }
+            <br />
+            <br />
+            {/* Home Link */}
+            <GoHome/>
         </div>
     );
 }

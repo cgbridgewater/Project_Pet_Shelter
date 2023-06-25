@@ -23,6 +23,15 @@
   background-size: cover;
 }
 
+.NavBackground {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0KsyQv5YwZXalff-qFUxzk_C_rL80pkG3w&usqp=CAU);
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .Flex {
   display: flex;
   flex-wrap: wrap;

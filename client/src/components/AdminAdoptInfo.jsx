@@ -89,25 +89,25 @@ const AdoptInfo = (props) => {
                         </div>
                     </div>
                     {/* Details Container */}
-                    <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://media.istockphoto.com/id/1064117208/vector/animal-paw-prints-on-blue-winter-background.jpg?s=612x612&w=0&k=20&c=SxtfxxqqSEHv8ms2EhMAvAuYZGFdQtqbcUOY4D3JIaU=)",backgroundSize:"cover", border:"2px solid white", borderRadius:"15px"}}>
+                    <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0KsyQv5YwZXalff-qFUxzk_C_rL80pkG3w&usqp=CAU)",backgroundSize:"cover", border:"2px solid #073DAA", borderRadius:"15px"}}>
                         {/* pet image */}
                         <img style={{width:"350px", borderRadius:"10px"}} src={petImage} alt="" />
                         {/* pet details */}
                         <div style={{width:"60%",minWidth:"350px", padding:"2%"}} className="details">
                             {/* Contact Name */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px",marginTop:"0px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px",marginTop:"0px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Applicant Name</p>
                                 <p  style={{width:"250px", textAlign:"end"}}>{userName}</p>
                             </div>
                         <hr />
                             {/* Contact Email */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Contact Email:</p>
                                 <p  style={{width:"250px", textAlign:"end"}}>{email}</p>
                             </div>
                         <hr />
                             {/* Contact Phone */}
-                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px"}}>
+                            <div style={{display:"flex",justifyContent:"space-between",padding:"10px", fontWeight:900}}>
                                 <p style={{color:"#073DAA", margin:0}}>Contact Phone:</p>
                                 <p  style={{width:"250px", textAlign:"end"}}>{phone}</p>
                             </div>                    

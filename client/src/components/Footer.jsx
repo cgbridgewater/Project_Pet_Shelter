@@ -4,14 +4,15 @@ const Footer = () => {
 
     return (
         <div className="Footer">
-            <hr className="FooterHr" />
             {/* footer content container */}
             <div className="FooterFlex" >
                 {/* left side links */}
                 <ul className="List1">
-                    <li><a href="/petshelter/ourstory">Our Story</a></li>
+                    <li><a href="/petshelter/events">Upcoming Events</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/adopt">Adopt Don't Buy</a></li>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
+                    <li><a href="/petshelter/fees">Adopting Fees</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/contactus">Visit Us</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
@@ -40,9 +41,11 @@ const Footer = () => {
                 </div>
                 {/* right side links */}
                 <ul className="List2">
-                    <li><Donate/></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/stories">Success Stories</a></li>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
+                    <li><a href="/petshelter/ourstory">Our Story</a></li>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
+                    <li><Donate/></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/careers">Careers</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>

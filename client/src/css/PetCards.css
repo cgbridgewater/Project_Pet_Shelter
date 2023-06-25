@@ -14,9 +14,7 @@
     background: linear-gradient(309deg, #791ddc, #073DAA, #791ddc, #06dfd9);
     animation: GradientAnimation 5s ease infinite;
     background-size: 800% 800%;
-    /* position: relative; */
     margin:0 15px  ;
-    /* display:block; */
     overflow:hidden;
     border: 3px solid #073DAA;
     border-radius:10px;
@@ -38,7 +36,7 @@
 }
 
 .pet:hover > .pet-image {
-    margin-top:-130px;
+    margin-top:-90px;
 }
 
 .pet-image {

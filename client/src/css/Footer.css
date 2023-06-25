@@ -31,11 +31,13 @@
 .Footer {
     padding: 3%;
     padding-top: 1%;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJg57rpVqorBaQ5H5I3z7MfkWgeVIobrXzCQ&usqp=CAU);
+    margin-top: 1%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0KsyQv5YwZXalff-qFUxzk_C_rL80pkG3w&usqp=CAU);
     background-attachment: fixed;
     background-position: center;
     background-size:cover;
     height: auto;
+    border-top: 10px double #073DAA;
 }
 
 .social:hover {
