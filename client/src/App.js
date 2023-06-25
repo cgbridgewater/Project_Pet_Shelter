@@ -44,6 +44,7 @@ import OurStory from './components/OurStory';
 import Login from './components/AdminLogin';
 import Register from './components/AdminRegister';
 import AdminLogout from './components/AdminLogout';
+import Fees from './components/Fees';
 
 function App() {
 
@@ -72,6 +73,7 @@ function App() {
             <Route path="/petshelter" element={<PetShow/>}/>
             <Route path="/petshelter/aboutme" element={<AboutMe/>}/>
             <Route path="/petshelter/adopting"element={<Adopting/>}/>
+            <Route path="/petshelter/fees"element={<Fees/>}/>
             <Route path="/petshelter/sort/:type" element={<TypeSort/>}/>
             <Route path="/petshelter/liveFeed" element={<LiveFeed/>}/>
             <Route path="/petshelter/ourstory" element={<OurStory/>}/>
