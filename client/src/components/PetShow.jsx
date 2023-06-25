@@ -60,6 +60,7 @@ const PetShow = () => {
                 <Link to="/" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}>Return To Shelter Home</Link>
             </div>
             <br />
+            <p className="mobile-only">Click Image To View Pet Details</p>
             {/* Main Content Cards */}
             <div className='Boxes' style={{display:"flex", flexWrap:"wrap", justifyContent:"center"}}>
                 {/* mapping */}
