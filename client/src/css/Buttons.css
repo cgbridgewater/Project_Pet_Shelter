@@ -1,12 +1,4 @@
 /* // Buttons //*/
-/* 
-.EnterButton {
-padding: 5px;
-color: white;
-    background-color: #073DAA;
-    border: 2px solid black;
-    border-radius: 5px;
-} */
 
 .HomeButton {
 padding: 5px;
@@ -35,13 +27,13 @@ color: white;
     transition: all 0.2s ease-in;
 }
 
-.Adopt:hover, .Deets:hover{
-    animation: wobble 1.5s 1;
+.MailPic:hover{
+    animation: wobble 1s 1;
 }
 
 @keyframes wobble {
     25% {
-    transform: rotate(5deg);
+    transform: rotate(10deg);
     }
     50% {
     transform: rotate(-8deg);
@@ -52,18 +44,6 @@ color: white;
     100% {
     transform: rotate(0deg);
     }
-}
-
-.EnteranceCard {
-    width: 45%;
-    min-width: 360px;
-    border-radius: 20px;
-    margin: 10px auto;
-    box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
-}
-
-.EnteranceCard:hover {
-    animation:wobble 1.5s 1;
 }
 
 .EditButton {
@@ -90,13 +70,13 @@ color: white;
 .Lost {
     width: 39%;
     min-width:350px; 
-    border: 3px solid white;
+    border: 3px solid #073DAA;
     border-radius:40%; 
 }
 
 .Lost:hover {
     border: 3px solid #fd6ee0;
-    box-shadow:12px 12px 12px 0 #fd6ee0;
+    box-shadow:0 0 8px #fd6ee0;
     -moz-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
@@ -120,34 +100,11 @@ color: white;
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
 }
 
-
-/* .LikeButton {
-    width: 134px;
-    margin:0 10px;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 5px;
-    background-color: palevioletred;
-    color: white;
-    font-weight: 800;
-    cursor: pointer;
-    max-height: 30px ;
-    box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
-} */
-
 .LiveFeed {
-    /* background-image: url(https://i.gifer.com/9XLg.gif); */
     width: 180px;
     height:66px;
     border: 2px solid black;
     border-radius: 10px;
-    /* background-color: #073DAA; */
-    /* padding: 20px 34px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px; */
     cursor: pointer;
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
 }
@@ -162,8 +119,6 @@ color: white;
 
 .PetLink:hover {
     filter: drop-shadow(5px 5px 2px #fd6ee0);
-    /* border: 2px solid #fd6ee0; */
-    /* box-shadow:12px 12px 12px 0 #fd6ee0; */
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     -webkit-transition: all 0.3s ease-in;

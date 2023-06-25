@@ -80,7 +80,6 @@ const AboutMe = () => {
                 </div>
                 {/* spliter */}
                 <hr />
-                {/* Home Link */}
                 <br />
                 {/* Home Link */}
                 <GoHome/>
