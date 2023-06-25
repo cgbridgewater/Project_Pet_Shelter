@@ -2,12 +2,11 @@ import { useEffect, useState} from "react";
 import axios from "axios";
 import { Link, useParams, useNavigate } from "react-router-dom"
 
-const AdoptInfo = () => {
+const AdoptInfo = (props) => {
 
     // adoption application info
     const {id} = useParams();
     const [ petName, setPetName ] = useState("");
-    const [ petId, setPetId ] = useState("");
     const [ userName, setUserName ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ phone, setPhone ] = useState("");
@@ -18,13 +17,25 @@ const AdoptInfo = () => {
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
+    
+    // this runs to test cookies
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/admin/user"  ,{withCredentials: true})
+        .then((res) => {
+            console.log("Logged In User Being Tracked!");
+        })
+        .catch((err) => {
+            console.log("UNAUTHORIZED USER DETECTED!")
+            props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
+            navigate("/admin/signin")
+        })
+    }, [])
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/adopt/" + id)
         .then( res => {
             console.log(res.data);
             setPetName(res.data.petName);
-            setPetId(res.data.petId);
             setUserName(res.data.userName);
             setPhone(res.data.phone);
             setEmail(res.data.email);
