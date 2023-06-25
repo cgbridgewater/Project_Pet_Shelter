@@ -1,18 +1,18 @@
 const mongoose = require('mongoose');
 
 const EventSchema = new mongoose.Schema({
-    title: { 
+    title: {
         type: String,
         required: [true, "Title"],
         minLength: [3, "Title must be at Least 3 characters long"],
         maxLength: [50,"Title can not exceed 50 characters!"]
     },
-    date: { 
+    date: {
         type: String,
         required: [true, "Date"],
         minLength: [3, "Type must be at least 3 characters long"],
     },
-    description: { 
+    description: {
         type: String,
         required: [true, "Description"],
         minLength: [3, "Description must be at least 3 characters long"],
@@ -22,5 +22,5 @@ const EventSchema = new mongoose.Schema({
         type:String,
         required:[true,"Flier Image Link"]
     },
-}, { timestamps: true });  
+}, { timestamps: true });
 module.exports = mongoose.model('Event', EventSchema);

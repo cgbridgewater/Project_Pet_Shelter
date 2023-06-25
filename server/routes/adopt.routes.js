@@ -8,6 +8,6 @@ module.exports = (app) => {
     app.get('/api/admin/adopt/:id', authenticate, AdoptController.getOne);  // auth required
     app.get('/api/adopt/:id', AdoptController.getOne);
     app.delete('/api/adopt/:id', AdoptController.delete);
-    // app.put('/api/adopt/:id', AdoptController.update); // just in case!
-    // app.get('/api/adopt/sort/:type', AdoptController.sorter); // just in case!
+    // app.put('/api/adopt/:id', AdoptController.update);  // created for expansion
+    // app.get('/api/adopt/sort/:type', AdoptController.sorter);  // created for expansion
 }

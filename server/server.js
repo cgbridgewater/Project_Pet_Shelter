@@ -17,7 +17,6 @@ require('./routes/pets.routes')(app);
 require('./routes/adopt.routes')(app);
 require('./routes/events.routes')(app);
 
-
 app.listen(PORT,() => {
     console.log(`WOOF!!! Listening on Port: ${PORT}`)
 });

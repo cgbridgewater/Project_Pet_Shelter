@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-
 const AdminSchema = new mongoose.Schema({
-    // Created incase name registration is required later
+    // Created in the event name registration is required later
     // firstName: {
     //     type: String,
     //     required: [true, "First name is required"]
@@ -18,30 +17,26 @@ const AdminSchema = new mongoose.Schema({
         validate: {
             validator: val => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val),
             message: "Please enter a valid email"
-        }        
+        }
     },
     password: {
         type: String,
         required: [true, "Password is required"],
         minlength: [8, "Password must be 8 characters or longer"]
     }
-    
 }, {timestamps: true});
-
 
 // add this after AdminSchema is defined
 AdminSchema.virtual('confirmPassword')
     .get( () => this._confirmPassword )
     .set( value => this._confirmPassword = value );
-    
-    
+
 AdminSchema.pre('validate', function(next) {
     if (this.password !== this.confirmPassword) {
-        this.invalidate('confirmPassword', 'Password must match confirm password');
+        this.invalidate('confirmPassword', 'Passwords must match!');
     }
     next();
 });
-    
 
 // add this after the validate function
 AdminSchema.pre('save', function(next) {
@@ -51,6 +46,5 @@ AdminSchema.pre('save', function(next) {
         next();
     });
 });
-
 
 module.exports = mongoose.model("User", AdminSchema)
