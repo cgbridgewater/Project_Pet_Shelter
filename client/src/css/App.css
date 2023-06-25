@@ -6,23 +6,14 @@
 
 .App {
   text-align: center;
-  /* background-image: url(https://www.rocketdogrescue.org/wp-content/uploads/2013/08/Cracked_Tarmac_Road_Worn_1.jpg); */
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJg57rpVqorBaQ5H5I3z7MfkWgeVIobrXzCQ&usqp=CAU);
   background-attachment: fixed;
   background-position: center;
   background-size:cover;
 
 }
-/* .App {
-  text-align: center;
-  background-image: url(https://media.istockphoto.com/id/1276581591/vector/cute-simple-seamless-pattern-with-paw-prints.jpg?s=612x612&w=0&k=20&c=qRxqN8NX0Q0VkLOOj0NCysIZZ37328M4W2Kze2Xofro=);
-  background-position: center;
-  background-size: contain;
-  background-size:auto;  
-} */
 
 .Background {
-  /* background-image: url(https://media.istockphoto.com/id/1276581591/vector/cute-simple-seamless-pattern-with-paw-prints.jpg?s=612x612&w=0&k=20&c=qRxqN8NX0Q0VkLOOj0NCysIZZ37328M4W2Kze2Xofro=); */
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJg57rpVqorBaQ5H5I3z7MfkWgeVIobrXzCQ&usqp=CAU);
   padding: 1%;
   /* Create the parallax scrolling effect */
@@ -30,7 +21,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* min-height: 62vh; */
 }
 
 .Flex {
@@ -47,7 +37,6 @@
   justify-content: space-evenly;
   padding: 15px;
 }
-
 
 h1, h2, h3, h4 {
   color:#073DAA;
@@ -202,7 +191,7 @@ tbody{
   background-repeat: no-repeat;
   background-size: 80%;
   animation: animate 2.5s linear infinite;
-  -webkit-background-clip:text;
+  background-clip:text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
@@ -214,12 +203,12 @@ tbody{
     background-position: 500%;
   }
 }
+
 .ActionNavTitle:hover {
   animation: none;
   background-size: 100%;
-  -webkit-background-clip: text;
+  background-clip: text;
 }
-
 
 /***** Global Slide *****/
 .slide-right, .slide-left {
