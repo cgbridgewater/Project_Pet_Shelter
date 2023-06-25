@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+// get Google API key
+// const Google_API = process.env.REACT_APP_GOOGLE_API;
+
 const ContactUs = () => {
     
     // scroll to top fix

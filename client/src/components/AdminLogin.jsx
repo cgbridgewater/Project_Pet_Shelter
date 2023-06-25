@@ -1,120 +1,60 @@
-import { useState } from "react";
-import axios from "axios";
-import {useNavigate} from "react-router-dom";
-
-const Login = (props) => {
-
-    const [regState, setRegState] = useState ({
-        register: {
-            firstName: "",
-            lastName: "",
-            email:"",
-            password:"",
-            confirmPassword:""
-        }
-    });
-
-    const {register} = regState
-    const handleRegInputs =(e) => {
-        props.setAuthorized("");
-        setRegState({...regState, register: {...regState.register,[ e.target.name]: e.target.value}})
-    }
-    const handleRegistration = (e) =>{
-        e.preventDefault()
-        axios.post("http://localhost:8000/api/register", register, {withCredentials: true})
-            .then(res => {console.log(res)
-                navigate("/users")
-            })
-            .catch(err => console.log(err))
-    }
-
-
-
-    const [loginState, setLoginState] = useState ({
-        login:{
-            email:"",
-            password:""
-        }
-    })
-
-    const {login} = loginState;
-    const navigate = useNavigate()
-
-    const handleLoginInputs = (e) => {
-        PaymentResponse.setAuthorized("");
-        setLoginState({...loginState, login: {...loginState.login, [e.target.name]: e.target.value}})
-    }
-
-    const handleLogin = (e) => {
-        e.preventDefault()
-        axios.post("http://localhost:8000/api/login", login, {withCredentials:true})
-        .then(res => { console.log(res)
-            navigate("/admin/viewall")
-        })
-        .catch(err => console.log(err))
-    }
-
-
+import {Link} from "react-router-dom"
+const Login = () => {
 
     return(
-        <div className="background">
-            <div className="container">
-                <input type="radio" name="switch" id="switch_register" />
-                <label className="l_switch" htmlFor="switch_register">Need To Sign Up? </label>
-                <form onSubmit={handleRegistration} className="form">
-                    <div>
-                    <h2>Sign Up</h2>
-                    {/* email signup */}
-                    <label htmlFor="email">Email</label>
-                    <input 
-                        name="email" 
-                        placeholder="email address"
-                        onChange={handleRegInputs}
-                    />
-                    {/* password signup */}
-                    <label htmlFor="password">Password</label>
-                    <input 
-                        type="password" 
-                        placeholder="password"
-                        onChange={handleRegInputs}
-                    />
-                    {/* password signup */}
-                    <label htmlFor="verPass">Verify Password</label>
-                    <input 
-                    name="verPass" 
-                    type="password" 
-                    placeholder="password"
-                    onChange={handleRegInputs}
-                    />
-                    {/* signup button */}
-                    <button >Sign Up!</button>
+        <div className="Wrapper" >
+
+  <div className="LoginContainer">
+          {/* <!-- trim area for spinner --> */}
+          <span className="borderLine"></span> 	
+          {/* <!-- ... -->  */}
+              <div className="formContainer">
+                {/* <!-- FORM REGISTER SECTION --> */}
+
+                  <h1 style={{color:"red"}} className="BigText"> Admin Login </h1>
+            
+                {/* <!-- FORM LOGIN SECTION  --> */}
+                <form action="/login" method="POST" modelAttribute="loginUser">
+                  <h2 className="SmallText">Login Here:</h2>
+                  
+                  {/* <!-- FORM EMAIL SECTION --> */}
+                    <div className="sectionOne">
+                        <div className="formation">
+                            <label path="email"> Email: </label>	
+                  <errors path="email" className="errors"/>
+                        </div>
+                        <div className="errors">
+                            <input path="email" className="input" />
+                        </div>
                     </div>
-                </form>
-                <input type="radio" name="switch" id="switch_login" defaultChecked/>
-                <label className="l_switch" htmlFor="switch_login">Already A Member?</label>
-                <form className="form" onSubmit={handleLogin}>
-                    <div> 
-                    <h2>Login</h2>
-                    {/* email login */}
-                    <label htmlFor="username">Email</label>
-                    <input
-                        name="email" 
-                        placeholder="email address"
-                        onChange={handleLoginInputs}
-                    />
-                    {/* password login */}
-                    <label htmlFor="password">Password</label>
-                    <input 
-                        name="password" 
-                        type="password" 
-                        placeholder="password"
-                        onChange={handleLoginInputs}    
-                    />
-                    {/* login button */}
-                    <button>Log In!</button>
+              {/* <!-- ...  --> */}
+              
+              {/* <!-- FORM PASSWORD SECTION --> */}
+                    <div className="sectionTwo">
+                        <div className="formation">
+                            <label path="password"> Password: </label>	
+                          <errors path="password" className="errors"/>
+                        </div>
+                        <div className="errors">
+                            <input path="password" type="password" className="input"/>
+                        </div>
                     </div>
+                  {/* <!-- ... --> */}
+                  
+                  {/* <!-- FORM BUTTON --> */}
+                    <div className="buttonContainer">		 		
+                        <button disabled className="button" type="submit">Login</button>
+                    </div>
+                    {/* <!-- ... --> */}
+                    
                 </form>
+                {/* <!-- END FORM LOGIN SECTION --> */}
+            <p style={{color:"white"}}>Not Registered? <Link to="/admin/register" style={{color:"#45f3ff"}}>Register Here!</Link></p>
             </div>
+
+          </div>
+   
+         
         </div>
     )
 }
