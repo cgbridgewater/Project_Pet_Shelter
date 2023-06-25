@@ -30,6 +30,7 @@ const Register = (props) => {
 
     return(
         <div className="Wrapper" >
+            <h2 id='LoginH2' className='Unauthorized'>{props.authorized}</h2>
             {/* Content */}
             <div className="LoginContainer">
                 {/* Trim area for spinner  */}

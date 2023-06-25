@@ -69,13 +69,13 @@ const Detail = () => {
                             <Link to="/" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline"}}> Back To Shelter</Link>
                             <div className="Flex">
                                 <Link to="/petshelter" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",width:"65px",margin:"10px"}}>All Pets</Link>
-                                <Link to="/petshelter/sort/dogs" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Dogs</Link>
-                                <Link to="/petshelter/sort/cats" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Cats</Link>
+                                <Link to="/petshelter/sort/dog" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Dogs</Link>
+                                <Link to="/petshelter/sort/cat" style={{color: "#073DAA ",fontWeight:"800", textDecoration:"underline",margin:"10px"}}>Cats</Link>
                             </div>
                         </div>
                     </div>
                     {/* Details Container */}
-                    <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://media.istockphoto.com/id/1064117208/vector/animal-paw-prints-on-blue-winter-background.jpg?s=612x612&w=0&k=20&c=SxtfxxqqSEHv8ms2EhMAvAuYZGFdQtqbcUOY4D3JIaU=)",backgroundSize:"cover", border:"2px solid white", borderRadius:"15px"}}>
+                    <div className="DetailContainer" style={{display:"flex", justifyContent:"space-evenly",flexWrap:"wrap", alignItems:"center",margin:"20px auto",padding:"2%", minHeight:"35%", width:"70%", minWidth:"370px",backgroundImage:"url(https://media.istockphoto.com/id/1064117208/vector/animal-paw-prints-on-blue-winter-background.jpg?s=612x612&w=0&k=20&c=SxtfxxqqSEHv8ms2EhMAvAuYZGFdQtqbcUOY4D3JIaU=)",backgroundSize:"cover", border:"2px solid #073DAA", borderRadius:"15px"}}>
                         {/* pet image */}
                         <img style={{width:"350px", height:"auto", borderRadius:"10px"}} src={petImage} alt="pet image" />
                         {/* pet details */}
