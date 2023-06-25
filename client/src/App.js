@@ -42,6 +42,7 @@ import AdminUpdateEvent from './components/AdminUpdateEvent';
 import AdoptInfo from './components/AdminAdoptInfo';
 import OurStory from './components/OurStory';
 import Login from './components/AdminLogin';
+import Register from './components/AdminRegister';
 
 function App() {
 
@@ -53,7 +54,8 @@ function App() {
             {/* Landing */}
             <Route path="/" default element={<Indexpage/>}/>
             {/* admin routes */}
-            <Route path="/admin" element={<Login/>}/>
+            <Route path="/admin/signin" element={<Login/>}/>
+            <Route path="/admin/register" element={<Register/>}/>
             <Route path="/admin/viewall" element={<AdminViewAll/>}/>
             <Route path="/admin/new/pet" element={<AdminPetForm/>}/>
             <Route path="/admin/new/event" element={<AdminEventForm/>}/>
