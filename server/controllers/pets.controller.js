@@ -1,5 +1,11 @@
 const Pets = require('../models/pets.model')
 
+module.exports.index = (req, res) => {
+    res.json({
+        message: "Dojo Pet Shelter!"
+    });
+}
+
 module.exports.create = (req, res) => {
     Pets.create(req.body)
     .then(result => res.json(result))
