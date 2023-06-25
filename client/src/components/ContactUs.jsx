@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // get Google API key
-// const Google_API = process.env.REACT_APP_GOOGLE_API;
+const Google_API = process.env.REACT_APP_GOOGLE_API;
 
 const ContactUs = () => {
     
@@ -98,8 +98,8 @@ const ContactUs = () => {
                     loading="lazy"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
-                    &q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006">
+                    src={`https://www.google.com/maps/embed/v1/place?key=`+ Google_API +
+                    `&q=coding dojo 3600 136th Pl SE Suite 300, Bellevue, WA 98006`}>
                 </iframe>
                 {/* <!-- end google MAP --> */}
             </div>
@@ -131,8 +131,8 @@ const ContactUs = () => {
                     loading="lazy"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
-                    &q=coding dojo, 440 N Wolfe Rd suite E019, Sunnyvale, CA 94085">
+                    src={`https://www.google.com/maps/embed/v1/place?key=`+ Google_API +`
+                    &q=coding dojo, 440 N Wolfe Rd suite E019, Sunnyvale, CA 94085`}>
                 </iframe>
                 {/* <!-- end google MAP --> */}
             </div>
@@ -164,8 +164,8 @@ const ContactUs = () => {
                     loading="lazy"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAckSxJ-8-9KFx-HKZsyAhpq1gsp01Upek
-                    &q=coding dojo, 213 W Institute Pl # 610, Chicago, IL 60610">
+                    src={`https://www.google.com/maps/embed/v1/place?key=` + Google_API + `
+                    &q=coding dojo, 213 W Institute Pl # 610, Chicago, IL 60610`}>
                 </iframe>
                 {/* <!-- end google MAP --> */}
             </div>
