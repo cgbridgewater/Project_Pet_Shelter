@@ -5,14 +5,16 @@
 	display: flex;
 	justify-content:center;
 	align-items:center;
+	flex-direction: column;
 	min-height:63vh;
     padding: 20px;
 }
 
 .LoginContainer{
 	position:relative;
+	width:40%;
+	max-width: 450px;
     min-width: 370px;
-	width:450px;
 	height:400px;
 	background: #1c1c1c;
 	border-radius: 8px;
@@ -215,4 +217,11 @@ button {
 	color:red;
 	font-weight:600;
 	font-size:11px
+}
+
+#LoginH2  {
+	margin: 15px 0;
+	font-size: 2em;
+	color:red;
+	font-weight: 900;
 }

@@ -2,13 +2,8 @@ import React, {useState,useEffect} from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 
-const AdminPetForm = () => {
-
-    // scroll to top fix
-    useEffect(() => {
-        window.scrollTo(0,0)
-    },[])
-
+const AdminPetForm = (props) => {
+    
     const[ name, setName ] = useState("");
     const[ type, setType ] = useState("");
     const[ description, setDescription ] = useState("");
@@ -20,6 +15,24 @@ const AdminPetForm = () => {
     const[ checked3, setChecked3 ] = useState(false);
     const [errors, setErrors] = useState("");
     const navigate = useNavigate();
+
+    // scroll to top fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
+
+    // this runs to test cookies
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/admin/user"  ,{withCredentials: true})
+        .then((res) => {
+            console.log("Logged In User Being Tracked!");
+        })
+        .catch((err) => {
+            console.log("UNAUTHORIZED USER DETECTED!")
+            props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
+            navigate("/admin/signin")
+        })
+    }, [])
 
     const onSubmitHandler = (e) => {
         e.preventDefault();

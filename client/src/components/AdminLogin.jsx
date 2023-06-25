@@ -21,7 +21,7 @@ const Login = (props) => {
     const navigate = useNavigate()
 
     const handleLoginInputs = (e) => {
-        // props.setAuthorized("");
+        props.setAuthorized("");
         setState({...state, login: {...state.login, [e.target.name]: e.target.value}})
     }
 
@@ -40,6 +40,7 @@ const Login = (props) => {
 
     return(
         <div className="Wrapper" >
+            <h2 id='LoginH2' className='Unauthorized'>{props.authorized}</h2>
             {/* Login Container */}
             <div className="LoginContainer">
                 {/* <!-- trim area for spinner --> */}

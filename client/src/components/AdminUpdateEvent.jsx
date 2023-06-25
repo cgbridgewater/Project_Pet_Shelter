@@ -4,11 +4,6 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 
 const AdminUpdateEvent = (props) => {
 
-    // scroll fix
-    useEffect(() => {
-        window.scrollTo(0,0)
-    },[])
-
     const {id} = useParams();
     const[ title, setTitle ] = useState("");
     const[ date, setDate ] = useState("");
@@ -17,10 +12,28 @@ const AdminUpdateEvent = (props) => {
     const [errors, setGetErrors] = useState({});
     const navigate = useNavigate()
 
+        // scroll fix
+        useEffect(() => {
+            window.scrollTo(0,0)
+        },[])
+
+    // this runs to test cookies
     useEffect(() => {
-        axios.get("http://localhost:8000/api/oneEvent/" + id)
+        axios.get("http://localhost:8000/api/admin/user"  ,{withCredentials: true})
+        .then((res) => {
+            console.log("Logged In User Being Tracked!");
+        })
+        .catch((err) => {
+            console.log("UNAUTHORIZED USER DETECTED!")
+            props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
+            navigate("/admin/signin")
+        })
+    }, [])
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/admin/oneEvent/" + id, {withCredentials: true})
         .then( res => {
-            console.log(res.data);
+            // console.log(res.data);
             setTitle(res.data.title);
             setDate(res.data.date);
             setDescription(res.data.description);
@@ -49,6 +62,8 @@ const AdminUpdateEvent = (props) => {
             .catch((err) => {
                 console.log(err.response.data.error.errors) 
                 setGetErrors(err.response.data.error.errors); //Set Errors
+                props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
+                navigate("/admin/signin")
             })
     }
 

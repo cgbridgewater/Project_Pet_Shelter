@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+
 
 // Pet Sorting
 const petSortType = { 
@@ -25,8 +26,8 @@ const AdoptSortType = {
     ZTOA: (a,b) => b.petName.localeCompare(a.petName)
 }
 
-const AdminViewAll = () => {
-
+const AdminViewAll = (props) => {
+    
     // scroll to top
     useEffect(() => {
         window.scrollTo(0,0)
@@ -41,11 +42,25 @@ const AdminViewAll = () => {
     const [ adopt, setAdopt ] = useState([])
     const [ adoptSort, setAdoptSort ] = useState("NONE") 
     const [getAdoptErrors, setGetAdoptErrors] = useState({});
+    const navigate = useNavigate()
+
+    // this runs to test cookies
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/admin/user"  ,{withCredentials: true})
+        .then((res) => {
+            console.log("Logged In User Being Tracked!");
+        })
+        .catch((err) => {
+            console.log("UNAUTHORIZED USER DETECTED!")
+            props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
+            navigate("/admin/signin")
+        })
+    }, [])
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/events")
+        axios.get("http://localhost:8000/api/admin/events",{withCredentials: true})
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setEvent(res.data);
             setGetEventErrors("")
         })
@@ -56,9 +71,9 @@ const AdminViewAll = () => {
     }, [eventSort])
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/pets")
+        axios.get("http://localhost:8000/api/admin/pets",{withCredentials: true})
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setPet(res.data);
             setGetErrors("")
         })
@@ -69,9 +84,9 @@ const AdminViewAll = () => {
     }, [petSort])
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/adopt")
+        axios.get("http://localhost:8000/api/admin/adopt" ,{withCredentials: true})
         .then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setAdopt(res.data);
             setGetAdoptErrors("")
         })

@@ -22,8 +22,22 @@ const AdminUpdatePet = (props) => {
     const [errors, setGetErrors] = useState({});
     const navigate = useNavigate()
 
+
+    // this runs to test cookies
     useEffect(() => {
-        axios.get("http://localhost:8000/api/pets/" + id)
+        axios.get("http://localhost:8000/api/admin/user"  ,{withCredentials: true})
+        .then((res) => {
+            console.log("Logged In User Being Tracked!");
+        })
+        .catch((err) => {
+            console.log("UNAUTHORIZED USER DETECTED!")
+            props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
+            navigate("/admin/signin")
+        })
+    }, [])
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/admin/pets/" + id, {withCredentials: true})
         .then( res => {
             console.log(res.data);
             setName(res.data.name);
@@ -68,7 +82,7 @@ const AdminUpdatePet = (props) => {
     }
 
     const deletePet = (e) => {
-        axios.delete('http://localhost:8000/api/pets/' + id)
+        axios.delete('http://localhost:8000/api/pets/' + id, {withCredentials: true})
             .then(res => {
                 navigate("/admin/viewall");
             })

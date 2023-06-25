@@ -2,16 +2,21 @@ const User = require("../models/admin.model");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-
 module.exports= {
 
     // // // FIND ALL (for future build out use)
-        // findAll : (req,res) => {
-        //     User.find()
-        //         .then(results => res.json(results))
-        //         .catch(err => res.status(400).json(err))
-        // },
-    
+    //     findAll : (req,res) => {
+    //         User.find()
+    //             .then(results => res.json(results))
+    //             .catch(err => res.status(400).json(err))
+    //     },
+
+    // // Check Cookies
+    cookieTester : (req,res) => {
+        User.find()
+            .then(results => res.json({results, message: "Cookies Being Tracked, I'm watching you!"}))
+            .catch(err => res.status(400).json(err))
+    },
     
     // // // REGISTER NEW USER
     register :async (req, res) => {
@@ -33,7 +38,6 @@ module.exports= {
             })
             .catch(err => res.status(400).json({message: "Problem with registration",error: err}));
     },  
-    
     
     // // // LOG-IN USER
     login :async (req, res) => {
@@ -65,18 +69,18 @@ module.exports= {
             .json({ msg: " Great success!" });
     },
     
-        // LOG OUT (close cookie session)
-        logout: (req,res) => {
-            res.clearCookie('usertoken');
-            res.sendStatus(200);
-        },
-    
-        // GET ONE USER BY ID
-        getOne : (req, res) => {
-            User.findOne({_id: req.params.id})
-                .then(results => res.json(results))
-                .catch((err) => res.status(400).json(err))
-        },
+    // LOG OUT (close cookie session)
+    logout: (req,res) => {
+        res.clearCookie('usertoken');
+        res.sendStatus(200);
+    },
+
+    // GET ONE USER BY ID
+    getOne : (req, res) => {
+        User.findOne({_id: req.params.id})
+            .then(results => res.json(results))
+            .catch((err) => res.status(400).json(err))
+    },
     
     // // // UPDATE USER (for future build out use)
         // update : (req,res) => {

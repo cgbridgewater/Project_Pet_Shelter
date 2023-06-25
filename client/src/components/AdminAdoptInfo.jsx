@@ -4,10 +4,6 @@ import {Link, useParams, useNavigate} from "react-router-dom"
 
 const AdoptInfo = () => {
 
-    useEffect(() => {
-        window.scrollTo(0,0)
-    },[])
-
     // adoption application info
     const {id} = useParams();
     const [ petName, setPetName ] = useState("");
@@ -18,6 +14,10 @@ const AdoptInfo = () => {
     const [ errors, setErrors] = useState("null");
     const [ petImage, setpetImage ] = useState("");
     const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/adopt/" + id)

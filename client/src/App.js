@@ -15,8 +15,8 @@ import './css/CardFlip.css';
 import './css/EventBanner.css';
 import './css/PetCards.css';
 import './css/Login.css';
-
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import { useState } from 'react';
+import { BrowserRouter,Routes,Route,Navigate } from 'react-router-dom'
 import BadLink from './components/BadLink';
 import Indexpage from './components/Index';
 import Navibar from './components/Navibar';
@@ -47,6 +47,8 @@ import AdminLogout from './components/AdminLogout';
 
 function App() {
 
+  const [authorized, setAuthorized] = useState("");
+  
   return (
     <div className="App">
       <BrowserRouter>
@@ -54,16 +56,17 @@ function App() {
           <Routes>
             {/* Landing */}
             <Route path="/" default element={<Indexpage/>}/>
-            {/* admin routes */}
-            <Route path="/admin/signin" element={<Login/>}/>
-            <Route path="/admin/register" element={<Register/>}/>
-            <Route path="/admin/viewall" element={<AdminViewAll/>}/>
-            <Route path="/admin/logout" element={<AdminLogout/>}/>
-            <Route path="/admin/new/pet" element={<AdminPetForm/>}/>
-            <Route path="/admin/new/event" element={<AdminEventForm/>}/>
-            <Route path="/admin/edit/event/:id" element={<AdminUpdateEvent/>}/>
-            <Route path="/admin/edit/pet/:id" element={<AdminUpdatePet/>}/>
-            <Route path="/admin/adopt/:id" element={<AdoptInfo/>}/>
+            {/* admin routes - LOCKED DOWN!! */}
+            <Route path="/admin" element={<Navigate to="/admin/signin"/>}/>
+            <Route path="/admin/signin" element={<Login authorized={authorized} setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/register" element={<Register authorized={authorized} setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/viewall" element={<AdminViewAll setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/logout" element={<AdminLogout setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/new/pet" element={<AdminPetForm setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/new/event" element={<AdminEventForm setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/edit/event/:id" element={<AdminUpdateEvent setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/edit/pet/:id" element={<AdminUpdatePet setAuthorized={setAuthorized}/>}/>
+            <Route path="/admin/adopt/:id" element={<AdoptInfo setAuthorized={setAuthorized}/>}/>
             <Route path="/admin/:bad" element={<BadLink/>}/>
             {/* user routes */}
             <Route path="/petshelter" element={<PetShow/>}/>
