@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
 
 // Pet Sorting
 const petSortType = { 
@@ -26,13 +25,8 @@ const AdoptSortType = {
     ZTOA: (a,b) => b.petName.localeCompare(a.petName)
 }
 
-const AdminViewAll = (props) => {
-    
-    // scroll to top
-    useEffect(() => {
-        window.scrollTo(0,0)
-    },[])
-    
+const AdminViewAll = (props) => {    
+
     const [ pet, setPet ] = useState([])
     const [ petSort, setPetSort ] = useState("NONE") 
     const [getErrors, setGetErrors] = useState({});
@@ -43,6 +37,11 @@ const AdminViewAll = (props) => {
     const [ adoptSort, setAdoptSort ] = useState("NONE") 
     const [getAdoptErrors, setGetAdoptErrors] = useState({});
     const navigate = useNavigate()
+
+    // scroll to top
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
 
     // this runs to test cookies
     useEffect(() => {

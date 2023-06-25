@@ -1,13 +1,8 @@
-import React, {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams, Link } from "react-router-dom";
 
 const AdminUpdatePet = (props) => {
-
-    // scroll fix
-    useEffect(() => {
-        window.scrollTo(0,0)
-    },[])
 
     const {id} = useParams();
     const[ name, setName ] = useState("");
@@ -22,6 +17,10 @@ const AdminUpdatePet = (props) => {
     const [errors, setGetErrors] = useState({});
     const navigate = useNavigate()
 
+    // scroll fix
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
 
     // this runs to test cookies
     useEffect(() => {

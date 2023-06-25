@@ -1,12 +1,6 @@
-import {useNavigate, Link} from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios';
-
-
-
-
-
-
 
 const Login = (props) => {
 
@@ -19,7 +13,6 @@ const Login = (props) => {
 
     const {login} = state;
     const navigate = useNavigate()
-
     const handleLoginInputs = (e) => {
         props.setAuthorized("");
         setState({...state, login: {...state.login, [e.target.name]: e.target.value}})
@@ -33,10 +26,6 @@ const Login = (props) => {
             })
             .catch(err => console.log(err))
     }
-
-
-
-
 
     return(
         <div className="Wrapper" >

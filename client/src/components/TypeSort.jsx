@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-import defaultPetImage from '../assets/images/dogCatDefault.png'
+// import defaultPetImage from '../assets/images/dogCatDefault.png'
 
 // sorting
 const sortType = { 

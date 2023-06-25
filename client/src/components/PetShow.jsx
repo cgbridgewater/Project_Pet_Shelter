@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import defaultPetImage from '../assets/images/dogCatDefault.png'
+// import defaultPetImage from '../assets/images/dogCatDefault.png'
 
     // sorting
     const sortType = { 
@@ -68,7 +68,7 @@ const PetShow = () => {
                     .map((pet, index) => {
                     return(
                         // Each Card //
-                        <div key={index} className="pet-container">
+                        <div key={pet._id} className="pet-container">
                             <div className="row">
                                 <div className="pet-1">
                                     <div className="pet">

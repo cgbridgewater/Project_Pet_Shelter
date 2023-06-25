@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import EventsBanner from './EventsBanner';
@@ -9,14 +9,14 @@ const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStar
 
 const EventsViewAll = () => {
     
+    const [ event, setEvent ] = useState([])
+    const [ eventSort, setEventSort ] = useState("NONE") 
+    const [getEventErrors, setGetEventErrors] = useState({});
+    
     // scroll to top fix
     useEffect(() => {
         window.scrollTo(0,0)
     },[])
-    
-    const [ event, setEvent ] = useState([])
-    const [ eventSort, setEventSort ] = useState("NONE") 
-    const [getEventErrors, setGetEventErrors] = useState({});
 
     useEffect(() => {
         axios.get("http://localhost:8000/api/events/" + today)

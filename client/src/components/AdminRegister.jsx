@@ -1,9 +1,6 @@
-import {useNavigate, Link} from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react';
 import axios from 'axios';
-
-
-
 
 const Register = (props) => {
 
@@ -17,9 +14,8 @@ const Register = (props) => {
 
     const {register} = state;
     const navigate = useNavigate()
-
     const handleRegInputs =(e) => {
-        // props.setAuthorized("");
+        props.setAuthorized("");
         setState({...state, register: {...state.register,[ e.target.name]: e.target.value}})
     }
 
@@ -31,9 +27,6 @@ const Register = (props) => {
             })
             .catch(err => console.log(err))
     }
-
-
-
 
     return(
         <div className="Wrapper" >
