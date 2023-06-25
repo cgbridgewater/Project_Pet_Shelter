@@ -21,7 +21,7 @@ label.l_switch {
     background-color: #073DAA;
     color: lightblue;
     z-index: 4;
-
+    cursor:pointer;
 }
 
 input[name=switch]:checked + label {
@@ -163,4 +163,5 @@ from, to {
     font-weight: 800;
     font-size: 1.2em;
 	margin-top: 10px;
+    cursor:pointer;
 }
