@@ -67,7 +67,7 @@ function App() {
             <Route path="/admin/edit/event/:id" element={<AdminUpdateEvent setAuthorized={setAuthorized}/>}/>
             <Route path="/admin/edit/pet/:id" element={<AdminUpdatePet setAuthorized={setAuthorized}/>}/>
             <Route path="/admin/adopt/:id" element={<AdoptInfo setAuthorized={setAuthorized}/>}/>
-            <Route path="/admin/:bad" element={<BadLink/>}/>
+            <Route path="/admin/:bad/*" element={<Navigate to="/admin/signin"/>}/>
             {/* user routes */}
             <Route path="/petshelter" element={<PetShow/>}/>
             <Route path="/petshelter/aboutme" element={<AboutMe/>}/>
@@ -83,7 +83,8 @@ function App() {
             <Route path="/petshelter/stories" element={<Stories/>}/>
             <Route path="/petshelter/careers" element={<Careers/>}/>
             <Route path="/petshelter/:id" element={<PetDetail/>}/>
-            <Route path="/:bad" element={<BadLink/>}/>
+            {/* <Route path="/:bad" element={<BadLink/>}/> */}
+            <Route path="/:bad/*" element={<BadLink/>}/>
             {/* trash ?? */}
             {/* <Route path="/petshelter/:bad"  element={<BadLink/>}/> */}
             {/* <Route path="/admin/edit/:bad" element={<BadLink/>}/> */}
