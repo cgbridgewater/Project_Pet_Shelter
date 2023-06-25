@@ -114,13 +114,10 @@ const AdminViewAll = (props) => {
                         <div className="TitleBox">
                             <h1><em>PETS FOR ADOPTION</em></h1>
                             <Link to="/admin/new/pet" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a pet to the shelter</Link>
-                        </div>
-                        {/* pets Table */}
-                        <table className='PetTable'>
                             {/* sorting menu */}
-                            <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
-                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                            <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
+                                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label>
+                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{textAlign:"center",border:"1px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
@@ -128,6 +125,9 @@ const AdminViewAll = (props) => {
                                     <option value="TYPEZ2A">Type Z to A</option>
                                 </select>
                             </div>
+                        </div>
+                        {/* pets Table */}
+                        <table className='PetTable'>
                             {/* table header */}
                             <thead>
                                 <tr>
@@ -140,7 +140,7 @@ const AdminViewAll = (props) => {
                                     .sort(petSortType[petSort])
                                     .map((pet, index) => {
                                         return(
-                                            // table body // 
+                                            // table body //
                                             <tbody key={pet._id}>
                                                 <tr>
                                                     <td>
@@ -152,7 +152,8 @@ const AdminViewAll = (props) => {
                                                 </tr>
                                             </tbody>
                                         )})
-                                }  {/* end mapping */}
+                                }
+                                {/* end mapping */}
                         </table>
                     </div>
                     {/* Center TABLE */}
@@ -161,18 +162,18 @@ const AdminViewAll = (props) => {
                         <div className="TitleBox">
                             <h1><em>EVENTS LIST</em></h1>
                             <Link className="Add" to="/admin/new/event" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a new event for the shelter</Link>
-                        </div>
-                        {/* Events Table */}
-                        <table className='EventTable'>
                             {/* sorting menu */}
-                            <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
-                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                            <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
+                                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label>
+                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"1px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
                                 </select>
                             </div>
+                        </div>
+                        {/* Events Table */}
+                        <table className='EventTable'>
                             {/* table header */}
                             <thead>
                                 <tr>
@@ -185,7 +186,7 @@ const AdminViewAll = (props) => {
                                     .sort(eventSortType[eventSort])
                                     .map((event, index) => {
                                         return(
-                                            // table body // 
+                                            // table body //
                                             <tbody key={event._id}>
                                                 <tr>
                                                     {/* Title */}
@@ -199,7 +200,8 @@ const AdminViewAll = (props) => {
                                                 </tr>
                                             </tbody>
                                         )})
-                                }  {/* end mapping */}
+                                }
+                                {/* end mapping */}
                         </table>
                     </div>
                     {/* RIGHT TABLE */}
@@ -207,20 +209,20 @@ const AdminViewAll = (props) => {
                     <div className='TableBox'>
                         {/* Table Title */}
                         <div className="TitleBox">
-                        <h1><em>ADOPTION REQUESTS</em></h1>
-                        <p style={{color:"white", fontWeight:700}}>Generated user side input</p>
-                        </div>
-                        {/* Adopt Table */}
-                        <table className='AdoptTable'>
+                            <h1><em>ADOPTION REQUESTS</em></h1>
+                            <p style={{color:"white", fontWeight:700}}>Generated user side input</p>
                             {/* sorting menu */}
-                            <div style={{display:"flex", justifyContent:"center", flexDirection:"column", width:"150px", border:"3px solid #073DAA"}} >
-                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                                <select value={adoptSort} onChange={(e) => setAdoptSort(e.target.value)} style={{textAlign:"center",border:"3px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                            <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
+                                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label>
+                                <select value={adoptSort} onChange={(e) => setAdoptSort(e.target.value)} style={{textAlign:"center",border:"1px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">By Pet - A to Z</option>
                                     <option value="ZTOA">By Pet - Z to A</option>
                                 </select>
                             </div>
+                        </div>
+                        {/* Adopt Table */}
+                        <table className='AdoptTable'>
                             {/* table header */}
                             <thead>
                                 <tr>
@@ -233,7 +235,7 @@ const AdminViewAll = (props) => {
                                     .sort(AdoptSortType[adoptSort])
                                     .map((adopt, index) => {
                                         return(
-                                            // table body // 
+                                            // table body //
                                             <tbody key={adopt._id}>
                                                 <tr>
                                                     {/* Contact */}
@@ -253,7 +255,8 @@ const AdminViewAll = (props) => {
                                                 </tr>
                                             </tbody>
                                         )})
-                                }  {/* end mapping */}
+                                }
+                                {/* end mapping */}
                         </table>
                     </div>
                 </div>
