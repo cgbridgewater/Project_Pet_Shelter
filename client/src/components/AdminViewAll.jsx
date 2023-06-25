@@ -208,7 +208,7 @@ const AdminViewAll = (props) => {
                         {/* Table Title */}
                         <div className="TitleBox">
                         <h1><em>ADOPTION REQUESTS</em></h1>
-                        <h3>Generated user side input</h3>
+                        <p style={{color:"white", fontWeight:700}}>Generated user side input</p>
                         </div>
                         {/* Adopt Table */}
                         <table className='AdoptTable'>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import EventsBanner from './EventsBanner';
 
-
+// Fetch Date
 const current = new Date();
 const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${current.getDate()}`;
 
@@ -46,7 +46,7 @@ const EventsViewAll = () => {
                             <div className='FlierFlex'>
                                 <img className='FlierImg' src={event.flierImage} alt="flier image"/>
                                 <div className='FlierInfo'>
-                                    <h3>{event.title} on {event.date}</h3>
+                                    <h3 style={{textAlign:"center"}}>{event.title}</h3>
                                     <hr className='FlierDivide' />
                                     <br />
                                     <h4>{event.description}</h4>

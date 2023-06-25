@@ -49,7 +49,7 @@ const AdminUpdateEvent = (props) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         axios.put('http://localhost:8000/api/events/' + id, {
-            title: title.toUpperCase(),
+            title: title,
             date,
             description,
             flierImage,

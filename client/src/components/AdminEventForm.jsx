@@ -7,7 +7,7 @@ const AdminEventForm = (props) => {
     const[ title, setTitle ] = useState("");
     const[ date, setDate ] = useState("");
     const[ description, setDescription ] = useState("");
-    const[ flierImage, setFlierImage ] = useState(null);
+    const[ flierImage, setFlierImage ] = useState("");
     const [errors, setErrors] = useState("");
     const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ const AdminEventForm = (props) => {
     const onSubmitHandler = (e) => {
         e.preventDefault();
         axios.post("http://localhost:8000/api/events", {
-            title: title.toUpperCase(),
+            title: title,
             date,
             description,
             flierImage,

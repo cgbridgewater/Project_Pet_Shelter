@@ -190,8 +190,9 @@ const AdminPetForm = (props) => {
                     <div>
                         <label>
                             <h3 style={{color:"#073DAA", margin:0}}>Fixed? </h3>
-                        </label>                    
+                        </label>
                         <input 
+                            name="fixed"
                             style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
                             type="checkbox" 
                             value={checked1}
@@ -204,8 +205,9 @@ const AdminPetForm = (props) => {
                             <h3 style={{color:"#073DAA", margin:0}}>
                                 Child Friendly? 
                             </h3>
-                        </label>                    
-                        <input 
+                        </label>
+                        <input
+                            name="childFriendly"
                             style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
                             type="checkbox" 
                             value={checked2}
@@ -218,8 +220,9 @@ const AdminPetForm = (props) => {
                             <h3 style={{color:"#073DAA", margin:0}}>
                                 Pet Friendly? 
                             </h3>
-                        </label>                    
+                        </label>
                         <input 
+                            name="petFriendly"
                             style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
                             type="checkbox" 
                             value={checked3}
