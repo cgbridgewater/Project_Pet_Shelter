@@ -1,13 +1,38 @@
-import {Link} from "react-router-dom"
+import {useNavigate, Link} from 'react-router-dom'
+import { useState } from 'react';
+import axios from 'axios';
 
 
 
 
 
 
-const Login = () => {
 
+const Login = (props) => {
 
+    const [state, setState] = useState ({
+        login: {
+            email:"",
+            password:""
+        }
+    });
+
+    const {login} = state;
+    const navigate = useNavigate()
+
+    const handleLoginInputs = (e) => {
+        // props.setAuthorized("");
+        setState({...state, login: {...state.login, [e.target.name]: e.target.value}})
+    }
+
+    const handleLogin = (e) => {
+        e.preventDefault()
+        axios.post("http://localhost:8000/api/login", login, {withCredentials: true})
+            .then(res => { console.log(res)
+                navigate("/admin/viewall")
+            })
+            .catch(err => console.log(err))
+    }
 
 
 
@@ -25,32 +50,43 @@ const Login = () => {
                     <h1 style={{color:"red"}} className="BigText"> Admin Login </h1>
                     <h2 className="SmallText">Login Here:</h2>
                     {/* <!-- FORM SECTION  --> */}
-                    <form action="/login" method="POST" modelAttribute="loginUser">
+                    <form onSubmit={handleLogin}>
                         <div className="InputContainer">
                         {/* <!-- EMAIL SECTION --> */}
                             <div className="sectionOne">
                                 <div className="formation">
                                     {/* <label path="email"> Email: </label>	 */}
-                                    <errors path="email" className="errors"/>
+                                    {/* <errors path="email" className="errors"/> */}
                                 </div>
                                 <div className="errors">
-                                    <input path="email" className="input" placeholder="Enter Email"/>
+                                    <input 
+                                        onChange={handleLoginInputs}
+                                        type='text'
+                                        name="email" 
+                                        className="input" 
+                                        placeholder="Enter Email"/>
                                 </div>
                             </div>
                             {/* <!-- PASSWORD SECTION --> */}
                             <div className="sectionTwo">
                                 <div className="formation">
                                     {/* <label path="password"> Password: </label>	 */}
-                                    <errors path="password" className="errors"/>
+                                    {/* <errors path="password" className="errors"/> */}
                                 </div>
                                 <div className="errors">
-                                    <input path="password" type="password" className="input" placeholder="Enter Password"/>
+                                    <input 
+                                    onChange={handleLoginInputs}
+                                        name="password" 
+                                        type="password" 
+                                        className="input" 
+                                        placeholder="Enter Password"
+                                    />
                                 </div>
                             </div>
                         </div>
                         {/* <!-- FORM BUTTON --> */}
                         <div className="buttonContainer">
-                            <button disabled className="button" type="submit">Login</button>
+                            <button className="button" type="submit">Login</button>
                         </div>
                     </form>
                     {/* <!-- END FORM SECTION --> */}

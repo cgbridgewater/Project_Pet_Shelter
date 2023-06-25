@@ -86,7 +86,9 @@ const AdminViewAll = () => {
             <div className='PetListTable'>
                 {/* Top Row */}
                 <div style={{padding:"0 10%",display:"flex",justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap"}}>
+                    <h1></h1>
                     <h1 style={{fontSize:"40px",color:"red"}}> ADMIN PAGE</h1>
+                    <Link style={{fontWeight:"bold", fontSize:"1.8em",textDecoration:"underline"}} className='Logout' to="/admin/logout">LOGOUT</Link>
                 </div>
                 <br />
                 {/* tables contaner */}
@@ -161,7 +163,7 @@ const AdminViewAll = () => {
                             <thead>
                                 <tr>
                                     <th>Event Name</th>
-                                    <th>Event Date</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
                                 {/* mapping and sorting */}

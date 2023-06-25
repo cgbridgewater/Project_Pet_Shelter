@@ -26,9 +26,9 @@ module.exports= {
                 console.log("I didnt fail!")
                 const userToken = jwt.sign({
                     id: newUser._id
-                }, console.log("I made a new user"), process.env.SECRET_KEY);
+                }, process.env.SECRET_KEY);
                 res
-                .cookie("usertoken", userToken,console.log("I made a cookie"), {httpOnly:true})
+                .cookie("usertoken", userToken, {httpOnly:true})
                 .json({ msg: "Great Success, You are registered!", user: newUser });
             })
             .catch(err => res.status(400).json({message: "Problem with registration",error: err}));
@@ -62,7 +62,7 @@ module.exports= {
             .cookie("usertoken", userToken, {
                 httpOnly: true
             })
-            .json({ msg: "success!" });
+            .json({ msg: " Great success!" });
     },
     
         // LOG OUT (close cookie session)

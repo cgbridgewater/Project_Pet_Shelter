@@ -43,6 +43,7 @@ import AdoptInfo from './components/AdminAdoptInfo';
 import OurStory from './components/OurStory';
 import Login from './components/AdminLogin';
 import Register from './components/AdminRegister';
+import AdminLogout from './components/AdminLogout';
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
             <Route path="/admin/signin" element={<Login/>}/>
             <Route path="/admin/register" element={<Register/>}/>
             <Route path="/admin/viewall" element={<AdminViewAll/>}/>
+            <Route path="/admin/logout" element={<AdminLogout/>}/>
             <Route path="/admin/new/pet" element={<AdminPetForm/>}/>
             <Route path="/admin/new/event" element={<AdminEventForm/>}/>
             <Route path="/admin/edit/event/:id" element={<AdminUpdateEvent/>}/>
