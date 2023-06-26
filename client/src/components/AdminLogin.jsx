@@ -25,7 +25,6 @@ const Login = (props) => {
                 navigate("/admin/viewall")
             })
             .catch(err =>  {
-                console.log(err) 
                 setErrors(err.response.data); //Set Errors
             })
             

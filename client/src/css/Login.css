@@ -1,12 +1,9 @@
-
-
-
 .Wrapper {
 	display: flex;
 	justify-content:center;
 	align-items:center;
 	flex-direction: column;
-	min-height:63vh;
+	min-height:67vh;
     padding: 20px;
 }
 

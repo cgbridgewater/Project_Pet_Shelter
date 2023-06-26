@@ -27,7 +27,6 @@ const Register = (props) => {
                 navigate("/admin/viewall")
             })
             .catch(err =>  {
-                console.log(err) 
                 setErrors(err.response.data.error.errors); //Set Errors
             })
     }
@@ -114,7 +113,7 @@ const Register = (props) => {
                         </div>
                         {/* FORM BUTTON  */}
                         <div className="buttonContainer">		 		
-                            <button disabled className="button" type="submit">Register</button>
+                            <button className="button" type="submit">Register</button>
                         </div>
                     </form>
                     {/* END FORM SECTION  */}
