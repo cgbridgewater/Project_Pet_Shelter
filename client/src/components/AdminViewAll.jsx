@@ -111,7 +111,7 @@ const AdminViewAll = (props) => {
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
                                 {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{padding:"3px",width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
@@ -159,7 +159,7 @@ const AdminViewAll = (props) => {
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
                                 {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{padding:"3px",width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
@@ -208,7 +208,7 @@ const AdminViewAll = (props) => {
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
                                 {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
-                                <select value={adoptSort} onChange={(e) => setAdoptSort(e.target.value)} style={{width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                <select value={adoptSort} onChange={(e) => setAdoptSort(e.target.value)} style={{padding:"3px",width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">By Pet - A to Z</option>
                                     <option value="ZTOA">By Pet - Z to A</option>
