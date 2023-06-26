@@ -9,11 +9,11 @@ const AdminUpdatePet = (props) => {
     const[ type, setType ] = useState("");
     const[ description, setDescription ] = useState("");
     const[ age, setAge ] = useState("");
-    const[ petImage, setPetImage ] = useState(null);
+    const[ petImage, setPetImage ] = useState("");
     const[ notes, setNotes ] = useState("");
-    const[ checked1, setChecked1 ] = useState("");
-    const[ checked2, setChecked2 ] = useState("");
-    const[ checked3, setChecked3 ] = useState("");
+    const[ checked1, setChecked1 ] = useState(false);
+    const[ checked2, setChecked2 ] = useState(false);
+    const[ checked3, setChecked3 ] = useState(false);
     const [errors, setGetErrors] = useState({});
     const navigate = useNavigate()
 
@@ -38,7 +38,6 @@ const AdminUpdatePet = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/admin/pets/" + id, {withCredentials: true})
         .then( res => {
-            console.log(res.data);
             setName(res.data.name);
             setType(res.data.type);
             setDescription(res.data.description);
@@ -72,10 +71,8 @@ const AdminUpdatePet = (props) => {
             .then(res => {
                 setGetErrors("")
                 navigate("/admin/viewall");
-                console.log(res);
             })
             .catch((err) => {
-                console.log(err.response.data.error.errors) 
                 setGetErrors(err.response.data.error.errors); //Set Errors
             })
     }
@@ -86,7 +83,6 @@ const AdminUpdatePet = (props) => {
                 navigate("/admin/viewall");
             })
             .catch((err) => {
-                console.log(err.response.data)
                 setGetErrors(err.response.data); 
             })
     }
@@ -107,10 +103,10 @@ const AdminUpdatePet = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.name ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.name.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0}}>{errors.name.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Pet Name
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -125,10 +121,10 @@ const AdminUpdatePet = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.type ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.type.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0}}>{errors.type.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Pet Type
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -143,10 +139,10 @@ const AdminUpdatePet = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.description ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.description.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0}}>{errors.description.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Description
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -161,10 +157,10 @@ const AdminUpdatePet = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.age ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.age.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0}}>{errors.age.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Pet Age
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -181,10 +177,10 @@ const AdminUpdatePet = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.petImage ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.petImage.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0}}>{errors.petImage.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Image Link
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -198,9 +194,9 @@ const AdminUpdatePet = (props) => {
                 {/* Notes */}
                 <div className="FormInput">
                     <label>
-                        <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                        <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                             Notes
-                        </h3>
+                        </p>
                     </label>                    
                     <input 
                         style={{paddingLeft:"5px", marginTop:"5px",backgroundColor:"lightgray", fontSize:"20px", fontWeight:800, border:"4px solid #073DAA", borderRadius:"15px", width:"250px"  }} 
@@ -215,49 +211,51 @@ const AdminUpdatePet = (props) => {
                     {/* fixed */}
                     <div>
                         <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>Fixed? </h3>
-                        </label>                    
-                        <input 
-                            style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
-                            type="checkbox" 
-                            checked={checked1}
-                            onChange={(e) => setChecked1(!checked1)}
-                            />
+                            <p style={{color:"#073DAA", margin:0}}>Fixed? </p>
+                            <input 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
+                                type="checkbox" 
+                                checked={checked1}
+                                onChange={(e) => setChecked1(!checked1)}
+                                />
+                        </label>
                     </div>
                     {/* child friendly */}
                     <div>
                         <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>
+                            <p style={{color:"#073DAA", margin:0}}>
                                 Child Friendly? 
-                            </h3>
-                        </label>                    
-                        <input 
-                            style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
-                            type="checkbox" 
-                            checked={checked2}
-                            onChange={(e) => setChecked2(!checked2)}
-                            />
+                            </p>
+                            <input 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
+                                type="checkbox" 
+                                checked={checked2}
+                                onChange={(e) => setChecked2(!checked2)}
+                                />
+                        </label>
                     </div>
                     {/* pet friendly */}
                     <div>
                         <label>
-                            <h3 style={{color:"#073DAA", margin:0}}>
+                            <p style={{color:"#073DAA", margin:0}}>
                                 Pet Friendly? 
-                            </h3>
-                        </label>                    
-                        <input 
-                            style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
-                            type="checkbox" 
-                            checked={checked3}
-                            onChange={(e) => setChecked3(!checked3)}
-                            />
+                            </p>
+                            <input 
+                                style={{marginTop:"5px",backgroundColor:"lightgray", border:"4px solid #073DAA", height:"30px", width:"30px"  }} 
+                                type="checkbox" 
+                                checked={checked3}
+                                onChange={(e) => setChecked3(!checked3)}
+                                />
+                        </label>
                     </div>
                 </div>
                 {/* form buttons */}
                 <div className="FlierFlex">
-                    <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
-                    <button className="SubmitButton" style={{color:"red", marginTop:"5%"}} onClick={(e) =>{deletePet(id)}}>
-                        Delete 
+                    <button className="SubmitButton" type="submit">
+                        SUBMIT
+                    </button>
+                    <button className="DeleteButton" onClick={(e) =>{deletePet(id)}}>
+                        DELETE 
                     </button>
                 </div>
             </form>

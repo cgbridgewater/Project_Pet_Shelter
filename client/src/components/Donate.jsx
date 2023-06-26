@@ -1,7 +1,7 @@
 const Donate = () => {
 
     return(
-        <div className="Background">
+        <div className="DonationContainer">
             {/* donate link */}
             <a className="DonateButton" href="#popup2">Donate</a>
             {/* pop up */}

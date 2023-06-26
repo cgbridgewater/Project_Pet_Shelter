@@ -10,7 +10,7 @@ const AdoptInfo = (props) => {
     const [ userName, setUserName ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ phone, setPhone ] = useState("");
-    const [ errors, setErrors] = useState("null");
+    const [ errors, setErrors] = useState("");
     const [ petImage, setpetImage ] = useState("");
     const navigate = useNavigate()
 
@@ -34,7 +34,6 @@ const AdoptInfo = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/adopt/" + id)
         .then( res => {
-            console.log(res.data);
             setPetName(res.data.petName);
             setUserName(res.data.userName);
             setPhone(res.data.phone);
@@ -43,7 +42,6 @@ const AdoptInfo = (props) => {
             setErrors("")
         })
         .catch((err) => {
-            console.log(err.response.data)
             setErrors(err.response.data); 
         })
     }, []);
@@ -54,7 +52,6 @@ const AdoptInfo = (props) => {
                 navigate("/admin/viewall");
             })
             .catch((err) => {
-                console.log(err.response.data)
                 setErrors(err.response.data); 
             })
     }
@@ -115,8 +112,8 @@ const AdoptInfo = (props) => {
                     </div>
                     {/* Delete Button */}
                     <div className="FlierFlex">
-                        <button className="DeleteButton" onClick={(e) =>{deleteApplication(id)}}>
-                            Remove Application 
+                        <button style={{margin:"0 auto"}} className="DeleteButton" onClick={(e) =>{deleteApplication(id)}}>
+                            Delete Application 
                         </button>
                     </div>
                 </div>

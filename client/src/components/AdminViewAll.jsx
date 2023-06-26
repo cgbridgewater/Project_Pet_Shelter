@@ -113,11 +113,11 @@ const AdminViewAll = (props) => {
                         {/* Table Title */}
                         <div className="TitleBox">
                             <h1><em>PETS FOR ADOPTION</em></h1>
-                            <Link to="/admin/new/pet" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a pet to the shelter</Link>
+                            <Link to="/admin/new/pet" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"#073DAA"}}>Add a pet to the shelter</Link>
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
-                                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label>
-                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{textAlign:"center",border:"1px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                                <select value={petSort} onChange={(e) => setPetSort(e.target.value)} style={{width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
@@ -144,9 +144,9 @@ const AdminViewAll = (props) => {
                                             <tbody key={pet._id}>
                                                 <tr>
                                                     <td>
-                                                        <Link className='TableLink' to={"/admin/edit/pet/" +pet._id}>{pet.name}</Link>
+                                                        <Link style={{textDecoration: "underline"}} className='TableLink' to={"/admin/edit/pet/" +pet._id}>{pet.name}</Link>
                                                     </td>
-                                                    <td style={{color:"white", fontSize:"16px", textAlign:"center"}}>
+                                                    <td style={{color:"#073DAA", fontSize:"16px", textAlign:"center"}}>
                                                         {pet.type}
                                                     </td>
                                                 </tr>
@@ -161,11 +161,11 @@ const AdminViewAll = (props) => {
                         {/* Table Title */}
                         <div className="TitleBox">
                             <h1><em>EVENTS LIST</em></h1>
-                            <Link className="Add" to="/admin/new/event" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"white"}}>Add a new event for the shelter</Link>
+                            <Link className="Add" to="/admin/new/event" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline",color:"#073DAA"}}>Add a new event for the shelter</Link>
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
-                                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label>
-                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{textAlign:"center",border:"1px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                                <select value={eventSort} onChange={(e) => setEventSort(e.target.value)} style={{width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">A to Z</option>
                                     <option value="ZTOA">Z to A</option>
@@ -191,10 +191,10 @@ const AdminViewAll = (props) => {
                                                 <tr>
                                                     {/* Title */}
                                                     <td>
-                                                        <Link  className='TableLink' to={"/admin/edit/event/" +event._id}>{event.title}</Link>
+                                                        <Link style={{textDecoration: "underline"}} className='TableLink' to={"/admin/edit/event/" +event._id}>{event.title}</Link>
                                                     </td>
                                                     {/* Date */}
-                                                    <td style={{color:"white", fontSize:"16px", textAlign:"center"}}>
+                                                    <td style={{color:"#073DAA", fontSize:"16px", textAlign:"center"}}>
                                                         {event.date}
                                                     </td>
                                                 </tr>
@@ -210,11 +210,11 @@ const AdminViewAll = (props) => {
                         {/* Table Title */}
                         <div className="TitleBox">
                             <h1><em>ADOPTION REQUESTS</em></h1>
-                            <p style={{color:"white", fontWeight:700}}>Generated user side input</p>
+                            <p style={{color:"#073DAA", fontWeight:700}}>Generated user side input</p>
                             {/* sorting menu */}
                             <div style={{display:"flex", justifyContent:"center", width:"175px",margin:"7px auto 0"}} >
-                                <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label>
-                                <select value={adoptSort} onChange={(e) => setAdoptSort(e.target.value)} style={{textAlign:"center",border:"1px solid white", fontSize:"18px", color:"white",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
+                                {/* <label style={{fontSize:"18px", fontWeight:800, color:"#073DAA",backgroundColor:"white"}} htmlFor="">Sort</label> */}
+                                <select value={adoptSort} onChange={(e) => setAdoptSort(e.target.value)} style={{width:"175px",textAlign:"center",border:"1px solid white", fontSize:"18px", color:"#45f3ff",backgroundColor:"#073DAA",boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.80)"}}>
                                     <option value="NONE">ALL</option>
                                     <option value="ATOZ">By Pet - A to Z</option>
                                     <option value="ZTOA">By Pet - Z to A</option>
@@ -227,7 +227,7 @@ const AdminViewAll = (props) => {
                             <thead>
                                 <tr>
                                     <th>Contact Email </th>
-                                    <th>Pet Name</th>
+                                    <th>Pet</th>
                                 </tr>
                             </thead>
                                 {/* mapping and sorting */}
@@ -240,16 +240,12 @@ const AdminViewAll = (props) => {
                                                 <tr>
                                                     {/* Contact */}
                                                     <td>
-                                                        <Link 
-                                                            style={{textAlign:"end"}}
-                                                            className='TableLink' 
-                                                            to={"/admin/adopt/" +adopt._id}
-                                                        >
+                                                        <Link  style={{textDecoration: "underline"}} className='TableLink' to={"/admin/adopt/" +adopt._id}>
                                                             {adopt.email}
                                                         </Link>
                                                     </td>
                                                     {/* Pet Name */}
-                                                    <td style={{color:"white", fontSize:"16px", textAlign:"center"}}>
+                                                    <td style={{color:"#073DAA", fontSize:"16px", textAlign:"center"}}>
                                                         {adopt.petName}
                                                     </td>
                                                 </tr>

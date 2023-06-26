@@ -38,8 +38,6 @@ const AdminEventForm = (props) => {
             flierImage,
     })
         .then( res => {
-            console.log(res);
-            console.log(res.data) 
             setTitle("")
             setDate("")
             setDescription("")
@@ -48,7 +46,6 @@ const AdminEventForm = (props) => {
             navigate("/admin/viewall");
         })
         .catch((err) => {
-            console.log(err.response.data.error.errors) 
             setErrors(err.response.data.error.errors); //Set Errors
         })
     }
@@ -63,16 +60,16 @@ const AdminEventForm = (props) => {
                 <Link to="/admin/viewall" style={{fontSize:"20px", fontWeight:"700", textDecoration:"underline"}}> Back To Admin Main</Link>
             </div>
             {/* form start */}
-            <form className="Form" style={{minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
+            <form className="Form" style={{marginTop:"2%",minWidth:"370px", fontSize:"20px", fontWeight:800,boxShadow:"0 8px 12px 0 rgba(0, 0, 0, 0.70)"}} onSubmit={onSubmitHandler}>
             {/* inner form container */}
                 {/* Event Title */}
                 <div className="FormInput">
                     <label>
                         { errors.title ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.title.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0, textAlign:"start"}}>{errors.title.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Title
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -87,10 +84,10 @@ const AdminEventForm = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.date ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.date.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0, textAlign:"start"}}>{errors.date.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Date
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -105,10 +102,10 @@ const AdminEventForm = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.description ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.description.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0, textAlign:"start"}}>{errors.description.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Description
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -123,10 +120,10 @@ const AdminEventForm = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.flierImage ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.flierImage.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <p style={{color:"red", margin:0, textAlign:"start"}}>{errors.flierImage.message}</p>
+                            : <p style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Flier Image Link
-                            </h3>
+                            </p>
                         }
                     </label>
                     <input 
@@ -139,7 +136,7 @@ const AdminEventForm = (props) => {
                 </div>
                 {/* form button */}
                 <div>
-                    <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
+                    <input className="SubmitButton" style={{marginTop:"5%"}} type="submit" />
                 </div>
             </form>
         </div>

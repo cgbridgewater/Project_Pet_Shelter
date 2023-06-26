@@ -8,7 +8,7 @@ const AdminUpdateEvent = (props) => {
     const[ title, setTitle ] = useState("");
     const[ date, setDate ] = useState("");
     const[ description, setDescription ] = useState("");
-    const[ flierImage, setFlierImage ] = useState(null);
+    const[ flierImage, setFlierImage ] = useState("");
     const [errors, setGetErrors] = useState({});
     const navigate = useNavigate()
 
@@ -33,7 +33,6 @@ const AdminUpdateEvent = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/admin/oneEvent/" + id, {withCredentials: true})
         .then( res => {
-            // console.log(res.data);
             setTitle(res.data.title);
             setDate(res.data.date);
             setDescription(res.data.description);
@@ -41,7 +40,6 @@ const AdminUpdateEvent = (props) => {
             setGetErrors("")
         })
         .catch((err) => {
-            console.log(err.response.data)
             setGetErrors(err.response.data); 
         })
     }, []);
@@ -57,13 +55,9 @@ const AdminUpdateEvent = (props) => {
             .then(res => {
                 setGetErrors("")
                 navigate("/admin/viewall");
-                console.log(res);
             })
             .catch((err) => {
-                console.log(err.response.data.error.errors) 
                 setGetErrors(err.response.data.error.errors); //Set Errors
-                props.setAuthorized("You must log in to access admin pages!");  // Sends back to main page with this message
-                navigate("/admin/signin")
             })
     }
 
@@ -73,7 +67,6 @@ const AdminUpdateEvent = (props) => {
                 navigate("/admin/viewall");
             })
             .catch((err) => {
-                console.log(err.response.data)
                 setGetErrors(err.response.data); 
             })
     }
@@ -94,10 +87,10 @@ const AdminUpdateEvent = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.title ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.title.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <h2 style={{color:"red", margin:0}}>{errors.title.message}</h2>
+                            : <h2 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Title
-                            </h3>
+                            </h2>
                         }
                     </label>
                     <input 
@@ -112,10 +105,10 @@ const AdminUpdateEvent = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.Date ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.date.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <h2 style={{color:"red", margin:0}}>{errors.date.message}</h2>
+                            : <h2 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Date
-                            </h3>
+                            </h2>
                         }
                     </label>
                     <input 
@@ -130,10 +123,10 @@ const AdminUpdateEvent = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.description ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.description.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <h2 style={{color:"red", margin:0}}>{errors.description.message}</h2>
+                            : <h2 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Description
-                            </h3>
+                            </h2>
                         }
                     </label>
                     <input 
@@ -148,10 +141,10 @@ const AdminUpdateEvent = (props) => {
                 <div className="FormInput">
                     <label>
                         { errors.flierImage ? 
-                            <h3 style={{color:"red", margin:0}}>{errors.flierImage.message}</h3>
-                            : <h3 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
+                            <h2 style={{color:"red", margin:0}}>{errors.flierImage.message}</h2>
+                            : <h2 style={{color:"#073DAA", margin:0, minWidth:"150px", textAlign:"start"}}>
                                 Image Link
-                            </h3>
+                            </h2>
                         }
                     </label>
                     <input 
@@ -165,9 +158,11 @@ const AdminUpdateEvent = (props) => {
                 
                 {/* Event form button */}
                 <div className="FlierFlex">
-                    <input className="SubmitButton" style={{color:"#073DAA", marginTop:"5%"}} type="submit" />
-                    <button className="SubmitButton" style={{color:"red", marginTop:"5%"}} onClick={(e) =>{deleteEvent(id)}}>
-                        Delete 
+                    <button className="SubmitButton" type="submit">
+                        SUBMIT
+                    </button>
+                    <button className="DeleteButton" onClick={(e) =>{deleteEvent(id)}}>
+                        DELETE 
                     </button>
                 </div>
             </form>

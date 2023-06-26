@@ -19,18 +19,36 @@
     font-size: 1em;
     font-weight: 600;
     padding: 5px;
-    margin: 0 auto;
+    width: 150px;
+    border-radius: 10px;
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
 }
 
-/* .DeleteButton:focus,  */
 .DeleteButton:hover {
     background-color: red;
+    color: #45f3ff;
     border: 2px solid #45f3ff;
     box-shadow:0 8px 12px 0 #fd6ee0;
-    -moz-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.SubmitButton {
+    color: #073DAA;
+    border: 2px solid #073DAA;
+    background-color:rgb(234,246,244);
+    font-size: 1em;
+    font-weight: 600;
+    padding: 5px;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
+}
+
+.SubmitButton:hover {
+    background-color: #073DAA;
+    border: 2px solid #45f3ff;
+    color: #45f3ff;
+    box-shadow:0 8px 12px 0 #fd6ee0;
     transition: all 0.2s ease-in;
 }
 
@@ -65,7 +83,7 @@
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
 }
 
-.SubmitButton:hover,.LiveFeed:hover,.ViewButton:hover,.EditButton:hover,.LikeButton:hover, .Return:hover,.EnterButton:hover {
+.LiveFeed:hover,.ViewButton:hover,.EditButton:hover,.LikeButton:hover, .Return:hover,.EnterButton:hover {
     color: purple;
     box-shadow:0 8px 12px 0 #fd6ee0;
     -moz-transition: all 0.2s ease-in;
@@ -90,11 +108,11 @@
     transition: all 0.2s ease-in;
 }
 
-.SubmitButton,.ViewButton:hover,.ViewButton2:hover {
+.ViewButton:hover,.ViewButton2:hover {
     color: #073DAA;
 }
 
-.SubmitButton,.ViewButton,.ViewButton2 {
+.ViewButton,.ViewButton2 {
     width: 134px;
     margin:0 10px;
     padding: 5px;
