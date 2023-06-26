@@ -308,7 +308,7 @@ tbody{
 
 .FlierFlex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
   margin: 15px 0;
@@ -321,7 +321,11 @@ tbody{
 
 .FlierImg {
   animation: 6s slide-right;
-  max-width: 400px;
+  width: 380px
+}
+
+.FlierImg2 {
+  margin: 0 auto;
   min-width: 370px;
 }
 
@@ -357,4 +361,3 @@ tbody{
   border: 2px solid #073DAA;
   border-radius: 50%;
 }
-

@@ -44,7 +44,8 @@ const EventsViewAll = () => {
                     return(
                         <div className='FlierContainer'key={event._id}>
                             <div className='FlierFlex'>
-                                <img className='FlierImg' src={event.flierImage} alt="flier image"/>
+                                <img className='FlierImg desktop-only' src={event.flierImage} alt="flier image"/>
+                                <img className='FlierImg2 mobile-only' src={event.flierImage} alt="flier image"/>
                                 <div className='FlierInfo'>
                                     <h3 style={{textAlign:"center"}}>{event.title}</h3>
                                     <hr className='FlierDivide' />
