@@ -12,7 +12,7 @@ const Footer = () => {
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/adopt">Adopt Don't Buy</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/fees">Adopting Fees</a></li>
+                    <li><a href="/petshelter/thingstoknow">Things To Know</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
                     <li><a href="/petshelter/contactus">Visit Us</a></li>
                     <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
