@@ -1,8 +1,14 @@
+import { useEffect } from "react"
 import GitHub from "./GitHubGraph"
 import GoHome from "./HomeButton"
 
 const AboutMe = () => {
 
+    // scroll to top
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
+    
     return(
         <div className="Background">
             {/* Container */}

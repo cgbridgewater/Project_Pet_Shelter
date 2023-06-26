@@ -3,7 +3,7 @@
 .FooterHr {
     background-color:  #073DAA;
     height: 3px; 
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .List1, .List2 {
@@ -11,6 +11,17 @@
     font-weight: bolder;
     color: #073DAA;
     list-style-type:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.List1 {
+    text-align: start;
+}
+
+.List2 {
+    text-align: end;
 }
 
 .FooterFlex {
@@ -21,16 +32,16 @@
 }
 
 .FooterLogos{
-    /* padding-top: 20px; */
     color: #073DAA;
     font-size: 15px;
     font-weight: 800;
     width: 40%;
+    padding: 5px;
 }
 
 .Footer {
-    padding: 3%;
-    padding-top: 1%;
+    padding: 5px;
+    padding-bottom: 15px;
     margin-top: 1%;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0KsyQv5YwZXalff-qFUxzk_C_rL80pkG3w&usqp=CAU);
     background-attachment: fixed;

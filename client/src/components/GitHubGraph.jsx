@@ -30,7 +30,7 @@ const GitHub = () => {
                 transformData={selectLastHalfYear} 
                 username="cgbridgewater" 
                 hideTotalCount
-                style={{margin:"15px", width:"370px"}}
+                style={{margin:"15px 0", width:"370px"}}
                 theme={minimalTheme}
                 />
         </div>

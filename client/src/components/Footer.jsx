@@ -7,17 +7,17 @@ const Footer = () => {
             {/* footer content container */}
             <div className="FooterFlex" >
                 {/* left side links */}
-                <ul className="List1">
-                    <li><a href="/petshelter/events">Upcoming Events</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/adopt">Adopt Don't Buy</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/thingstoknow">Things To Know</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/contactus">Visit Us</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/wishlist">Wish List</a></li>
-                </ul>
+                <div className="List1">
+                    <a href="/petshelter/events">Upcoming Events</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginRight:"5%"}}/>
+                    <a href="/petshelter/adopt">Adopt Don't Buy</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginRight:"5%"}}/>
+                    <a href="/petshelter/thingstoknow">Things To Know</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginRight:"5%"}}/>
+                    <a href="/petshelter/contactus">Visit Us</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginRight:"5%"}}/>
+                    <a href="/petshelter/wishlist">Wish List</a>
+                </div>
                 {/* social media links (center) */}
                 <div className="FooterLogos">
                     <a href="https://www.facebook.com/greenhillhumane/?ref=ts">
@@ -40,17 +40,17 @@ const Footer = () => {
                     </a>
                 </div>
                 {/* right side links */}
-                <ul className="List2">
-                    <li><a href="/petshelter/stories">Success Stories</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/ourstory">Our Story</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><Donate /></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/careers">Careers</a></li>
-                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"75%", margin:"2px auto"}}/>
-                    <li><a href="/petshelter/aboutme">Site Info</a></li>
-                </ul>
+                <div className="List2">
+                    <a href="/petshelter/stories">Success Stories</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginLeft:"5%"}}/>
+                    <a href="/petshelter/ourstory">Our Story</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginLeft:"5%"}}/>
+                    <Donate />
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginLeft:"5%"}}/>
+                    <a href="/petshelter/careers">Careers</a>
+                    <hr className="mobile-only" style={{borderBottom:"1px solid #073DAA", width:"95%", marginLeft:"5%"}}/>
+                    <a href="/petshelter/aboutme">Site Info</a>
+                </div>
             </div>
         </div>
     );
