@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom"
+import { useEffect } from "react"
 
 const Navibar = () => {
+
+    // scroll to top fix
+    useEffect(() => {
+      window.scrollTo(0,0)
+  },[])
 
   return (
     // Container background
     <div className="NavBackground">
       {/* navbar container */}
-      <nav style={{flexWrap:"wrap",height:"auto", display:"flex", justifyContent:"space-between", alignItems:"center", padding:"1%", paddingLeft:"5%", borderBottom:"10px double #073DAA"}}>
+      <nav style={{flexWrap:"wrap",height:"auto", display:"flex", justifyContent:"space-evenly", alignItems:"center", padding:"1%", borderBottom:"10px double #073DAA"}}>
         {/* left side of navbar */}
         <div style={{minWidth:"355px",width:"30%", textAlign:"start"}}>
           <Link to="/">
@@ -22,7 +28,7 @@ const Navibar = () => {
           <img className="LiveFeed" src="https://i.gifer.com/9XLg.gif" alt="live feed" />
         </Link>
         {/* right side of navbar */}
-        <div style={{minWidth:"30%",display:"flex",alignItems:"center"}} className='RightNav'>
+        <div style={{minWidth:"30%",display:"flex",alignItems:"center", justifyContent:"end"}} className='RightNav'>
           <Link to="/petshelter/events">
             <p className="ActionNavTitle">
               See Upcoming Events!

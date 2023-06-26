@@ -257,11 +257,10 @@ tbody{
 .TitleContainer {
   width:  90%;
   min-width: 370px;
-  margin: 5% auto;
+  margin: 3% auto;
   padding: 20px;
   overflow: hidden;
-  box-shadow: 0 0 15px  #073DAA;
-  margin-top: 30px;
+  box-shadow: 0 0 20px #073DAA;
   border: 2px solid  #073DAA;
   border-radius: 15px;
   text-align: center;
