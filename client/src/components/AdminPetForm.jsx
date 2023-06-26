@@ -63,7 +63,7 @@ const AdminPetForm = (props) => {
     }
 
     return(
-        <div className="Background" style={{minHeight:"63vh"}}>
+        <div className="Background" style={{minHeight:"69vh"}}>
             {/* top ribbon */}
             <div  className='PetFormHeader' style={{display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap-reverse"}}>
                 <h1 style={{color:"#073DAA"}}>New Pet Intake Form</h1>

@@ -113,7 +113,7 @@ const Register = (props) => {
                         </div>
                         {/* FORM BUTTON  */}
                         <div className="buttonContainer">		 		
-                            <button className="button" type="submit">Register</button>
+                            <button disabled className="button" type="submit">Register</button>
                         </div>
                     </form>
                     {/* END FORM SECTION  */}
