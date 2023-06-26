@@ -12,7 +12,7 @@ const ThingsToKnow = () => {
         <div className="Background">
             {/* text container */}
             <div className="TextBox">
-                <img style={{margin:"15px 0"}} src="https://splashshacktx.com/wp-content/uploads/things-to-know-title.png" alt="things to know" />
+                <img style={{margin:"15px 0", width:"60%"}} src="https://splashshacktx.com/wp-content/uploads/things-to-know-title.png" alt="things to know" />
                 {/* Thanks info */}
                 <h3 style={{textAlign:"start"}}>
                     Thank you for showing an interest in adopting one of our pets, please remember our adoptions operate on a 'first come first serve basis'. 
