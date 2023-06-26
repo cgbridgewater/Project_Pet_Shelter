@@ -59,12 +59,10 @@ const AdminViewAll = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/admin/events",{withCredentials: true})
         .then((res) => {
-            // console.log(res.data);
             setEvent(res.data);
             setGetEventErrors("")
         })
         .catch((err) => {
-            console.log(err.response.data.path)
             setGetEventErrors(err.response.data.path); //Set Errors
         })
     }, [eventSort])
@@ -72,12 +70,10 @@ const AdminViewAll = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/admin/pets",{withCredentials: true})
         .then((res) => {
-            // console.log(res.data);
             setPet(res.data);
             setGetErrors("")
         })
         .catch((err) => {
-            console.log(err.response.data.path)
             setGetErrors(err.response.data.path); //Set Errors
         })
     }, [petSort])
@@ -85,12 +81,10 @@ const AdminViewAll = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/admin/adopt" ,{withCredentials: true})
         .then((res) => {
-            // console.log(res.data);
             setAdopt(res.data);
             setGetAdoptErrors("")
         })
         .catch((err) => {
-            console.log(err.response.data.path)
             setGetAdoptErrors(err.response.data.path); //Set Errors
         })
     }, [adoptSort])
@@ -144,7 +138,7 @@ const AdminViewAll = (props) => {
                                             <tbody key={pet._id}>
                                                 <tr>
                                                     <td>
-                                                        <Link style={{textDecoration: "underline"}} className='TableLink' to={"/admin/edit/pet/" +pet._id}>{pet.name}</Link>
+                                                        <Link style={{fontWeight:600 ,textDecoration: "underline"}} className='TableLink' to={"/admin/edit/pet/" +pet._id}>{pet.name}</Link>
                                                     </td>
                                                     <td style={{color:"#073DAA", fontSize:"16px", textAlign:"center"}}>
                                                         {pet.type}
@@ -191,7 +185,7 @@ const AdminViewAll = (props) => {
                                                 <tr>
                                                     {/* Title */}
                                                     <td>
-                                                        <Link style={{textDecoration: "underline"}} className='TableLink' to={"/admin/edit/event/" +event._id}>{event.title}</Link>
+                                                        <Link style={{fontWeight:600 ,textDecoration: "underline"}} className='TableLink' to={"/admin/edit/event/" +event._id}>{event.title}</Link>
                                                     </td>
                                                     {/* Date */}
                                                     <td style={{color:"#073DAA", fontSize:"16px", textAlign:"center"}}>
@@ -240,7 +234,7 @@ const AdminViewAll = (props) => {
                                                 <tr>
                                                     {/* Contact */}
                                                     <td>
-                                                        <Link  style={{textDecoration: "underline"}} className='TableLink' to={"/admin/adopt/" +adopt._id}>
+                                                        <Link  style={{fontWeight:600 ,textDecoration: "underline"}} className='TableLink' to={"/admin/adopt/" +adopt._id}>
                                                             {adopt.email}
                                                         </Link>
                                                     </td>
