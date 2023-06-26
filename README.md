@@ -1,5 +1,5 @@
 ## Project Pet Shelter
-See the LIVE site here 👉 <a href="#">Project Pet Shelter</a>
+See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter</a>
 <p>Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter Coding Dojo.</p>
 
 <br/>
