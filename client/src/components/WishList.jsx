@@ -20,7 +20,7 @@ const WishList = () => {
             </p>
             {/* start wish list */}
             <h2 style={{textAlign:"center"}}> Adoptions/Foster Program </h2>
-            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
+            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto", padding:"8px"}} >
                 <li>
                     Litter scoopers
                 </li>
@@ -95,7 +95,7 @@ const WishList = () => {
             <br/>
             {/* start wish list 2 */}
             <h2 style={{textAlign:"center"}}> AniMeals </h2>
-            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
+            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto", padding:"8px"}} >
                 <li>
                     Any unexpired, unopened cat and dog food (can be wet or dry)
                 </li>
@@ -118,7 +118,7 @@ const WishList = () => {
             <br/>
             {/* start wish list 3 */}
             <h2 style={{textAlign:"center"}}> Technology and Web Needs </h2>
-            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
+            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto", padding:"8px"}} >
                 <li>
                     Webcams
                 </li>
@@ -138,7 +138,7 @@ const WishList = () => {
             <br/>
             {/* start wish list 4 */}
             <h2 style={{textAlign:"center"}}> Special Events </h2>
-            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
+            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto", padding:"8px"}} >
                 <li>
                     Banner material (specifically 24″ wide canvas rolls for our HP Design Jet 500)
                 </li>
@@ -164,7 +164,7 @@ const WishList = () => {
             <br/>
             {/* start wish list 5 */}
             <h2 style={{textAlign:"center"}}> Pet Encounter Therapy </h2>
-            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto"}} >
+            <ul style={{width:"40%", minWidth:"370px", margin:"0 auto", padding:"8px"}} >
                 <li>
                     New or gently used bagless heavy-duty vacuum
                 </li>

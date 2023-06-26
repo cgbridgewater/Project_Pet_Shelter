@@ -15,7 +15,7 @@ const Careers = () => {
             <div style={{width:"70%", margin:"10px auto" }}>
                 {/* row 1 */}
                 <div className='Flex'>
-                    <h2 style={{fontWeight:"800", fontSize:"2em", textAlign:"start",margin:"15px"}}>There is nothing like going home at the end of the day knowing you made lives better!</h2>
+                    <h2 style={{fontWeight:"800", fontSize:"2em", textAlign:"start",margin:"15px -40px"}}>There is nothing like going home at the end of the day knowing you made lives better!</h2>
                     <div className='TextBox'>
                         <p style={{fontSize:"18px", fontWeight:800, color:"#073DAA", textAlign:"start"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>W</span>
