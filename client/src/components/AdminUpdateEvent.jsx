@@ -72,9 +72,9 @@ const AdminUpdateEvent = (props) => {
     }
 
     return(
-        <div className="Background"style={{minHeight:"63vh"}}>
+        <div className="Background"style={{minHeight:"70vh"}}>
             {/* top ribbon */}
-            <div style={{display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap-reverse"}}>
+            <div style={{margin:"2%",display:"flex", justifyContent:"space-evenly", alignItems:"center", flexWrap:"wrap-reverse"}}>
                 <h1 style={{color:"#073DAA"}}>Event Update Form</h1>
                 <h1 style={{fontSize:"40px",color:"RED"}}>ADMIN PAGE </h1>
                 <br />

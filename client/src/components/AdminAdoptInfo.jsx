@@ -72,10 +72,10 @@ const AdoptInfo = (props) => {
                 : 
             // start content //
             <div>
-                <div className="DetailContainer" style={{ minHeight:"61vh"}}>
+                <div className="DetailContainer" style={{ minHeight:"67vh"}}>
                 {/* content */}
                     {/* top ribbon */}
-                    <div style={{display:"flex",justifyContent:"space-evenly", alignItems:"center", height:"15%", marginTop:"20px"}}>
+                    <div style={{margin:"2%",display:"flex",justifyContent:"space-evenly", alignItems:"center", height:"15%", marginTop:"20px"}}>
                         {/* Pet Name */}
                         <h1 style={{color:"#073DAA"}}>Request For : {petName}</h1>
                         {/* ADMIN PAGE TEXT */}

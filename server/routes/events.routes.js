@@ -8,6 +8,6 @@ module.exports = (app) => {
     app.get('/api/oneEvent/:id', EventsController.getOne);
     app.get('/api/admin/oneEvent/:id', authenticate, EventsController.getOne);  // auth required
     app.post('/api/events', EventsController.create);
-    // app.put('/api/events/:id', EventsController.update);  // created for expansion
+    app.put('/api/events/:id', EventsController.update);
     // app.delete('/api/events/:id', EventsController.delete);  // created for expansion
 }
