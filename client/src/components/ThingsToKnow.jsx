@@ -1,7 +1,13 @@
 import GoHome from './HomeButton';
+import { useEffect } from 'react';
 
 const ThingsToKnow = () => {
 
+    // scroll to top
+    useEffect(() => {
+        window.scrollTo(0,0)
+    },[])
+    
     return(
         <div className="Background">
             {/* text container */}
