@@ -16,33 +16,34 @@ See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter
 
 # 📷 Images from the site showing layout and features
 
-## Public Side pages
+### Public Side pages
 
 <p>The Index/Home page animations all created with CSS</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005465450_e2918b332c_z.jpg" alt="Shelter Index Features">
+<img width="75%" src="https://live.staticflickr.com/65535/53005465450_e2918b332c_z.jpg" alt="Shelter Index Features">
 <br/>
 <p>The View All page has front end sorting, along with slide up card displays (on hover for PC and clickable for phones)</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005466080_4a16c3be0e_z.jpg" alt="Shelter VeiwAll Features">
+<img width="75%" src="https://live.staticflickr.com/65535/53005466080_4a16c3be0e_z.jpg" alt="Shelter VeiwAll Features">
 <br/>
 <p>The View One page incorporates a pop-up adoption request from that populates a contact list that can be seen on the Admin pages</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005564428_876fed9e3c_c.jpg" alt="Shelter ViewOne Features">
+<img width="75%" src="https://live.staticflickr.com/65535/53005564428_876fed9e3c_c.jpg" alt="Shelter ViewOne Features">
 <br/>
 <p>The Events page animations all created with CSS. Date filtering done on the backend side to prevent old events from rendering</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005241749_89380783fb_z.jpg " alt="Shelter Events Features">
+<img width="75%" src="https://live.staticflickr.com/65535/53005241749_89380783fb_z.jpg " alt="Shelter Events Features">
 <br/>
 <p>The Success Stories page flippable card displays (on hover for PC and clickable for phones) </p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005080481_a9f964fee0_z.jpg" alt="Shelter Stories Features">
+<img width="75%" src="https://live.staticflickr.com/65535/53005080481_a9f964fee0_z.jpg" alt="Shelter Stories Features">
 <br/>
 <p>Google Maps API is utilized from the Google Cloud</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005564733_723f46e51b_z.jpg" alt="Shelter Google API">
+<img width="75%" src="https://live.staticflickr.com/65535/53005564733_723f46e51b_z.jpg" alt="Shelter Google API">
 <br/>
 <p>A GitHub API utilized to pull and display GitHub Commits, Trimmed to 6 months and custom colors for style </p>
-<img width="90%" src="https://live.staticflickr.com/65535/53004494852_b910601d7d_z.jpg" alt="Shelter GH API">
+<img width="75%" src="https://live.staticflickr.com/65535/53004494852_b910601d7d_z.jpg" alt="Shelter GH API">
 <br/>
 <p>Footer links to several content filled pages about the mock shelter. The donation link generates a pop-up warning that you will be leaving the site</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005080436_4691530a64_z.jpg" alt="Shelter Content">
+<img width="75%" src="https://live.staticflickr.com/65535/53005080436_4691530a64_z.jpg" alt="Shelter Content">
 <br/><br/>
-## Admin side pages
+
+### Admin side pages
 <p>Login and Registration pages</p>
 <img width="90%" src="https://live.staticflickr.com/65535/53005241179_26218f7994_c.jpg" alt="Shelter Admin Login/Reg">
 <br/>
