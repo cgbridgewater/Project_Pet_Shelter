@@ -1,6 +1,7 @@
 ## Project Pet Shelter
 <p>Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter Coding Dojo.</p>
 See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter</a>
+<img width="90%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
 
 <br/>
 <br/>
@@ -14,7 +15,37 @@ See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter
 <br/>
 
 ## 📷 Images from the site showing layout and features
-<p>COMING SOON.....</p>
 
 
-<img width="90%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005465450_e2918b332c_z.jpg" alt="Shelter Index Features">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005466080_4a16c3be0e_z.jpg" alt="Shelter VeiwAll Features">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005564428_876fed9e3c_c.jpg" alt="Shelter ViewOne Features">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005241749_89380783fb_z.jpg " alt="Shelter Events Features">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005080481_a9f964fee0_z.jpg" alt="Shelter Stories Features">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005564733_723f46e51b_z.jpg" alt="Shelter Google API">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53004494852_b910601d7d_z.jpg" alt="Shelter GH API">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005080436_4691530a64_z.jpg" alt="Shelter Content">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005241179_26218f7994_c.jpg" alt="Shelter Admin Login/Reg">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53004495237_c12aa65529_c.jpg" alt="Shelter Admin Main View">
+
+<p> </p>
+<img width="90%" src="https://live.staticflickr.com/65535/53005080311_dd76beb383_z.jpg" alt="Shelter Forms">
