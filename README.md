@@ -16,3 +16,5 @@ See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter
 ## 📷 Images from the site showing layout and features
 <p>COMING SOON.....</p>
 
+
+<img width="90%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
