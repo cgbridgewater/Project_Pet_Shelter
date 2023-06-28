@@ -1,7 +1,8 @@
-# Project Pet Shelter
-<p>Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter Coding Dojo.</p>
-See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter</a><br/><br/>
-<img width="60%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
+# 🐾 Project Pet Shelter 🐶🐱
+<p>Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter from the Coding Dojo.</p>
+<p>Scroll down to see images and features of the site, or see it in action...</p>
+Click here to see the LIVE site! 👉 <a href="http://34.218.236.175/">Project Pet Shelter</a><br/><br/>
+<img width="75%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
 
 <br/>
 <br/>
@@ -41,14 +42,18 @@ See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter
 <br/>
 <p>Footer links to several content filled pages about the mock shelter. The donation link generates a pop-up warning that you will be leaving the site</p>
 <img width="75%" src="https://live.staticflickr.com/65535/53005080436_4691530a64_z.jpg" alt="Shelter Content">
-<br/><br/>
+<br/>
 
 ### Admin side pages
 <p>Login and Registration pages</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005241179_26218f7994_c.jpg" alt="Shelter Admin Login/Reg">
+<img width="75%" src="https://live.staticflickr.com/65535/53005241179_26218f7994_c.jpg" alt="Shelter Admin Login/Reg">
 <br/>
 <p>The Admin Viewall page with displays of all pets in shelter, all events created and adoption requests that have been submitted from the user side</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53004495237_c12aa65529_c.jpg" alt="Shelter Admin Main View">
+<img width="75%" src="https://live.staticflickr.com/65535/53004495237_c12aa65529_c.jpg" alt="Shelter Admin Main View">
 <br/>
 <p>The ViewAll page links to Create and Update forms for pets and events, along with a view page for adoption requests</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005080311_dd76beb383_z.jpg" alt="Shelter Forms">
+<img width="75%" src="https://live.staticflickr.com/65535/53005080311_dd76beb383_z.jpg" alt="Shelter Forms">
+
+
+# 🔎 Utilized Chrome Lighthouse for optimization of pages
+<img width="75%" src="https://live.staticflickr.com/65535/53007366715_3ea671e488.jpg" alt="Lighthouse" >
