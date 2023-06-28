@@ -23,7 +23,7 @@ const OurStory = () => {
                 he Coding Dojo Pet Shelter came about when the veterinary hospital staff of the Coding Dojo Centers in Seattle, Washington, found themselves treating patients out-of-pocket when clients lacked the necessary funds to save their pets in emergency situations. After realizing the problem was larger than the animal hospital could handle, The Coding Dojo Pet Shelter was formed.
             </p>
             {/* image 2 */}
-            <img className='storyImg' src="https://petpartners.org/wp-content/uploads/2019/10/Blog-Shelter-hero-cropped-1900x600-1598469591.jpg" alt="puppy pet" />
+            <img className='storyImg' src="https://foothillsanimalshelter.org/wp-content/uploads/2021/01/Adoption-General-Images.jpg" alt="puppy hold" />
             {/* section 3 */}
             <p style={{textAlign:"start", fontSize:"18px", fontWeight:800, color:"#073DAA"}} className='ourStory'>
                 <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>T</span>
