@@ -42,7 +42,7 @@ Click here to see the LIVE site! 👉 <a href="http://34.218.236.175/">Project P
 <br/>
 <p>Footer links to several content filled pages about the mock shelter. The donation link generates a pop-up warning that you will be leaving the site</p>
 <img width="75%" src="https://live.staticflickr.com/65535/53005080436_4691530a64_z.jpg" alt="Shelter Content">
-<br/><br/>
+<br/>
 
 ### Admin side pages
 <p>Login and Registration pages</p>
