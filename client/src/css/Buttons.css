@@ -134,6 +134,15 @@
     box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
     margin: 15px;
 }
+.LiveFeed2 {
+    width: 126px;
+    height: 46px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow:0 8px 12px 0 rgba(0, 0, 0, 0.70);
+    margin-top: 15px;
+}
 
 .PetLink { 
     margin-top: 3%;

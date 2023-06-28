@@ -25,7 +25,6 @@ const Detail = () => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/pets/" + id)
         .then( res => {
-            console.log(res.data);
             setName(res.data.name);
             setType(res.data.type);
             setDescription(res.data.description);
@@ -38,7 +37,6 @@ const Detail = () => {
             setGetErrors("")
         })
         .catch((err) => {
-            console.log(err.response.data)
             setGetErrors(err.response.data); 
         })
     }, []);

@@ -25,7 +25,8 @@ const Navibar = () => {
           </Link>
         </div>
         <Link to="/petshelter/livefeed">
-          <img className="LiveFeed" src="https://i.gifer.com/9XLg.gif" alt="live feed" />
+          <img className="LiveFeed2 mobile-only" src="https://i.gifer.com/9XLg.gif" alt="live feed" />
+          <img className="LiveFeed desktop-only" src="https://i.gifer.com/9XLg.gif" alt="live feed" />
         </Link>
         {/* right side of navbar */}
         <div style={{minWidth:"30%",display:"flex",alignItems:"center", justifyContent:"end"}} className='RightNav'>
