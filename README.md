@@ -1,7 +1,7 @@
 # Project Pet Shelter
 <p>Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter Coding Dojo.</p>
 See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter</a><br/><br/>
-<img width="60%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
+<img width="75%" src="https://live.staticflickr.com/65535/53005465155_0319f48850_z.jpg" alt="Shelter Index Page">
 
 <br/>
 <br/>
