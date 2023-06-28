@@ -1,4 +1,4 @@
-# Project Pet Shelter
+# 🐾 Project Pet Shelter 🐶🐱
 <p>Welcome To My Pet Shelter Project Site!  This site is a mockup of a ficticious Pet Shelter from the Coding Dojo.</p>
 <p>Scroll down to see images and features of the site, or see it in action...</p>
 Click here to see the LIVE site! 👉 <a href="http://34.218.236.175/">Project Pet Shelter</a><br/><br/>
@@ -53,3 +53,7 @@ Click here to see the LIVE site! 👉 <a href="http://34.218.236.175/">Project P
 <br/>
 <p>The ViewAll page links to Create and Update forms for pets and events, along with a view page for adoption requests</p>
 <img width="75%" src="https://live.staticflickr.com/65535/53005080311_dd76beb383_z.jpg" alt="Shelter Forms">
+
+
+# 🔎 Utilized Chrome Lighthouse for optimization of pages
+<img width="75%" src="https://live.staticflickr.com/65535/53007366715_3ea671e488.jpg" alt="Lighthouse" >
