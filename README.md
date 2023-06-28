@@ -45,10 +45,10 @@ See the LIVE site here 👉 <a href="http://34.218.236.175/">Project Pet Shelter
 
 ### Admin side pages
 <p>Login and Registration pages</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005241179_26218f7994_c.jpg" alt="Shelter Admin Login/Reg">
+<img width="75%" src="https://live.staticflickr.com/65535/53005241179_26218f7994_c.jpg" alt="Shelter Admin Login/Reg">
 <br/>
 <p>The Admin Viewall page with displays of all pets in shelter, all events created and adoption requests that have been submitted from the user side</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53004495237_c12aa65529_c.jpg" alt="Shelter Admin Main View">
+<img width="75%" src="https://live.staticflickr.com/65535/53004495237_c12aa65529_c.jpg" alt="Shelter Admin Main View">
 <br/>
 <p>The ViewAll page links to Create and Update forms for pets and events, along with a view page for adoption requests</p>
-<img width="90%" src="https://live.staticflickr.com/65535/53005080311_dd76beb383_z.jpg" alt="Shelter Forms">
+<img width="75%" src="https://live.staticflickr.com/65535/53005080311_dd76beb383_z.jpg" alt="Shelter Forms">
