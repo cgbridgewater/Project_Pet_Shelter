@@ -52,11 +52,13 @@ const AboutMe = () => {
                 <hr />
                 {/* Row 3 */}
                 <div className="FlexBox">
-                    <GitHub/>
+                    <div>
+                        <GitHub/>
+                    </div>
                     <div className="TextBox">
                         <p style={{textAlign:"start",color:"#073DAA", color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
-                            nterested in what other projects I've worked on? <br /> Want to see the technologies I know. <br /> Check out my <a style={{textDecoration:"underline"}} href="https://github.com/cgbridgewater">GitHub</a>
+                            nterested in what other projects I've worked on? <br /> Want to see the technologies I know. <br /> Here is a snip of my stats <br /> Check out my <a style={{textDecoration:"underline"}} href="https://github.com/cgbridgewater">GitHub</a>
                         </p>
                     </div>
                 </div>
