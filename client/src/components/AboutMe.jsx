@@ -24,7 +24,7 @@ const AboutMe = () => {
                             his single page app was created utilizing the MERN stack, and was built with a handfull of features. Here is a few of them:
                         </p>
                         <ul style={{width:"80%", margin:"15px", textAlign:"start"}}>
-                            <li>Full CRUD functionality on both the pets up for adoptoin and the event fliers</li>
+                            <li>Full CRUD functionality on both the pets up for adoption and the event fliers</li>
                             <li>Admin login/registration pages are validated by Bcrypt and using hashed passwords for added security</li>
                             <li>All Update and Delete functions are protected by limiting access with JWT tokens via the admin pages</li>
                             <li>Integration of Googles location mapping API from Google's Cloud Services</li>
