@@ -5,8 +5,9 @@ import GoHome from './HomeButton';
 
 // Fetch Date
 const current = new Date();
-const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${current.getDate()}`;
-
+const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${String(current.getDate()).padStart(2,'0')}`;
+// const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, '0')}-${current.getDate()}`;
+console.log(today)
 const EventsViewAll = () => {
     
     const [ event, setEvent ] = useState([])
