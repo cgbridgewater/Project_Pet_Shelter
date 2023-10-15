@@ -83,11 +83,11 @@ const WishList = () => {
                     Shopping/grocery bags-Paper or reusable
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS" target="_blank">Link to Fosters wishlist</a> 
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS" target="_blank" rel="noopener noreferrer">Link to Fosters wishlist</a> 
                 
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD" target="_blank">Link to Adoptions wishlist</a>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD" target="_blank" rel="noopener noreferrer"> rel="noopener noreferrer"Link to Adoptions wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
@@ -110,7 +110,7 @@ const WishList = () => {
                     Ziploc Freezer Gallon and/or Quart bags (Ziploc FREEZER brand only please)
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX" target="_blank">Link to Meals wishlist</a>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H7R14M1V4CIX" target="_blank" rel="noopener noreferrer">Link to Meals wishlist</a>
                 </li>
             </ul>
             {/* end wish list 2 */}
@@ -130,7 +130,7 @@ const WishList = () => {
                     Flash Memory Cards
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9" target="_blank">Link to Tech wishlist</a>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/87HJBBA3HSU9" target="_blank" rel="noopener noreferrer">Link to Tech wishlist</a>
                 </li>
             </ul>
             {/* end wish list 3 */}
@@ -188,7 +188,7 @@ const WishList = () => {
                     Hand crank emergency radio for evacuation kit
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75" target="_blank">Link to Amazon wishlist</a>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/1OM3FWUF6KB75" target="_blank" rel="noopener noreferrer">Link to Amazon wishlist</a>
                 </li>
             </ul>
             {/* end wish list 5 */}

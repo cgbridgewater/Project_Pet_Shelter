@@ -20,22 +20,22 @@ const Footer = () => {
                 </div>
                 {/* social media links (center) */}
                 <div className="FooterLogos">
-                    <a href="https://www.facebook.com/greenhillhumane/?ref=ts" target="_blank">
+                    <a href="https://www.facebook.com/greenhillhumane/?ref=ts" target="_blank" rel="noopener noreferrer">
                         <img className="social" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/83-facebook-64.png" alt="#"/>
                     </a>
-                    <a href="https://www.youtube.com/c/GreenhillHumane" target="_blank">
+                    <a href="https://www.youtube.com/c/GreenhillHumane" target="_blank" rel="noopener noreferrer">
                         <img className="social" src="https://cdn0.iconfinder.com/data/icons/social-media-2473/128/youtube_logo_social_media_social_media_network-64.png" alt="#"/>
                     </a>
-                    <a href="https://twitter.com/GreenhillHumane" target="_blank">
+                    <a href="https://twitter.com/GreenhillHumane" target="_blank" rel="noopener noreferrer">
                         <img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-64.png" alt="#"/>
                     </a>
-                    <a href="https://www.instagram.com/greenhillhumane/" target="_blank">
+                    <a href="https://www.instagram.com/greenhillhumane/" target="_blank" rel="noopener noreferrer">
                         <img className="social" src="https://cdn3.iconfinder.com/data/icons/blue-magic/256/Instagram.png" alt="#"/>
                     </a>
-                    <a href="https://open.spotify.com/show/2EVHbhbQand7huz6fpOtPB?si=b3600725d7434783&nd=1" target="_blank">
+                    <a href="https://open.spotify.com/show/2EVHbhbQand7huz6fpOtPB?si=b3600725d7434783&nd=1" target="_blank" rel="noopener noreferrer">
                         <img className="social" src="https://cdn0.iconfinder.com/data/icons/social-media-2473/128/spotify_interface_media_social_logo-64.png" alt="#"/>
                     </a>
-                    <a href="https://www.tiktok.com/@greenhillhumanesociety" target="_blank">
+                    <a href="https://www.tiktok.com/@greenhillhumanesociety" target="_blank" rel="noopener noreferrer">
                         <img className="social" src="https://cdn2.iconfinder.com/data/icons/social-media-2452/512/TikTok-01-64.png" alt="#"/>
                     </a>
                 </div>

@@ -9,7 +9,7 @@ const today = `${current.getFullYear()}-${String(current.getMonth() + 1).padStar
 const EventsViewAll = () => {
     
     const [ event, setEvent ] = useState([])
-    const [ setGetEventErrors] = useState({});
+
     // scroll to top fix
     useEffect(() => {
         window.scrollTo(0,0)
@@ -19,10 +19,9 @@ const EventsViewAll = () => {
         axios.get("http://localhost:8000/api/events/" + today)
         .then((res) => {
             setEvent(res.data);
-            setGetEventErrors("")
         })
         .catch((err) => {
-            setGetEventErrors(err.response.data.path); //Set Errors
+            console.log("Axios Issue")
         })
     }, [])
 
