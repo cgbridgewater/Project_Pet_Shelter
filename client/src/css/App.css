@@ -16,7 +16,6 @@
 .Background {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJg57rpVqorBaQ5H5I3z7MfkWgeVIobrXzCQ&usqp=CAU);
   padding: 1%;
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +24,6 @@
 
 .NavBackground {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt0KsyQv5YwZXalff-qFUxzk_C_rL80pkG3w&usqp=CAU);
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -300,7 +298,11 @@ tbody{
     }
   }
 
-.FlierContainer{
+.FlierBox {
+  min-height: 50dvh;
+}
+
+.FlierContainer {
   width: 60%;
   margin:0 auto;
 }

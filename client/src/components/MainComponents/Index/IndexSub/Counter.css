@@ -1,0 +1,25 @@
+.Counters {
+    background: url('../Assets/counterBackground.jpg');
+	color: #fff;
+	padding: 10px 20px;
+	border: 3px lightskyblue solid;
+    border-radius: 15px;
+    width: 80%;
+    margin:0 auto;
+}
+
+.Counters .CounterContainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.Counters .Counter {
+    font-size: 35px;
+}
+
+.Counter-text {
+    color: lightblue;
+    font-weight: bold;
+}

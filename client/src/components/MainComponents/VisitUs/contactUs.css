@@ -1,0 +1,62 @@
+/* hours directions css */
+
+.title {
+    margin: 0 auto;
+}
+
+.hoursFlex, .hoursFlex2, .hoursFlex3{
+    width: 55%;
+    margin: 2% auto;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hoursFlex2, .hoursFlex{
+    border: 2px solid #073DAA;
+    box-shadow:0 8px 12px 0 #000;
+    min-width: 375px;
+    margin-top: 2%;
+}
+
+.infoWrapper {
+    width: 55%;
+    min-width: 375px;
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hoursFlex3 {
+    width: 45%;
+    min-width: 325px;
+}
+
+.textLeft {
+    text-align: start;
+}
+
+.lostLink {
+    margin: 0 auto;
+}
+
+.lostnfound {
+    box-shadow:0 8px 12px 0 #000;
+}
+
+.lostnfound:hover {
+    box-shadow:0 8px 12px 0 #fd6ee0;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+iframe {
+    border: 2px solid #073DAA;
+}
+iframe, .infobox {
+    margin: 0 auto;
+}
