@@ -83,11 +83,11 @@ const WishList = () => {
                     Shopping/grocery bags-Paper or reusable
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS" target="_blank" rel="noopener noreferrer">Link to Fosters wishlist</a> 
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2IUJS0TK46EVS" target="_blank" rel="noopener noreferrer">Link to Foster wishlist</a> 
                 
                 </li>
                 <li>
-                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD" target="_blank" rel="noopener noreferrer"> rel="noopener noreferrer"Link to Adoptions wishlist</a>
+                    <a style={{textDecoration:"underline",textAlign:"start", fontSize:"16px", color:"purple"}} href="https://www.amazon.com/hz/wishlist/ls/2H6WSAI62K3JD" target="_blank" rel="noopener noreferrer">Link to Adoption wishlist</a>
                 </li>
             </ul>
             {/* end wish list */}
