@@ -327,7 +327,7 @@ tbody{
 
 .FlierImg2 {
   margin: 0 auto;
-  min-width: 370px;
+  min-width: 300px;
 }
 
 .FlierDivide {
@@ -342,17 +342,21 @@ tbody{
   align-items: center;
 }
 
-.GitHub {
-  width: 45%;
-  min-width: 350px;
-  padding: 3px;
+#GitHubContainer {
+  width: 40%;
+  /* min-width: 360px; */
+  margin: 15px;
+}
+
+.GitHub, #GitCalendar {
+  width: 80%;
+  min-width: 260px;
   margin: 15px 0;
 }
 
 .AboutMePic {
   width: 360px;
-  /* padding: 3px; */
-  margin: 15px 0;
+  margin: 15px;
 }
 
 .MailPic {
@@ -361,4 +365,12 @@ tbody{
   margin: 15px 0;
   border: 2px solid #073DAA;
   border-radius: 50%;
+}
+
+
+@media only screen and (max-width:450px) {
+  .AboutMePic, #GitHubContainer {
+      width: 270px;
+      margin: 15px 0
+  }
 }

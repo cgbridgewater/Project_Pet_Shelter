@@ -25,16 +25,17 @@ dark: ['hsl(0, 0%, 92%)', 'lightblue'],
 const GitHub = () => {
 
   return(  
-    <div style={{padding:"3px",border:" 2px solid #073DAA"}}>
+    <div id='GitHubContainer' style={{padding:"3px",border:" 2px solid #073DAA"}}>
       <GitHubCalendar
+        id="GitCalendar"
         transformData={selectLastHalfYear} 
         username="cgbridgewater" 
         hideTotalCount
-        style={{margin:"5px 3px", width:"360px"}}
+        style={{margin:"5px auto", minWidth:"260px"}}
         theme={minimalTheme}
       />
       <hr style={{border:"1px solid #A483EF", width:"90%", margin:"0 auto"}} />
-      <img style={{width:"360px", marginTop:"5px"}}  src="https://github-readme-streak-stats.herokuapp.com/?user=cgbridgewater&theme=tokyonight&hide_border=false" alt="github graph" loading="lazy" />
+      <img className='GitHub' src="https://github-readme-streak-stats.herokuapp.com/?user=cgbridgewater&theme=tokyonight&hide_border=false" alt="github graph" loading="lazy" />
     </div>
   )
 }

@@ -5,6 +5,7 @@ import FetchDog from "./Assets/fetchDog.gif"
 import BinaryCode from "./Assets/binaryCode.gif"
 import LinkedIn from "./Assets/linkedIn.gif"
 import MailBox from "./Assets/mailBox.gif"
+import Nibbler from "./Assets/nibbler.jpg"
 
 const AboutMe = () => {
 
@@ -56,9 +57,7 @@ const AboutMe = () => {
                 <hr />
                 {/* Row 3 */}
                 <div className="FlexBox">
-                    <div>
-                        <GitHub/>
-                    </div>
+                    <GitHub/>
                     <div className="TextBox">
                         <p style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20px"}}>
                             <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>I</span>
@@ -91,6 +90,23 @@ const AboutMe = () => {
                             Click <a style={{textDecoration:"underline"}} href="mailto:cgbridgewater@outlook.com">HERE</a> to email me me!
                             <br />Or<br />
                             Check out my portfolio <a style={{textDecoration:"underline"}}  href="https://www.chrisbridgewater.com/" target="_blank">ChrisBridgewater.com</a>
+                        </p>
+                    </div>
+                </div>
+                {/* spliter */}
+                <hr />
+                {/* Row 3 */}
+                <div className="FlexBox">
+                    <div>
+                        <img className="AboutMePic" src={Nibbler} alt="Nibbler ❤️" />
+                    </div>
+                    <div className="TextBox">
+                        <p style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20px"}}>
+                            <span style={{fontSize:" 200%", fontWeight: 700, lineHeight:"80%", color:"#073DAA"}}>T</span>
+                            his site is in loving memory of Nibbler, 2008-2024.
+                        </p>
+                        <p style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20px"}}>
+                            Rest in peace puppy boy, we miss you and can't wait until we can hold you in our arms again. ❤️🐾❤️🐾
                         </p>
                     </div>
                 </div>
