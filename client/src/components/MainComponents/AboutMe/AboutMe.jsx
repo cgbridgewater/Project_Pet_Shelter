@@ -106,7 +106,7 @@ const AboutMe = () => {
                             his site is in loving memory of Nibbler, 2008-2024.
                         </p>
                         <p style={{textAlign:"start",color:"#073DAA", fontWeight:700, fontSize:"20px", marginTop:"20px"}}>
-                            Rest in peace puppy boy, we miss you and can't wait until we can hold you in our arms again. ❤️🐾❤️🐾
+                            Rest in peace puppy boy. It's not good bye, just see you later. ❤️🐾❤️🐾
                         </p>
                     </div>
                 </div>
